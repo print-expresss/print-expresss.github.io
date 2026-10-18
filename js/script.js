@@ -56,12 +56,21 @@ function createCategoryCard(cat, count, type) {
         label = type === 'servicii' ? 'servicii' : 'produse';
     }
 
+    // Verificăm dacă avem o imagine specifică pentru acest card
+    var imageContent = '<span class="icon">&#9679;</span>';
+    
+    if (cat.id === 'printari') {
+        imageContent = '<img src="images/printari-banner.jpg" alt="Printări" style="width: 100%; height: 100%; object-fit: cover;">';
+    } else if (cat.id === 'obiecte-personalizate') {
+        imageContent = '<img src="images/obiecte-banner.jpg" alt="Obiecte personalizate" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display=\'none\'">';
+    }
+
     var div = document.createElement('div');
     div.className = 'category-card';
     div.innerHTML =
         '<a href="' + url + '" class="category-card-link">' +
             '<div class="category-card-image ' + cat.color + '">' +
-                '<span class="icon">&#9679;</span>' +
+                imageContent +
             '</div>' +
             '<div class="category-card-body">' +
                 '<h3>' + cat.title + '</h3>' +
@@ -489,7 +498,7 @@ document.addEventListener('DOMContentLoaded', function () {
     renderIndexPreviews();
     renderServiciiPage();
     renderProdusePage();
-    renderObiectePersonalizatePage(); // Adăugat pentru pagina nouă
+    renderObiectePersonalizatePage();
     renderServiciiCategorie();
     renderProduseCategorie();
     renderServiciuDetalii();
