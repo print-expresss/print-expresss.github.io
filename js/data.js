@@ -169,9 +169,146 @@ const PRODUCTS = [
         shortDesc: "Marker pentru tablă, vârf rotund.",
         longDesc: "Marker pentru tablă, cu cerneală ștergabilă. Vârf rotund de 2mm.",
         price: "4.50 lei",
+// ... (Restul codului de sus rămâne neschimbat)
+
+const PRODUCTS = [
+    // --- CAIETE ---
+    {
+        id: "caiet-a4-48-file",
+        categoryId: "papetarie",
+        title: "Caiet A4 48 file",
+        shortDesc: "Caiet A4, 48 file, dictando.",
+        longDesc: "Caiet A4 cu 48 file, tip dictando. Coperta rezistentă, file albe de calitate superioară.",
+        price: "3.50 lei",
+        author: "PrintExpress",
+        features: ["Format: A4", "Număr file: 48", "Tip: Dictando", "Gramaj hârtie: 80g/mp", "Copertă: Carton", "Utilizare: Școală, birou, notițe"],
+        images: [
+            "images/products/caiet-a4-48-file-1.jpg",
+            "images/products/caiet-a4-48-file-2.jpg",
+            "images/products/caiet-a4-48-file-3.jpg"
+        ]
+    },
+    {
+        id: "caiet-a5-48-file",
+        categoryId: "papetarie",
+        title: "Caiet A5 48 file",
+        shortDesc: "Caiet A5, 48 file, dictando.",
+        longDesc: "Caiet A5 cu 48 file, tip dictando. Ideal pentru notițe rapide.",
+        price: "2.00 lei",
+        author: "PrintExpress",
+        features: ["Format: A5", "Număr file: 48", "Tip: Dictando", "Gramaj hârtie: 80g/mp", "Copertă: Carton", "Utilizare: Notițe, școală"],
+        images: [
+            "images/products/caiet-a5-48-file-1.jpg",
+            "images/products/caiet-a5-48-file-2.jpg",
+            "images/products/caiet-a5-48-file-3.jpg"
+        ]
+    },
+    {
+        id: "caiet-a5-80-file",
+        categoryId: "papetarie",
+        title: "Caiet A5 80 file",
+        shortDesc: "Caiet A5, 80 file, dictando.",
+        longDesc: "Caiet A5 cu 80 file, tip dictando. Mai multe pagini pentru mai multe notițe.",
+        price: "2.50 lei",
+        author: "PrintExpress",
+        features: ["Format: A5", "Număr file: 80", "Tip: Dictando", "Gramaj hârtie: 80g/mp", "Copertă: Carton", "Utilizare: Școală, birou"],
+        images: [
+            "images/products/caiet-a5-80-file-1.jpg",
+            "images/products/caiet-a5-80-file-2.jpg",
+            "images/products/caiet-a5-80-file-3.jpg"
+        ]
+    },
+    {
+        id: "caiet-24-file",
+        categoryId: "papetarie",
+        title: "Caiet 24 file",
+        shortDesc: "Caiet mic, 24 file, dictando.",
+        longDesc: "Caiet mic, 24 file, tip dictando. Ideal pentru notițe scurte.",
+        price: "1.00 lei",
+        author: "PrintExpress",
+        features: ["Format: Mic (A6)", "Număr file: 24", "Tip: Dictando", "Gramaj hârtie: 80g/mp", "Copertă: Carton", "Utilizare: Notițe rapide"],
+        images: [
+            "images/products/caiet-24-file-1.jpg",
+            "images/products/caiet-24-file-2.jpg",
+            "images/products/caiet-24-file-3.jpg"
+        ]
+    },
+    {
+        id: "caiet-a4-80-file",
+        categoryId: "papetarie",
+        title: "Caiet A4 80 file",
+        shortDesc: "Caiet A4, 80 file, matematică.",
+        longDesc: "Caiet A4, 80 file, tip matematică. Ideal pentru exerciții și calcule.",
+        price: "5.50 lei",
+        author: "PrintExpress",
+        features: ["Format: A4", "Număr file: 80", "Tip: Matematică (pătrățele)", "Gramaj hârtie: 80g/mp", "Copertă: Carton", "Utilizare: Matematică, științe exacte"],
+        images: [
+            "images/products/caiet-a4-80-file-1.jpg",
+            "images/products/caiet-a4-80-file-2.jpg",
+            "images/products/caiet-a4-80-file-3.jpg"
+        ]
+    },
+
+    // --- INSTRUMENTE DE SCRIS ---
+    {
+        id: "pix-albastru",
+        categoryId: "instrumente-scris",
+        title: "Pix albastru",
+        shortDesc: "Pix cu cerneală albastră, vârf 0.7mm.",
+        longDesc: "Pix albastru cu cerneală fluidă, vârf de 0.7mm. Scriere fină și curată.",
+        price: "1.50 lei",
+        author: "PrintExpress",
+        features: ["Culoare: Albastru", "Vârf: 0.7mm", "Tip cerneală: Lichidă", "Brand: Diverse", "Utilizare: Scris zilnic"],
+        images: [
+            "images/products/pix-albastru-1.jpg",
+            "images/products/pix-albastru-2.jpg",
+            "images/products/pix-albastru-3.jpg"
+        ]
+    },
+    {
+        id: "pix-rosu",
+        categoryId: "instrumente-scris",
+        title: "Pix roșu",
+        shortDesc: "Pix cu cerneală roșie, vârf 0.7mm.",
+        longDesc: "Pix roșu cu cerneală fluidă, vârf de 0.7mm. Ideal pentru corecturi.",
+        price: "1.50 lei",
+        author: "PrintExpress",
+        features: ["Culoare: Roșu", "Vârf: 0.7mm", "Tip cerneală: Lichidă", "Brand: Diverse", "Utilizare: Corecturi, notițe"],
+        images: [
+            "images/products/pix-rosu-1.jpg",
+            "images/products/pix-rosu-2.jpg",
+            "images/products/pix-rosu-3.jpg"
+        ]
+    },
+    {
+        id: "stilou",
+        categoryId: "instrumente-scris",
+        title: "Stilou",
+        shortDesc: "Stilou elegant, pentru scris rafinat.",
+        longDesc: "Stilou din metal, cu design elegant. Ideal pentru semnături și cadouri.",
+        price: "35.00 lei",
+        author: "PrintExpress",
+        features: ["Material: Metal", "Culoare: Argintiu", "Tip: Cu cerneală", "Brand: Premium", "Utilizare: Cadou, semnături"],
+        images: [
+            "images/products/stilou-1.jpg",
+            "images/products/stilou-2.jpg",
+            "images/products/stilou-3.jpg"
+        ]
+    },
+    {
+        id: "marker-tabla",
+        categoryId: "instrumente-scris",
+        title: "Marker pentru tablă",
+        shortDesc: "Marker pentru tablă, vârf rotund.",
+        longDesc: "Marker pentru tablă, cu cerneală ștergabilă. Vârf rotund de 2mm.",
+        price: "4.50 lei",
         author: "PrintExpress",
         features: ["Culoare: Negru/Albastru", "Vârf: Rotund 2mm", "Tip cerneală: Ștergabilă", "Brand: Diverse", "Utilizare: Tablă albă"],
-        gallery: ["marker1", "marker2", "marker3"]
+        images: [
+            "images/products/marker-tabla-1.jpg",
+            "images/products/marker-tabla-2.jpg",
+            "images/products/marker-tabla-3.jpg"
+        ]
     },
 
     // --- RECHIZITE ---
@@ -184,7 +321,11 @@ const PRODUCTS = [
         price: "89.00 lei",
         author: "PrintExpress",
         features: ["Conținut: 20+ piese", "Include: Caiete, pixuri, creioane", "Include: Culori, riglă, gumă", "Ciclu: Primar (I-IV)", "Ambalaj: Cutie"],
-        gallery: ["set1", "set2", "set3"]
+        images: [
+            "images/products/set-rechizite-primar-1.jpg",
+            "images/products/set-rechizite-primar-2.jpg",
+            "images/products/set-rechizite-primar-3.jpg"
+        ]
     },
     {
         id: "set-rechizite-gimnaziu",
@@ -195,7 +336,11 @@ const PRODUCTS = [
         price: "129.00 lei",
         author: "PrintExpress",
         features: ["Conținut: 25+ piese", "Include: Caiete specializate", "Include: Instrumente geometrice", "Ciclu: Gimnaziu (V-VIII)", "Ambalaj: Cutie"],
-        gallery: ["set2", "set2", "set2"]
+        images: [
+            "images/products/set-rechizite-gimnaziu-1.jpg",
+            "images/products/set-rechizite-gimnaziu-2.jpg",
+            "images/products/set-rechizite-gimnaziu-3.jpg"
+        ]
     },
 
     // --- ACCESORII BIROU ---
@@ -208,7 +353,11 @@ const PRODUCTS = [
         price: "15.00 lei",
         author: "PrintExpress",
         features: ["Material: Metal", "Culoare: Negru", "Capacitate: 10+ pixuri", "Design: Elegant", "Utilizare: Birou"],
-        gallery: ["suport1", "suport2", "suport3"]
+        images: [
+            "images/products/suport-pixuri-1.jpg",
+            "images/products/suport-pixuri-2.jpg",
+            "images/products/suport-pixuri-3.jpg"
+        ]
     },
     {
         id: "agenda-2024",
@@ -219,7 +368,11 @@ const PRODUCTS = [
         price: "25.00 lei",
         author: "PrintExpress",
         features: ["An: 2024", "Format: A5", "Coperți: Piele ecologică", "Pagini: 200+", "Utilizare: Birou, organizare"],
-        gallery: ["agenda1", "agenda2", "agenda3"]
+        images: [
+            "images/products/agenda-2024-1.jpg",
+            "images/products/agenda-2024-2.jpg",
+            "images/products/agenda-2024-3.jpg"
+        ]
     },
 
     // --- HÂRTIE ---
@@ -232,7 +385,11 @@ const PRODUCTS = [
         price: "25.00 lei",
         author: "PrintExpress",
         features: ["Format: A4", "Gramaj: 80g/mp", "Cantitate: 500 coli", "Culoare: Alb", "Utilizare: Printare, copiere"],
-        gallery: ["hartie1", "hartie2", "hartie3"]
+        images: [
+            "images/products/hartie-a4-1.jpg",
+            "images/products/hartie-a4-2.jpg",
+            "images/products/hartie-a4-3.jpg"
+        ]
     },
     {
         id: "post-it",
@@ -243,10 +400,15 @@ const PRODUCTS = [
         price: "5.00 lei",
         author: "PrintExpress",
         features: ["Dimensiune: 76x76mm", "Culoare: Galben", "Cantitate: 100 file", "Adeziv: Refolosibil", "Utilizare: Notițe rapide"],
-        gallery: ["postit1", "postit2", "postit3"]
+        images: [
+            "images/products/post-it-1.jpg",
+            "images/products/post-it-2.jpg",
+            "images/products/post-it-3.jpg"
+        ]
     }
 ];
 
+// ... (Restul codului rămâne neschimbat)
 // ============================================
 // PRODUSE PERSONALIZABILE - CONFIGURATOR
 // ============================================
