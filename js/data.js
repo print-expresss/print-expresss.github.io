@@ -317,129 +317,40 @@ const PERSONALIZABLE_PRODUCTS = [
         shortDesc: "Breloc cu imaginea ta, în diverse forme și mărimi.",
         basePrice: 25,
         shapes: [
-            {
-                id: "dreptunghiular",
-                label: "Dreptunghiular",
-                priceExtra: 0,
-                layer: "front",
-                baseImage: "images/products/breloc-dreptunghiular.png",
-                coords: [150, 316, 441, 752],
-                borderRadius: "4px"
-            },
-            {
-                id: "rotund",
-                label: "Rotund",
-                priceExtra: 0,
-                layer: "front",
-                baseImage: "images/products/breloc-rotund.png",
-                coords: [210, 190, 470, 450],
-                borderRadius: "50%"
-            },
-            {
-                id: "inima",
-                label: "Inimă",
-                priceExtra: 5,
-                layer: "front",
-                baseImage: "images/products/breloc-inima.png",
-                coords: [130, 150, 270, 330],
-                borderRadius: "0",
-                maskImage: "url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Cpath d=%22M50 90 C20 65 0 40 0 25 C0 10 10 0 25 0 C40 0 50 10 50 25 C50 10 60 0 75 0 C90 0 100 10 100 25 C100 40 80 65 50 90 Z%22/%3E%3C/svg%3E')"
-            },
-            {
-                id: "patrat",
-                label: "Pătrat",
-                priceExtra: 3,
-                layer: "front",
-                baseImage: "images/products/breloc-patrat.png",
-                coords: [314, 270, 852, 806],
-                borderRadius: "6px"
-            }
+            { id: "dreptunghiular", label: "Dreptunghiular", priceExtra: 0, layer: "front", baseImage: "images/products/breloc-dreptunghiular.png", coords: [150, 316, 441, 752], borderRadius: "4px" },
+            { id: "rotund", label: "Rotund", priceExtra: 0, layer: "front", baseImage: "images/products/breloc-rotund.png", coords: [210, 190, 470, 450], borderRadius: "50%" },
+            { id: "inima", label: "Inimă", priceExtra: 5, layer: "front", baseImage: "images/products/breloc-inima.png", coords: [130, 150, 270, 330], borderRadius: "0", maskImage: "url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Cpath d=%22M50 90 C20 65 0 40 0 25 C0 10 10 0 25 0 C40 0 50 10 50 25 C50 10 60 0 75 0 C90 0 100 10 100 25 C100 40 80 65 50 90 Z%22/%3E%3C/svg%3E')" },
+            { id: "patrat", label: "Pătrat", priceExtra: 3, layer: "front", baseImage: "images/products/breloc-patrat.png", coords: [314, 270, 852, 806], borderRadius: "6px" }
         ],
-        sizes: [
-            { id: "mic", label: "Mic (3 cm)", priceExtra: 0 },
-            { id: "mediu", label: "Mediu (5 cm)", priceExtra: 5 },
-            { id: "mare", label: "Mare (7 cm)", priceExtra: 10 }
-        ],
-        materials: [
-            { id: "metal", label: "Metal", priceExtra: 0 },
-            { id: "acrylic", label: "Acrilic", priceExtra: 3 },
-            { id: "lemn", label: "Lemn", priceExtra: 7 }
-        ]
+        sizes: [ { id: "mic", label: "Mic (3 cm)", priceExtra: 0 }, { id: "mediu", label: "Mediu (5 cm)", priceExtra: 5 }, { id: "mare", label: "Mare (7 cm)", priceExtra: 10 } ],
+        materials: [ { id: "metal", label: "Metal", priceExtra: 0 }, { id: "acrylic", label: "Acrilic", priceExtra: 3 }, { id: "lemn", label: "Lemn", priceExtra: 7 } ]
     },
     {
         id: "cana",
         title: "Cană personalizată",
         shortDesc: "Cană ceramică cu imaginea ta preferată.",
         basePrice: 45,
-        shapes: [
-            {
-                id: "clasica",
-                label: "Clasică",
-                priceExtra: 0,
-                layer: "front",
-                baseImage: "images/products/cana-clasica.png",
-                coords: [150, 200, 350, 400],
-                borderRadius: "4px"
-            }
-        ],
-        sizes: [
-            { id: "330", label: "330 ml", priceExtra: 0 },
-            { id: "450", label: "450 ml", priceExtra: 8 }
-        ],
-        materials: [
-            { id: "ceramica", label: "Ceramică", priceExtra: 0 },
-            { id: "ceramica-premium", label: "Ceramică premium", priceExtra: 12 }
-        ]
+        shapes: [ { id: "clasica", label: "Clasică", priceExtra: 0, layer: "front", baseImage: "images/products/cana-clasica.png", coords: [150, 200, 350, 400], borderRadius: "4px" } ],
+        sizes: [ { id: "330", label: "330 ml", priceExtra: 0 }, { id: "450", label: "450 ml", priceExtra: 8 } ],
+        materials: [ { id: "ceramica", label: "Ceramică", priceExtra: 0 }, { id: "ceramica-premium", label: "Ceramică premium", priceExtra: 12 } ]
     },
     {
         id: "rama",
         title: "Ramă foto personalizată",
         shortDesc: "Ramă foto cu imaginea ta preferată.",
         basePrice: 35,
-        shapes: [
-            {
-                id: "dreptunghiular",
-                label: "Dreptunghiular",
-                priceExtra: 0,
-                layer: "front",
-                baseImage: "images/products/rama-dreptunghiular.png",
-                coords: [100, 100, 400, 300],
-                borderRadius: "0"
-            }
-        ],
-        sizes: [
-            { id: "10x15", label: "10x15 cm", priceExtra: 0 },
-            { id: "13x18", label: "13x18 cm", priceExtra: 10 }
-        ],
-        materials: [
-            { id: "lemn", label: "Lemn", priceExtra: 0 },
-            { id: "metal", label: "Metal", priceExtra: 5 }
-        ]
+        shapes: [ { id: "dreptunghiular", label: "Dreptunghiular", priceExtra: 0, layer: "front", baseImage: "images/products/rama-dreptunghiular.png", coords: [100, 100, 400, 300], borderRadius: "0" } ],
+        sizes: [ { id: "10x15", label: "10x15 cm", priceExtra: 0 }, { id: "13x18", label: "13x18 cm", priceExtra: 10 } ],
+        materials: [ { id: "lemn", label: "Lemn", priceExtra: 0 }, { id: "metal", label: "Metal", priceExtra: 5 } ]
     },
     {
         id: "cutie",
         title: "Cutie cadou personalizată",
         shortDesc: "Cutie cadou cu mesajul tău.",
         basePrice: 20,
-        shapes: [
-            {
-                id: "patrata",
-                label: "Pătrată",
-                priceExtra: 0,
-                layer: "front",
-                baseImage: "images/products/cutie-patrata.png",
-                coords: [50, 50, 250, 250],
-                borderRadius: "4px"
-            }
-        ],
-        sizes: [
-            { id: "mica", label: "Mică (10x10 cm)", priceExtra: 0 },
-            { id: "mare", label: "Mare (15x15 cm)", priceExtra: 5 }
-        ],
-        materials: [
-            { id: "carton", label: "Carton", priceExtra: 0 },
-            { id: "lemn", label: "Lemn", priceExtra: 15 }
-        ]
+        shapes: [ { id: "patrata", label: "Pătrată", priceExtra: 0, layer: "front", baseImage: "images/products/cutie-patrata.png", coords: [50, 50, 250, 250], borderRadius: "4px" } ],
+        sizes: [ { id: "mica", label: "Mică (10x10 cm)", priceExtra: 0 }, { id: "mare", label: "Mare (15x15 cm)", priceExtra: 5 } ],
+        materials: [ { id: "carton", label: "Carton", priceExtra: 0 }, { id: "lemn", label: "Lemn", priceExtra: 15 } ]
     }
 ];
 
