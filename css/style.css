@@ -2,17 +2,17 @@
    VARIABILE - MODIFICĂ AICI CULORILE!
    ============================================ */
 :root {
-    --color-primary: #023E8A;
-    --color-secondary: #0077B6;
+    --color-primary: #1e3a8a;
+    --color-secondary: #3b82f6;
     --color-accent: #60a5fa;
     --color-dark: #1e293b;
     --color-light: #f0f9ff;
 
-    --gradient-1: linear-gradient(135deg, #023E8A, #0077B6);
+    --gradient-1: linear-gradient(135deg, #1e3a8a, #3b82f6);
     --gradient-2: linear-gradient(135deg, #1e40af, #60a5fa);
     --gradient-3: linear-gradient(135deg, #3730a3, #818cf8);
     --gradient-4: linear-gradient(135deg, #0c4a6e, #0ea5e9);
-    --gradient-5: linear-gradient(135deg, #023E8A, #06b6d4);
+    --gradient-5: linear-gradient(135deg, #1e3a8a, #06b6d4);
     --gradient-6: linear-gradient(135deg, #312e81, #6366f1);
 }
 
@@ -154,6 +154,7 @@ img { max-width: 100%; display: block; }
     border: none;
     cursor: pointer;
     padding: 0;
+    z-index: 1001;
 }
 .menu-toggle span {
     display: block;
@@ -223,8 +224,38 @@ img { max-width: 100%; display: block; }
 .back-btn:hover .arrow { transform: translateX(-3px); }
 
 /* ============================================
-   HERO & PAGE HERO
+   HERO CU VIDEO
    ============================================ */
+.hero-video {
+    position: relative;
+    overflow: hidden;
+    padding: 8rem 0;
+    background: none;
+}
+.hero-video-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    object-fit: cover;
+}
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(30, 58, 138, 0.6); /* Overlay albastru */
+    z-index: 1;
+}
+.hero-video .hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Restul Hero */
 .hero, .page-hero {
     color: #fff;
     text-align: center;
@@ -233,8 +264,6 @@ img { max-width: 100%; display: block; }
 .hero {
     background: linear-gradient(135deg, var(--color-primary), var(--color-secondary), var(--color-accent));
     padding: 6rem 0;
-    position: relative;
-    overflow: hidden;
 }
 .hero-content h1 { font-size: 2.8rem; margin-bottom: 1rem; font-weight: 700; }
 .hero-content p { font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.95; }
@@ -797,7 +826,7 @@ img { max-width: 100%; display: block; }
     width: 100%;
     display: block;
     line-height: 0;
-    z-index: 0; /* Creează contextul de stacking pentru layere */
+    z-index: 0;
 }
 
 .preview-base-image {
@@ -811,14 +840,13 @@ img { max-width: 100%; display: block; }
     transition: transform 0.3s ease;
 }
 
-/* Când imaginea produsului trebuie să fie deasupra pozei utilizatorului */
 .preview-base-image.layer-front {
     z-index: 3;
 }
 
 .print-area {
     position: absolute;
-    z-index: 2; /* Implicit: poza utilizatorului este deasupra */
+    z-index: 2;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -827,10 +855,9 @@ img { max-width: 100%; display: block; }
     transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-/* Când zona de print trebuie să fie în spatele produsului */
 .print-area.layer-behind {
     z-index: 1;
-    background: transparent; /* Fără fundal gri când e în spate */
+    background: transparent;
 }
 
 .print-area::after {
@@ -1186,6 +1213,69 @@ img { max-width: 100%; display: block; }
     object-fit: contain;
 }
 
+/* --- COMING SOON --- */
+.coming-soon {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 4rem 2rem;
+    background: var(--color-light);
+    border-radius: 16px;
+    border: 2px dashed var(--color-secondary);
+    margin: 1rem auto;
+    width: 100%;
+    animation: fadeInUp 0.6s ease-out both;
+}
+.coming-soon h2 {
+    color: var(--color-primary);
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+.coming-soon p {
+    color: #64748b;
+    font-size: 1.1rem;
+}
+
+/* --- TABEL PREȚURI --- */
+.price-list-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(30,58,138,0.08);
+}
+.price-list-container h2 {
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.price-table th, .price-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+.price-table th {
+    background: var(--color-light);
+    color: var(--color-primary);
+    font-weight: 600;
+}
+.price-table td:last-child {
+    text-align: right;
+    font-weight: 600;
+    color: var(--color-secondary);
+}
+.price-note {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: #64748b;
+    text-align: center;
+    font-style: italic;
+}
+
 /* ============================================
    RESPONSIVE
    ============================================ */
@@ -1209,7 +1299,7 @@ img { max-width: 100%; display: block; }
         overflow: hidden;
         transition: max-height 0.4s ease;
     }
-    .nav.active { max-height: 500px; }
+    .nav.active { max-height: 600px; } /* Am marit putin inaltimea pentru a incapea toate linkurile */
     .nav-list { flex-direction: column; gap: 0; padding: 1rem 0; }
     .nav-list li { width: 100%; text-align: center; }
     .nav-list a { display: block; padding: 1rem; }
@@ -1236,30 +1326,7 @@ img { max-width: 100%; display: block; }
     .preview-hint { font-size: 0.8rem; }
     .config-actions { flex-direction: column; }
     .modal-box { padding: 2rem 1.5rem; }
-}
-/* ============================================
-   STIL PENTRU SECȚIUNI ÎN CONSTRUCȚIE (VA URMA)
-   ============================================ */
-.coming-soon {
-    grid-column: 1 / -1;
-    text-align: center;
-    padding: 4rem 2rem;
-    background: var(--color-light);
-    border-radius: 16px;
-    border: 2px dashed var(--color-secondary);
-    margin: 1rem auto;
-    width: 100%;
-    animation: fadeInUp 0.6s ease-out both;
-}
 
-.coming-soon h2 {
-    color: var(--color-primary);
-    font-size: 2.2rem;
-    margin-bottom: 0.5rem;
-    font-weight: 700;
-}
-
-.coming-soon p {
-    color: #64748b;
-    font-size: 1.1rem;
+    .price-list-container { padding: 1rem; }
+    .price-table th, .price-table td { padding: 0.75rem 0.5rem; font-size: 0.9rem; }
 }
