@@ -211,8 +211,17 @@ function renderServiciiCategorie() {
         document.getElementById('categoryTitle').textContent = category.title;
         document.getElementById('categoryDesc').textContent = category.shortDesc;
         document.title = category.title + ' - Servicii - PrintExpress';
+        
         var hero = document.getElementById('categoryHero');
-        if (hero) hero.classList.add(category.color);
+        if (hero) {
+            if (category.image) {
+                hero.style.backgroundImage = 'url("' + category.image + '")';
+                hero.classList.add('with-image');
+                hero.classList.remove('animated-gradient');
+            } else {
+                hero.classList.add(category.color);
+            }
+        }
 
         renderBreadcrumb([
             { label: 'Acasă', url: 'index.html' },
@@ -240,8 +249,17 @@ function renderProduseCategorie() {
         document.getElementById('categoryTitle').textContent = category.title;
         document.getElementById('categoryDesc').textContent = category.shortDesc;
         document.title = category.title + ' - Produse - PrintExpress';
+        
         var hero = document.getElementById('categoryHero');
-        if (hero) hero.classList.add(category.color);
+        if (hero) {
+            if (category.image) {
+                hero.style.backgroundImage = 'url("' + category.image + '")';
+                hero.classList.add('with-image');
+                hero.classList.remove('animated-gradient');
+            } else {
+                hero.classList.add(category.color);
+            }
+        }
 
         renderBreadcrumb([
             { label: 'Acasă', url: 'index.html' },
