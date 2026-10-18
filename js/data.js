@@ -18,8 +18,7 @@ const PRODUCT_CATEGORIES = [
     { id: "pixuri", title: "Pixuri și stilouri", shortDesc: "Pixuri, stilouri, rezerve și markere.", color: "gradient-2", image: "images/banner-pixuri.jpg" },
     { id: "carti", title: "Cărți", shortDesc: "Beletristică, dezvoltare personală, cărți pentru copii.", color: "gradient-3", image: "images/banner-carti.jpg" },
     { id: "rechizite", title: "Rechizite școlare", shortDesc: "Seturi complete pentru fiecare ciclu școlar.", color: "gradient-4", image: "images/banner-rechizite.jpg" },
-    { id: "accesorii-birou", title: "Accesorii birou", shortDesc: "Suporturi, organizatoare, agende.", color: "gradient-5", image: "images/banner-accesorii.jpg" },
-    { id: "hartie", title: "Hârtie și produse conexe", shortDesc: "Hârtie copiator, post-it, blocnotesuri.", color: "gradient-6", image: "images/banner-hartie.jpg" }
+    { id: "accesorii-birou", title: "Accesorii birou", shortDesc: "Suporturi, organizatoare, agende.", color: "gradient-5", image: "images/banner-accesorii.jpg" }
 ];
 
 const PRODUCTS = [
