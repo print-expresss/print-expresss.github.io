@@ -39,10 +39,22 @@ function initBackButton() {
 // CREARE CARD CATEGORIE
 // ============================================
 function createCategoryCard(cat, count, type) {
-    var url = type === 'servicii'
-        ? 'servicii-categorie.html?id=' + cat.id
-        : 'produse-categorie.html?id=' + cat.id;
-    var label = type === 'servicii' ? 'servicii' : 'produse';
+    var url = '';
+    var label = '';
+
+    // Redirecționăm special către paginile noastre
+    if (cat.id === 'printari') {
+        url = 'printari.html';
+        label = 'Vezi lista';
+    } else if (cat.id === 'obiecte-personalizate') {
+        url = 'obiecte-personalizate.html';
+        label = 'Personalizează';
+    } else {
+        url = type === 'servicii'
+            ? 'servicii-categorie.html?id=' + cat.id
+            : 'produse-categorie.html?id=' + cat.id;
+        label = type === 'servicii' ? 'servicii' : 'produse';
+    }
 
     var div = document.createElement('div');
     div.className = 'category-card';
@@ -54,7 +66,7 @@ function createCategoryCard(cat, count, type) {
             '<div class="category-card-body">' +
                 '<h3>' + cat.title + '</h3>' +
                 '<p>' + cat.shortDesc + '</p>' +
-                '<span class="category-card-count">' + count + ' ' + label + '</span>' +
+                '<span class="category-card-count">' + (count > 0 ? count + ' ' + label : label) + '</span>' +
             '</div>' +
         '</a>';
     return div;
@@ -106,6 +118,7 @@ function renderIndexPreviews() {
         if (typeof COMING_SOON_SERVICES !== 'undefined' && COMING_SOON_SERVICES) {
             servicesPreview.innerHTML = '<div class="coming-soon"><h2>Va urma :)</h2><p>Lucrăm la această secțiune.</p></div>';
         } else {
+            // Afișăm primele 3 servicii
             SERVICE_CATEGORIES.slice(0, 3).forEach(function (cat) {
                 var count = getServicesByCategory(cat.id).length;
                 servicesPreview.appendChild(createCategoryCard(cat, count, 'servicii'));
@@ -166,6 +179,38 @@ function renderProdusePage() {
     });
 }
 
+function renderObiectePersonalizatePage() {
+    var el = document.getElementById('personalizableChoices');
+    if (!el || typeof PERSONALIZABLE_PRODUCTS === 'undefined') return;
+
+    renderBreadcrumb([
+        { label: 'Acasă', url: 'index.html' },
+        { label: 'Servicii', url: 'servicii.html' },
+        { label: 'Obiecte personalizate', url: '#' }
+    ]);
+
+    PERSONALIZABLE_PRODUCTS.forEach(function (product) {
+        var firstShape = product.shapes[0];
+        var thumbImage = firstShape ? firstShape.baseImage : '';
+        var card = document.createElement('div');
+        card.className = 'category-card';
+        card.innerHTML =
+            '<a href="personalizare.html?product=' + product.id + '" class="category-card-link">' +
+                '<div class="category-card-image custom-product-thumb">' +
+                    '<img src="' + thumbImage + '" alt="' + product.title + '" ' +
+                         'onerror="this.parentNode.innerHTML=\'<span class=&quot;icon&quot;>&#9679;</span>\'">' +
+                '</div>' +
+                '<div class="category-card-body">' +
+                    '<h3>' + product.title + '</h3>' +
+                    '<p>' + product.shortDesc + '</p>' +
+                    '<span class="category-card-count">Personalizează &rarr;</span>' +
+                '</div>' +
+            '</a>';
+        el.appendChild(card);
+    });
+}
+
+// (Restul funcțiilor de randare pentru detalii rămân neschimbate)
 function renderServiciiCategorie() {
     var el = document.getElementById('servicesInCategory');
     if (!el || typeof SERVICES === 'undefined') return;
@@ -400,11 +445,12 @@ function initHeaderScroll() {
 // INIT GENERAL
 // ============================================
 document.addEventListener('DOMContentLoaded', function () {
-    // Meniu mobil
+    // Meniu mobil - REPARAT
     var menuToggle = document.querySelector('.menu-toggle');
     var nav = document.querySelector('.nav');
     if (menuToggle && nav) {
-        menuToggle.addEventListener('click', function () {
+        menuToggle.addEventListener('click', function (e) {
+            e.preventDefault();
             menuToggle.classList.toggle('active');
             nav.classList.toggle('active');
         });
@@ -443,6 +489,7 @@ document.addEventListener('DOMContentLoaded', function () {
     renderIndexPreviews();
     renderServiciiPage();
     renderProdusePage();
+    renderObiectePersonalizatePage(); // Adăugat pentru pagina nouă
     renderServiciiCategorie();
     renderProduseCategorie();
     renderServiciuDetalii();
