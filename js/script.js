@@ -42,7 +42,6 @@ function createCategoryCard(cat, count, type) {
     var url = '';
     var label = '';
 
-    // Redirecționăm special către paginile noastre
     if (cat.id === 'printari') {
         url = 'printari.html';
         label = 'Vezi lista';
@@ -56,7 +55,6 @@ function createCategoryCard(cat, count, type) {
         label = type === 'servicii' ? 'servicii' : 'produse';
     }
 
-    // Verificăm dacă avem o imagine definită în data.js
     var imageContent = '<span class="icon">&#9679;</span>';
     
     if (cat.image) {
@@ -99,7 +97,6 @@ function createServiceCard(service) {
 // CREARE CARD PRODUS (CU SUPORT PENTRU IMAGINI)
 // ============================================
 function createProductCard(product, categoryColor) {
-    // Construim calea către imagine pe baza ID-ului
     var imagePath = 'images/products/' + product.id + '.jpg';
     
     var div = document.createElement('div');
@@ -107,7 +104,6 @@ function createProductCard(product, categoryColor) {
     div.innerHTML =
         '<a href="produs-detalii.html?id=' + product.id + '" class="card-link">' +
             '<div class="product-image ' + (categoryColor || 'gradient-1') + '">' +
-                // Aici punem imaginea. Dacă nu o găsește, o ascunde și arată textul
                 '<img src="' + imagePath + '" alt="' + product.title + '" style="width:100%; height:100%; object-fit:cover; position:absolute; top:0; left:0;" onerror="this.style.display=\'none\'">' +
                 '<span style="position:relative; z-index:1; color: #fff; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">' + product.title + '</span>' +
             '</div>' +
@@ -334,7 +330,7 @@ function renderServiciuDetalii() {
 }
 
 // ============================================
-// DETALII PRODUS (CU IMAGINE ȘI SPECIFICAȚII)
+// DETALII PRODUS (CU CARUSEL)
 // ============================================
 function renderProdusDetalii() {
     var el = document.getElementById('productDetails');
@@ -350,21 +346,30 @@ function renderProdusDetalii() {
 
     var category = getProductCategory(product.categoryId);
     var featuresHtml = product.features.map(function (f) { return '<li>' + f + '</li>'; }).join('');
-    var imagePath = 'images/products/' + product.id + '.jpg';
     
-    // Generăm galeria cu imagini (dacă există)
-    var galleryHtml = product.gallery.map(function () {
-        return '<div class="gallery-thumb" style="background-image: url(\'' + imagePath + '\'); background-size: cover; background-position: center;"></div>';
-    }).join('');
+    var slidesHtml = '';
+    var dotsHtml = '';
+    
+    product.images.forEach(function (imgSrc, index) {
+        slidesHtml += 
+            '<div class="carousel-slide">' +
+                '<img src="' + imgSrc + '" alt="' + product.title + ' - Poza ' + (index+1) + '" ' +
+                     'onerror="this.style.display=\'none\'; this.nextElementSibling.style.display=\'block\';">' +
+                '<div class="fallback-text">' + product.title + '</div>' +
+            '</div>';
+            
+        dotsHtml += '<div class="carousel-dot ' + (index === 0 ? 'active' : '') + '" data-index="' + index + '"></div>';
+    });
 
     el.innerHTML =
         '<div class="details-wrapper fade-in-up">' +
             '<div>' +
-                '<div class="details-image-main ' + (category ? category.color : 'gradient-1') + '">' +
-                    '<img src="' + imagePath + '" alt="' + product.title + '" style="width:100%; height:100%; object-fit:cover; position:absolute; top:0; left:0; z-index:1;" onerror="this.style.display=\'none\'">' +
-                    '<span style="position:relative; z-index:2; color: #fff; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">' + product.title + '</span>' +
+                '<div class="carousel-container" id="productCarousel">' +
+                    '<div class="carousel-track" id="carouselTrack">' + slidesHtml + '</div>' +
+                    '<button class="carousel-btn prev" id="carouselPrev">&#10094;</button>' +
+                    '<button class="carousel-btn next" id="carouselNext">&#10095;</button>' +
+                    '<div class="carousel-indicators" id="carouselDots">' + dotsHtml + '</div>' +
                 '</div>' +
-                '<div class="details-gallery">' + galleryHtml + '</div>' +
             '</div>' +
             '<div class="details-content">' +
                 '<h1>' + product.title + '</h1>' +
@@ -390,6 +395,73 @@ function renderProdusDetalii() {
         { label: category ? category.title : 'Categorie', url: 'produse-categorie.html?id=' + product.categoryId },
         { label: product.title, url: '#' }
     ]);
+
+    initCarousel();
+}
+
+// ============================================
+// LOGICA DE CARUSEL (REPARATĂ ȘI ÎNCHISĂ CORECT)
+// ============================================
+function initCarousel() {
+    var track = document.getElementById('carouselTrack');
+    var dots = document.querySelectorAll('.carousel-dot');
+    var prevBtn = document.getElementById('carouselPrev');
+    var nextBtn = document.getElementById('carouselNext');
+    var container = document.getElementById('productCarousel');
+    
+    if (!track || !dots.length) return;
+
+    var currentIndex = 0;
+    var totalSlides = dots.length;
+    var autoPlayInterval;
+
+    function updateCarousel() {
+        track.style.transform = 'translateX(-' + (currentIndex * 100) + '%)';
+        
+        dots.forEach(function (dot, i) {
+            dot.classList.toggle('active', i === currentIndex);
+        });
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        updateCarousel();
+    }
+
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        updateCarousel();
+    }
+
+    function goToSlide(index) {
+        currentIndex = index;
+        updateCarousel();
+    }
+
+    function startAutoPlay() {
+        autoPlayInterval = setInterval(nextSlide, 3000);
+    }
+
+    function stopAutoPlay() {
+        clearInterval(autoPlayInterval);
+    }
+
+    nextBtn.addEventListener('click', function() { stopAutoPlay(); nextSlide(); startAutoPlay(); });
+    prevBtn.addEventListener('click', function() { stopAutoPlay(); prevSlide(); startAutoPlay(); });
+    
+    dots.forEach(function (dot) {
+        dot.addEventListener('click', function() {
+            stopAutoPlay();
+            goToSlide(parseInt(this.dataset.index));
+            startAutoPlay();
+        });
+    });
+
+    container.addEventListener('mouseenter', stopAutoPlay);
+    container.addEventListener('mouseleave', startAutoPlay);
+    container.addEventListener('touchstart', stopAutoPlay);
+
+    startAutoPlay();
 }
 
 // ============================================
