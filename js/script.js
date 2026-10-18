@@ -36,7 +36,7 @@ function initBackButton() {
 }
 
 // ============================================
-// CREARE CARD CATEGORIE
+// CREARE CARD CATEGORIE (CU SUPORT PENTRU IMAGINI)
 // ============================================
 function createCategoryCard(cat, count, type) {
     var url = '';
@@ -56,13 +56,12 @@ function createCategoryCard(cat, count, type) {
         label = type === 'servicii' ? 'servicii' : 'produse';
     }
 
-    // Verificăm dacă avem o imagine specifică pentru acest card
+    // Verificăm dacă avem o imagine definită în data.js
     var imageContent = '<span class="icon">&#9679;</span>';
     
-    if (cat.id === 'printari') {
-        imageContent = '<img src="images/printari-banner.jpg" alt="Printări" style="width: 100%; height: 100%; object-fit: cover;">';
-    } else if (cat.id === 'obiecte-personalizate') {
-        imageContent = '<img src="images/obiecte-banner.jpg" alt="Obiecte personalizate" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display=\'none\'">';
+    if (cat.image) {
+        // Dacă există imagine, o folosim. Dacă apare eroare (poza lipsește), arătăm bulina.
+        imageContent = '<img src="' + cat.image + '" alt="' + cat.title + '" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.parentNode.innerHTML=\'<span class=&quot;icon&quot;>&#9679;</span>\'">';
     }
 
     var div = document.createElement('div');
@@ -219,7 +218,7 @@ function renderObiectePersonalizatePage() {
     });
 }
 
-// (Restul funcțiilor de randare pentru detalii rămân neschimbate)
+// (Restul funcțiilor rămân neschimbate)
 function renderServiciiCategorie() {
     var el = document.getElementById('servicesInCategory');
     if (!el || typeof SERVICES === 'undefined') return;
@@ -454,7 +453,7 @@ function initHeaderScroll() {
 // INIT GENERAL
 // ============================================
 document.addEventListener('DOMContentLoaded', function () {
-    // Meniu mobil - REPARAT
+    // Meniu mobil
     var menuToggle = document.querySelector('.menu-toggle');
     var nav = document.querySelector('.nav');
     if (menuToggle && nav) {
