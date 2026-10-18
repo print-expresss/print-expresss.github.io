@@ -2,7 +2,7 @@
 // ÎNTRERUPĂTOARE PENTRU SECȚIUNI
 // ============================================
 const COMING_SOON_SERVICES = false;
-const COMING_SOON_PRODUCTS = false; // Am setat pe false ca să apară produsele!
+const COMING_SOON_PRODUCTS = false;
 
 // ============================================
 // DATELE SITE-ULUI - PrintExpress
@@ -62,9 +62,6 @@ const SERVICES = [
     }
 ];
 
-// ============================================
-// CATEGORII PRODUSE (Structură Nouă)
-// ============================================
 const PRODUCT_CATEGORIES = [
     { id: "papetarie", title: "Papetărie", shortDesc: "Caiete, agende, carnete, blocnotesuri.", color: "gradient-1" },
     { id: "instrumente-scris", title: "Instrumente de scris", shortDesc: "Pixuri, stilouri, creioane, markere.", color: "gradient-2" },
@@ -73,9 +70,6 @@ const PRODUCT_CATEGORIES = [
     { id: "hartie", title: "Hârtie și produse conexe", shortDesc: "Hârtie copiator, post-it, blocnotesuri.", color: "gradient-5" }
 ];
 
-// ============================================
-// PRODUSE INDIVIDUALE (Bazat pe lista ta)
-// ============================================
 const PRODUCTS = [
     // --- CAIETE ---
     {
@@ -86,14 +80,7 @@ const PRODUCTS = [
         longDesc: "Caiet A4 cu 48 file, tip dictando. Coperta rezistentă, file albe de calitate superioară.",
         price: "3.50 lei",
         author: "PrintExpress",
-        features: [
-            "Format: A4",
-            "Număr file: 48",
-            "Tip: Dictando",
-            "Gramaj hârtie: 80g/mp",
-            "Copertă: Carton",
-            "Utilizare: Școală, birou, notițe"
-        ],
+        features: ["Format: A4", "Număr file: 48", "Tip: Dictando", "Gramaj hârtie: 80g/mp", "Copertă: Carton", "Utilizare: Școală, birou, notițe"],
         gallery: ["caiet1", "caiet2", "caiet3"]
     },
     {
@@ -104,14 +91,7 @@ const PRODUCTS = [
         longDesc: "Caiet A5 cu 48 file, tip dictando. Ideal pentru notițe rapide.",
         price: "2.00 lei",
         author: "PrintExpress",
-        features: [
-            "Format: A5",
-            "Număr file: 48",
-            "Tip: Dictando",
-            "Gramaj hârtie: 80g/mp",
-            "Copertă: Carton",
-            "Utilizare: Notițe, școală"
-        ],
+        features: ["Format: A5", "Număr file: 48", "Tip: Dictando", "Gramaj hârtie: 80g/mp", "Copertă: Carton", "Utilizare: Notițe, școală"],
         gallery: ["caiet2", "caiet2", "caiet3"]
     },
     {
@@ -122,14 +102,7 @@ const PRODUCTS = [
         longDesc: "Caiet A5 cu 80 file, tip dictando. Mai multe pagini pentru mai multe notițe.",
         price: "2.50 lei",
         author: "PrintExpress",
-        features: [
-            "Format: A5",
-            "Număr file: 80",
-            "Tip: Dictando",
-            "Gramaj hârtie: 80g/mp",
-            "Copertă: Carton",
-            "Utilizare: Școală, birou"
-        ],
+        features: ["Format: A5", "Număr file: 80", "Tip: Dictando", "Gramaj hârtie: 80g/mp", "Copertă: Carton", "Utilizare: Școală, birou"],
         gallery: ["caiet3", "caiet2", "caiet3"]
     },
     {
@@ -140,14 +113,7 @@ const PRODUCTS = [
         longDesc: "Caiet mic, 24 file, tip dictando. Ideal pentru notițe scurte.",
         price: "1.00 lei",
         author: "PrintExpress",
-        features: [
-            "Format: Mic (A6)",
-            "Număr file: 24",
-            "Tip: Dictando",
-            "Gramaj hârtie: 80g/mp",
-            "Copertă: Carton",
-            "Utilizare: Notițe rapide"
-        ],
+        features: ["Format: Mic (A6)", "Număr file: 24", "Tip: Dictando", "Gramaj hârtie: 80g/mp", "Copertă: Carton", "Utilizare: Notițe rapide"],
         gallery: ["caiet1", "caiet1", "caiet1"]
     },
     {
@@ -158,14 +124,7 @@ const PRODUCTS = [
         longDesc: "Caiet A4, 80 file, tip matematică. Ideal pentru exerciții și calcule.",
         price: "5.50 lei",
         author: "PrintExpress",
-        features: [
-            "Format: A4",
-            "Număr file: 80",
-            "Tip: Matematică (pătrățele)",
-            "Gramaj hârtie: 80g/mp",
-            "Copertă: Carton",
-            "Utilizare: Matematică, științe exacte"
-        ],
+        features: ["Format: A4", "Număr file: 80", "Tip: Matematică (pătrățele)", "Gramaj hârtie: 80g/mp", "Copertă: Carton", "Utilizare: Matematică, științe exacte"],
         gallery: ["caiet4", "caiet4", "caiet4"]
     },
 
@@ -178,13 +137,7 @@ const PRODUCTS = [
         longDesc: "Pix albastru cu cerneală fluidă, vârf de 0.7mm. Scriere fină și curată.",
         price: "1.50 lei",
         author: "PrintExpress",
-        features: [
-            "Culoare: Albastru",
-            "Vârf: 0.7mm",
-            "Tip cerneală: Lichidă",
-            "Brand: Diverse",
-            "Utilizare: Scris zilnic"
-        ],
+        features: ["Culoare: Albastru", "Vârf: 0.7mm", "Tip cerneală: Lichidă", "Brand: Diverse", "Utilizare: Scris zilnic"],
         gallery: ["pix1", "pix2", "pix3"]
     },
     {
@@ -195,13 +148,7 @@ const PRODUCTS = [
         longDesc: "Pix roșu cu cerneală fluidă, vârf de 0.7mm. Ideal pentru corecturi.",
         price: "1.50 lei",
         author: "PrintExpress",
-        features: [
-            "Culoare: Roșu",
-            "Vârf: 0.7mm",
-            "Tip cerneală: Lichidă",
-            "Brand: Diverse",
-            "Utilizare: Corecturi, notițe"
-        ],
+        features: ["Culoare: Roșu", "Vârf: 0.7mm", "Tip cerneală: Lichidă", "Brand: Diverse", "Utilizare: Corecturi, notițe"],
         gallery: ["pix2", "pix2", "pix2"]
     },
     {
@@ -212,13 +159,7 @@ const PRODUCTS = [
         longDesc: "Stilou din metal, cu design elegant. Ideal pentru semnături și cadouri.",
         price: "35.00 lei",
         author: "PrintExpress",
-        features: [
-            "Material: Metal",
-            "Culoare: Argintiu",
-            "Tip: Cu cerneală",
-            "Brand: Premium",
-            "Utilizare: Cadou, semnături"
-        ],
+        features: ["Material: Metal", "Culoare: Argintiu", "Tip: Cu cerneală", "Brand: Premium", "Utilizare: Cadou, semnături"],
         gallery: ["stilou1", "stilou2", "stilou3"]
     },
     {
@@ -229,13 +170,7 @@ const PRODUCTS = [
         longDesc: "Marker pentru tablă, cu cerneală ștergabilă. Vârf rotund de 2mm.",
         price: "4.50 lei",
         author: "PrintExpress",
-        features: [
-            "Culoare: Negru/Albastru",
-            "Vârf: Rotund 2mm",
-            "Tip cerneală: Ștergabilă",
-            "Brand: Diverse",
-            "Utilizare: Tablă albă"
-        ],
+        features: ["Culoare: Negru/Albastru", "Vârf: Rotund 2mm", "Tip cerneală: Ștergabilă", "Brand: Diverse", "Utilizare: Tablă albă"],
         gallery: ["marker1", "marker2", "marker3"]
     },
 
@@ -248,13 +183,7 @@ const PRODUCTS = [
         longDesc: "Set complet de rechizite pentru elevii din ciclul primar: caiete, pixuri, creioane, culori, riglă, gumă și alte materiale.",
         price: "89.00 lei",
         author: "PrintExpress",
-        features: [
-            "Conținut: 20+ piese",
-            "Include: Caiete, pixuri, creioane",
-            "Include: Culori, riglă, gumă",
-            "Ciclu: Primar (I-IV)",
-            "Ambalaj: Cutie"
-        ],
+        features: ["Conținut: 20+ piese", "Include: Caiete, pixuri, creioane", "Include: Culori, riglă, gumă", "Ciclu: Primar (I-IV)", "Ambalaj: Cutie"],
         gallery: ["set1", "set2", "set3"]
     },
     {
@@ -265,13 +194,7 @@ const PRODUCTS = [
         longDesc: "Set de rechizite pentru gimnaziu: caiete specializate, instrumente geometrice, markere și materiale pentru toate materiile.",
         price: "129.00 lei",
         author: "PrintExpress",
-        features: [
-            "Conținut: 25+ piese",
-            "Include: Caiete specializate",
-            "Include: Instrumente geometrice",
-            "Ciclu: Gimnaziu (V-VIII)",
-            "Ambalaj: Cutie"
-        ],
+        features: ["Conținut: 25+ piese", "Include: Caiete specializate", "Include: Instrumente geometrice", "Ciclu: Gimnaziu (V-VIII)", "Ambalaj: Cutie"],
         gallery: ["set2", "set2", "set2"]
     },
 
@@ -284,13 +207,7 @@ const PRODUCTS = [
         longDesc: "Suport din metal pentru pixuri și creioane. Design elegant, ideal pentru birou.",
         price: "15.00 lei",
         author: "PrintExpress",
-        features: [
-            "Material: Metal",
-            "Culoare: Negru",
-            "Capacitate: 10+ pixuri",
-            "Design: Elegant",
-            "Utilizare: Birou"
-        ],
+        features: ["Material: Metal", "Culoare: Negru", "Capacitate: 10+ pixuri", "Design: Elegant", "Utilizare: Birou"],
         gallery: ["suport1", "suport2", "suport3"]
     },
     {
@@ -301,13 +218,7 @@ const PRODUCTS = [
         longDesc: "Agendă de birou cu coperți premium, pentru anul 2024. Include calendar și pagini pentru notițe.",
         price: "25.00 lei",
         author: "PrintExpress",
-        features: [
-            "An: 2024",
-            "Format: A5",
-            "Coperți: Piele ecologică",
-            "Pagini: 200+",
-            "Utilizare: Birou, organizare"
-        ],
+        features: ["An: 2024", "Format: A5", "Coperți: Piele ecologică", "Pagini: 200+", "Utilizare: Birou, organizare"],
         gallery: ["agenda1", "agenda2", "agenda3"]
     },
 
@@ -320,13 +231,7 @@ const PRODUCTS = [
         longDesc: "Hârtie copiator A4, 80g/mp, 500 coli. Calitate superioară pentru printare.",
         price: "25.00 lei",
         author: "PrintExpress",
-        features: [
-            "Format: A4",
-            "Gramaj: 80g/mp",
-            "Cantitate: 500 coli",
-            "Culoare: Alb",
-            "Utilizare: Printare, copiere"
-        ],
+        features: ["Format: A4", "Gramaj: 80g/mp", "Cantitate: 500 coli", "Culoare: Alb", "Utilizare: Printare, copiere"],
         gallery: ["hartie1", "hartie2", "hartie3"]
     },
     {
@@ -337,13 +242,7 @@ const PRODUCTS = [
         longDesc: "Blocnotes adeziv pentru notițe rapide. Se lipește ușor și se îndepărtează fără urme.",
         price: "5.00 lei",
         author: "PrintExpress",
-        features: [
-            "Dimensiune: 76x76mm",
-            "Culoare: Galben",
-            "Cantitate: 100 file",
-            "Adeziv: Refolosibil",
-            "Utilizare: Notițe rapide"
-        ],
+        features: ["Dimensiune: 76x76mm", "Culoare: Galben", "Cantitate: 100 file", "Adeziv: Refolosibil", "Utilizare: Notițe rapide"],
         gallery: ["postit1", "postit2", "postit3"]
     }
 ];
@@ -352,5 +251,143 @@ const PRODUCTS = [
 // PRODUSE PERSONALIZABILE - CONFIGURATOR
 // ============================================
 const PERSONALIZABLE_PRODUCTS = [
-    // ... (rămân neschimbate)
+    {
+        id: "breloc",
+        title: "Breloc personalizat",
+        shortDesc: "Breloc cu imaginea ta, în diverse forme și mărimi.",
+        basePrice: 25,
+        shapes: [
+            {
+                id: "dreptunghiular",
+                label: "Dreptunghiular",
+                priceExtra: 0,
+                layer: "front",
+                baseImage: "images/products/breloc-dreptunghiular.png",
+                coords: [150, 316, 441, 752],
+                borderRadius: "4px"
+            },
+            {
+                id: "rotund",
+                label: "Rotund",
+                priceExtra: 0,
+                layer: "front",
+                baseImage: "images/products/breloc-rotund.png",
+                coords: [210, 190, 470, 450],
+                borderRadius: "50%"
+            },
+            {
+                id: "inima",
+                label: "Inimă",
+                priceExtra: 5,
+                layer: "front",
+                baseImage: "images/products/breloc-inima.png",
+                coords: [130, 150, 270, 330],
+                borderRadius: "0",
+                maskImage: "url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Cpath d=%22M50 90 C20 65 0 40 0 25 C0 10 10 0 25 0 C40 0 50 10 50 25 C50 10 60 0 75 0 C90 0 100 10 100 25 C100 40 80 65 50 90 Z%22/%3E%3C/svg%3E')"
+            },
+            {
+                id: "patrat",
+                label: "Pătrat",
+                priceExtra: 3,
+                layer: "front",
+                baseImage: "images/products/breloc-patrat.png",
+                coords: [314, 270, 852, 806],
+                borderRadius: "6px"
+            }
+        ],
+        sizes: [
+            { id: "mic", label: "Mic (3 cm)", priceExtra: 0 },
+            { id: "mediu", label: "Mediu (5 cm)", priceExtra: 5 },
+            { id: "mare", label: "Mare (7 cm)", priceExtra: 10 }
+        ],
+        materials: [
+            { id: "metal", label: "Metal", priceExtra: 0 },
+            { id: "acrylic", label: "Acrilic", priceExtra: 3 },
+            { id: "lemn", label: "Lemn", priceExtra: 7 }
+        ]
+    },
+    {
+        id: "cana",
+        title: "Cană personalizată",
+        shortDesc: "Cană ceramică cu imaginea ta preferată.",
+        basePrice: 45,
+        shapes: [
+            {
+                id: "clasica",
+                label: "Clasică",
+                priceExtra: 0,
+                layer: "front",
+                baseImage: "images/products/cana-clasica.png",
+                coords: [150, 200, 350, 400],
+                borderRadius: "4px"
+            }
+        ],
+        sizes: [
+            { id: "330", label: "330 ml", priceExtra: 0 },
+            { id: "450", label: "450 ml", priceExtra: 8 }
+        ],
+        materials: [
+            { id: "ceramica", label: "Ceramică", priceExtra: 0 },
+            { id: "ceramica-premium", label: "Ceramică premium", priceExtra: 12 }
+        ]
+    },
+    {
+        id: "rama",
+        title: "Ramă foto personalizată",
+        shortDesc: "Ramă foto cu imaginea ta preferată.",
+        basePrice: 35,
+        shapes: [
+            {
+                id: "dreptunghiular",
+                label: "Dreptunghiular",
+                priceExtra: 0,
+                layer: "front",
+                baseImage: "images/products/rama-dreptunghiular.png",
+                coords: [100, 100, 400, 300],
+                borderRadius: "0"
+            }
+        ],
+        sizes: [
+            { id: "10x15", label: "10x15 cm", priceExtra: 0 },
+            { id: "13x18", label: "13x18 cm", priceExtra: 10 }
+        ],
+        materials: [
+            { id: "lemn", label: "Lemn", priceExtra: 0 },
+            { id: "metal", label: "Metal", priceExtra: 5 }
+        ]
+    },
+    {
+        id: "cutie",
+        title: "Cutie cadou personalizată",
+        shortDesc: "Cutie cadou cu mesajul tău.",
+        basePrice: 20,
+        shapes: [
+            {
+                id: "patrata",
+                label: "Pătrată",
+                priceExtra: 0,
+                layer: "front",
+                baseImage: "images/products/cutie-patrata.png",
+                coords: [50, 50, 250, 250],
+                borderRadius: "4px"
+            }
+        ],
+        sizes: [
+            { id: "mica", label: "Mică (10x10 cm)", priceExtra: 0 },
+            { id: "mare", label: "Mare (15x15 cm)", priceExtra: 5 }
+        ],
+        materials: [
+            { id: "carton", label: "Carton", priceExtra: 0 },
+            { id: "lemn", label: "Lemn", priceExtra: 15 }
+        ]
+    }
 ];
+
+// ============================================
+// FUNCȚII UTILITARE
+// ============================================
+function getServiceCategory(id) { return SERVICE_CATEGORIES.find(function (c) { return c.id === id; }); }
+function getProductCategory(id) { return PRODUCT_CATEGORIES.find(function (c) { return c.id === id; }); }
+function getServicesByCategory(id) { return SERVICES.filter(function (s) { return s.categoryId === id; }); }
+function getProductsByCategory(id) { return PRODUCTS.filter(function (p) { return p.categoryId === id; }); }
+function getPersonalizableProduct(id) { return PERSONALIZABLE_PRODUCTS.find(function (p) { return p.id === id; }); }
