@@ -81,7 +81,11 @@ const PRODUCTS = [
         price: "1.50 lei",
         author: "PrintExpress",
         features: ["Format: A5", "Număr file: 48", "Tip: Dictando", "Gramaj hârtie: 65-70g/mp", "Copertă: Carton", "Utilizare: Școală, birou, notițe"],
-        gallery: ["caiet1", "caiet2", "caiet3"]
+        images: [
+            "images/products/caiet-a5-48-file-1.jpg",
+            "images/products/caiet-a5-48-file-2.jpg",
+            "images/products/caiet-a5-48-file-3.jpg"
+        ]
     },
     {
         id: "caiet-a4-48-file",
@@ -92,115 +96,10 @@ const PRODUCTS = [
         price: "2.00 lei",
         author: "PrintExpress",
         features: ["Format: A4", "Număr file: 48", "Tip: Dictando", "Gramaj hârtie: 80g/mp", "Copertă: Carton", "Utilizare: Notițe, școală"],
-        gallery: ["caiet2", "caiet2", "caiet3"]
-    },
-    {
-        id: "caiet-a5-80-file",
-        categoryId: "papetarie",
-        title: "Caiet A5 80 file",
-        shortDesc: "Caiet A5, 80 file, dictando.",
-        longDesc: "Caiet A5 cu 80 file, tip dictando. Mai multe pagini pentru mai multe notițe.",
-        price: "2.50 lei",
-        author: "PrintExpress",
-        features: ["Format: A5", "Număr file: 80", "Tip: Dictando", "Gramaj hârtie: 80g/mp", "Copertă: Carton", "Utilizare: Școală, birou"],
-        gallery: ["caiet3", "caiet2", "caiet3"]
-    },
-    {
-        id: "caiet-24-file",
-        categoryId: "papetarie",
-        title: "Caiet 24 file",
-        shortDesc: "Caiet mic, 24 file, dictando.",
-        longDesc: "Caiet mic, 24 file, tip dictando. Ideal pentru notițe scurte.",
-        price: "1.00 lei",
-        author: "PrintExpress",
-        features: ["Format: Mic (A6)", "Număr file: 24", "Tip: Dictando", "Gramaj hârtie: 80g/mp", "Copertă: Carton", "Utilizare: Notițe rapide"],
-        gallery: ["caiet1", "caiet1", "caiet1"]
-    },
-    {
-        id: "caiet-a4-80-file",
-        categoryId: "papetarie",
-        title: "Caiet A4 80 file",
-        shortDesc: "Caiet A4, 80 file, matematică.",
-        longDesc: "Caiet A4, 80 file, tip matematică. Ideal pentru exerciții și calcule.",
-        price: "5.50 lei",
-        author: "PrintExpress",
-        features: ["Format: A4", "Număr file: 80", "Tip: Matematică (pătrățele)", "Gramaj hârtie: 80g/mp", "Copertă: Carton", "Utilizare: Matematică, științe exacte"],
-        gallery: ["caiet4", "caiet4", "caiet4"]
-    },
-
-    // --- INSTRUMENTE DE SCRIS ---
-    {
-        id: "pix-albastru",
-        categoryId: "instrumente-scris",
-        title: "Pix albastru",
-        shortDesc: "Pix cu cerneală albastră, vârf 0.7mm.",
-        longDesc: "Pix albastru cu cerneală fluidă, vârf de 0.7mm. Scriere fină și curată.",
-        price: "1.50 lei",
-        author: "PrintExpress",
-        features: ["Culoare: Albastru", "Vârf: 0.7mm", "Tip cerneală: Lichidă", "Brand: Diverse", "Utilizare: Scris zilnic"],
-        gallery: ["pix1", "pix2", "pix3"]
-    },
-    {
-        id: "pix-rosu",
-        categoryId: "instrumente-scris",
-        title: "Pix roșu",
-        shortDesc: "Pix cu cerneală roșie, vârf 0.7mm.",
-        longDesc: "Pix roșu cu cerneală fluidă, vârf de 0.7mm. Ideal pentru corecturi.",
-        price: "1.50 lei",
-        author: "PrintExpress",
-        features: ["Culoare: Roșu", "Vârf: 0.7mm", "Tip cerneală: Lichidă", "Brand: Diverse", "Utilizare: Corecturi, notițe"],
-        gallery: ["pix2", "pix2", "pix2"]
-    },
-    {
-        id: "stilou",
-        categoryId: "instrumente-scris",
-        title: "Stilou",
-        shortDesc: "Stilou elegant, pentru scris rafinat.",
-        longDesc: "Stilou din metal, cu design elegant. Ideal pentru semnături și cadouri.",
-        price: "35.00 lei",
-        author: "PrintExpress",
-        features: ["Material: Metal", "Culoare: Argintiu", "Tip: Cu cerneală", "Brand: Premium", "Utilizare: Cadou, semnături"],
-        gallery: ["stilou1", "stilou2", "stilou3"]
-    },
-    {
-        id: "marker-tabla",
-        categoryId: "instrumente-scris",
-        title: "Marker pentru tablă",
-        shortDesc: "Marker pentru tablă, vârf rotund.",
-        longDesc: "Marker pentru tablă, cu cerneală ștergabilă. Vârf rotund de 2mm.",
-        price: "4.50 lei",
-// ... (Restul codului de sus rămâne neschimbat)
-
-const PRODUCTS = [
-    // --- CAIETE ---
-    {
-        id: "caiet-a4-48-file",
-        categoryId: "papetarie",
-        title: "Caiet A4 48 file",
-        shortDesc: "Caiet A4, 48 file, dictando.",
-        longDesc: "Caiet A4 cu 48 file, tip dictando. Coperta rezistentă, file albe de calitate superioară.",
-        price: "3.50 lei",
-        author: "PrintExpress",
-        features: ["Format: A4", "Număr file: 48", "Tip: Dictando", "Gramaj hârtie: 80g/mp", "Copertă: Carton", "Utilizare: Școală, birou, notițe"],
         images: [
             "images/products/caiet-a4-48-file-1.jpg",
             "images/products/caiet-a4-48-file-2.jpg",
             "images/products/caiet-a4-48-file-3.jpg"
-        ]
-    },
-    {
-        id: "caiet-a5-48-file",
-        categoryId: "papetarie",
-        title: "Caiet A5 48 file",
-        shortDesc: "Caiet A5, 48 file, dictando.",
-        longDesc: "Caiet A5 cu 48 file, tip dictando. Ideal pentru notițe rapide.",
-        price: "2.00 lei",
-        author: "PrintExpress",
-        features: ["Format: A5", "Număr file: 48", "Tip: Dictando", "Gramaj hârtie: 80g/mp", "Copertă: Carton", "Utilizare: Notițe, școală"],
-        images: [
-            "images/products/caiet-a5-48-file-1.jpg",
-            "images/products/caiet-a5-48-file-2.jpg",
-            "images/products/caiet-a5-48-file-3.jpg"
         ]
     },
     {
@@ -408,7 +307,6 @@ const PRODUCTS = [
     }
 ];
 
-// ... (Restul codului rămâne neschimbat)
 // ============================================
 // PRODUSE PERSONALIZABILE - CONFIGURATOR
 // ============================================
