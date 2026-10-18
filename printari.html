@@ -1,1 +1,97 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Printări - Listă de prețuri - PrintExpress</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
 
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Logo PrintExpress" class="logo-img" onerror="this.style.display='none'">
+                <span class="logo-text">PrintExpress</span>
+            </a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="servicii.html">Servicii</a></li>
+                    <li><a href="produse.html">Produse</a></li>
+                    <li><a href="personalizare.html">Personalizare</a></li>
+                    <li><a href="index.html#despre">Despre Noi</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="index.html#unde-ne-gasiti">Unde ne găsiți</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" aria-label="Meniu"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+
+    <div class="breadcrumb-bar">
+        <div class="container">
+            <ul class="breadcrumb" id="breadcrumb"></ul>
+        </div>
+    </div>
+
+    <section class="page-hero animated-gradient">
+        <div class="container fade-in-up">
+            <h1>Printări - Listă de prețuri</h1>
+            <p>Prețuri orientative pentru serviciile noastre de printare</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="back-actions">
+                <a href="servicii.html" class="back-btn">
+                    <span class="arrow">&larr;</span> Înapoi la servicii
+                </a>
+            </div>
+            
+            <!-- AICI POȚI PUNE TU LISTA DE PREȚURI -->
+            <div class="price-list-container">
+                <h2>Lista de prețuri</h2>
+                <table class="price-table">
+                    <thead>
+                        <tr>
+                            <th>Serviciu</th>
+                            <th>Preț</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Print A4 alb-negru</td><td>0.50 lei / pagină</td></tr>
+                        <tr><td>Print A4 color</td><td>1.50 lei / pagină</td></tr>
+                        <tr><td>Print A3 color</td><td>3.00 lei / pagină</td></tr>
+                        <tr><td>Print foto A4 (hârtie premium)</td><td>5.00 lei / pagină</td></tr>
+                        <tr><td>Print foto A3 (hârtie premium)</td><td>10.00 lei / pagină</td></tr>
+                        <tr><td>Plastifiere A4</td><td>3.00 lei / pagină</td></tr>
+                        <tr><td>Legare spirală</td><td>8.00 lei / document</td></tr>
+                        <tr><td>Copiere acte</td><td>0.50 lei / pagină</td></tr>
+                    </tbody>
+                </table>
+                <p class="price-note">* Prețurile sunt orientative. Pentru comenzi mari, contactați-ne pentru ofertă personalizată.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <ul class="footer-nav">
+                <li><a href="index.html">Acasă</a></li>
+                <li><a href="servicii.html">Servicii</a></li>
+                <li><a href="produse.html">Produse</a></li>
+                <li><a href="personalizare.html">Personalizare</a></li>
+                <li><a href="index.html#despre">Despre Noi</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="index.html#unde-ne-gasiti">Unde ne găsiți</a></li>
+            </ul>
+            <p>&copy; <span id="currentYear"></span> PrintExpress. Toate drepturile rezervate.</p>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
