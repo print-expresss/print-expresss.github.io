@@ -1,6 +1,3 @@
-// ============================================
-// UTILITARE
-// ============================================
 function getQueryParam(param) {
     var urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(param);
@@ -35,9 +32,6 @@ function initBackButton() {
     }
 }
 
-// ============================================
-// CREARE CARD CATEGORIE
-// ============================================
 function createCategoryCard(cat, count, type) {
     var url = '';
     var label = '';
@@ -49,14 +43,11 @@ function createCategoryCard(cat, count, type) {
         url = 'obiecte-personalizate.html';
         label = 'Personalizează';
     } else {
-        url = type === 'servicii'
-            ? 'servicii-categorie.html?id=' + cat.id
-            : 'produse-categorie.html?id=' + cat.id;
+        url = type === 'servicii' ? 'servicii-categorie.html?id=' + cat.id : 'produse-categorie.html?id=' + cat.id;
         label = type === 'servicii' ? 'servicii' : 'produse';
     }
 
     var imageContent = '<span class="icon">&#9679;</span>';
-    
     if (cat.image) {
         imageContent = '<img src="' + cat.image + '" alt="' + cat.title + '" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.parentNode.innerHTML=\'<span class=&quot;icon&quot;>&#9679;</span>\'">';
     }
@@ -65,9 +56,7 @@ function createCategoryCard(cat, count, type) {
     div.className = 'category-card';
     div.innerHTML =
         '<a href="' + url + '" class="category-card-link">' +
-            '<div class="category-card-image ' + cat.color + '">' +
-                imageContent +
-            '</div>' +
+            '<div class="category-card-image ' + cat.color + '">' + imageContent + '</div>' +
             '<div class="category-card-body">' +
                 '<h3>' + cat.title + '</h3>' +
                 '<p>' + cat.shortDesc + '</p>' +
@@ -77,9 +66,6 @@ function createCategoryCard(cat, count, type) {
     return div;
 }
 
-// ============================================
-// CREARE CARD SERVICIU
-// ============================================
 function createServiceCard(service) {
     var div = document.createElement('div');
     div.className = 'card';
@@ -93,11 +79,10 @@ function createServiceCard(service) {
     return div;
 }
 
-// ============================================
-// CREARE CARD PRODUS (CU SUPORT PENTRU IMAGINI)
-// ============================================
 function createProductCard(product, categoryColor) {
-    var imagePath = 'images/products/' + product.id + '.jpg';
+    var imagePath = (product.images && product.images.length > 0) 
+        ? product.images[0] 
+        : 'images/products/placeholder.jpg';
     
     var div = document.createElement('div');
     div.className = 'card product-card';
@@ -117,9 +102,6 @@ function createProductCard(product, categoryColor) {
     return div;
 }
 
-// ============================================
-// RANDARE PAGINI
-// ============================================
 function renderIndexPreviews() {
     var servicesPreview = document.getElementById('servicesPreview');
     if (servicesPreview && typeof SERVICE_CATEGORIES !== 'undefined') {
@@ -329,9 +311,6 @@ function renderServiciuDetalii() {
     ]);
 }
 
-// ============================================
-// DETALII PRODUS (CU CARUSEL)
-// ============================================
 function renderProdusDetalii() {
     var el = document.getElementById('productDetails');
     if (!el || typeof PRODUCTS === 'undefined') return;
@@ -399,9 +378,6 @@ function renderProdusDetalii() {
     initCarousel();
 }
 
-// ============================================
-// LOGICA DE CARUSEL (REPARATĂ ȘI ÎNCHISĂ CORECT)
-// ============================================
 function initCarousel() {
     var track = document.getElementById('carouselTrack');
     var dots = document.querySelectorAll('.carousel-dot');
@@ -417,7 +393,6 @@ function initCarousel() {
 
     function updateCarousel() {
         track.style.transform = 'translateX(-' + (currentIndex * 100) + '%)';
-        
         dots.forEach(function (dot, i) {
             dot.classList.toggle('active', i === currentIndex);
         });
@@ -464,9 +439,6 @@ function initCarousel() {
     startAutoPlay();
 }
 
-// ============================================
-// ANIMAȚII LA SCROLL
-// ============================================
 function initScrollAnimations() {
     var els = document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right');
     if (!els.length) return;
@@ -530,11 +502,7 @@ function initHeaderScroll() {
     });
 }
 
-// ============================================
-// INIT GENERAL
-// ============================================
 document.addEventListener('DOMContentLoaded', function () {
-    // Meniu mobil
     var menuToggle = document.querySelector('.menu-toggle');
     var nav = document.querySelector('.nav');
     if (menuToggle && nav) {
@@ -551,11 +519,9 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // An curent
     var yearEl = document.getElementById('currentYear');
     if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-    // Formular
     var contactForm = document.getElementById('contactForm');
     var formStatus = document.getElementById('formStatus');
     if (contactForm && formStatus) {
@@ -574,7 +540,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Randare pagini
     renderIndexPreviews();
     renderServiciiPage();
     renderProdusePage();
@@ -584,7 +549,6 @@ document.addEventListener('DOMContentLoaded', function () {
     renderServiciuDetalii();
     renderProdusDetalii();
 
-    // Utilitare
     initBackButton();
     initHeaderScroll();
     initScrollAnimations();
