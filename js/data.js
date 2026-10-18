@@ -3,7 +3,7 @@
 // Schimbă în "false" când vrei să activezi secțiunea!
 // ============================================
 const COMING_SOON_SERVICES = false; // Serviciile sunt active
-const COMING_SOON_PRODUCTS = true;  // Produsele sunt în lucru ("Va urma")
+const COMING_SOON_PRODUCTS = false;  // Produsele sunt în lucru ("Va urma")
 
 // ============================================
 // DATELE SITE-ULUI - PrintExpress
