@@ -24,199 +24,166 @@ const PRODUCT_CATEGORIES = [
 const PRODUCTS = [
     // --- CAIETE ---
     {
-        id: "caiet-a5-48-file",
+        id: "caiet-a5-48-file-dictando",
         categoryId: "caiete",
-        title: "Caiet NEBO A5 48 file",
+        title: " ",
         shortDesc: "Caiet A5, 48 file, dictando, 65-70 g/mp.",
         longDesc: "Caiet A5 cu 48 file, tip dictando, 65-70 g/mp. Coperta rezistentă, file albe de calitate superioară.",
         price: "1.50 lei",
         author: "PrintExpress",
         features: ["Format: A5", "Număr file: 48", "Tip: Dictando", "Gramaj hârtie: 65-70g/mp", "Copertă: Carton", "Utilizare: Școală, birou, notițe"],
-        images: ["images/products/caiet-a5-48-file-1.jpg", "images/products/caiet-a5-48-file-2.jpg", "images/products/caiet-a5-48-file-3.jpg"]
+        images: ["images/products/caiete/caiet-a5-48-file-1.jpg", "images/products/caiete/caiet-a5-48-file-2.jpg", "images/products/caiete/caiet-a5-48-file-3.jpg"]
     },
     {
-        id: "caiet-a4-48-file",
+        id: "caiet-a5-48-file-mate",
         categoryId: "caiete",
-        title: "Caiet A4 48 file",
-        shortDesc: "Caiet A4, 48 file, dictando.",
+        title: " ",
+        shortDesc: "Caiet A5, 48 file, mate, 65-70 g/mp.",
+        longDesc: "Caiet A5 cu 48 file, tip mate, 65-70 g/mp. Coperta rezistentă, file albe de calitate superioară.",
+        price: "1.50 lei",
+        author: "PrintExpress",
+        features: ["Format: A5", "Număr file: 48", "Tip: Mate", "Gramaj hârtie: 65-70g/mp", "Copertă: Carton Laminat", "Utilizare: Școală, birou, notițe"],
+        images: ["images/products/caiete/caietm-a5-48-file-1.jpg"]
+    },
+    {
+        id: "caietm-a4-80-file-s1",
+        categoryId: "caiete",
+        title: " ",
+        shortDesc: "Caiet A4, 80 file, matematica.",
         longDesc: "Caiet A4 cu 48 file, tip dictando. Ideal pentru notițe rapide.",
+        price: "7.00 lei",
+        author: "PrintExpress",
+        features: ["Format: A4", "Număr file: 80", "Tip: Matematica cu spirala", "Gramaj hârtie: 80g/mp", "Copertă: Carton", "Utilizare: Notițe, școală"],
+        images: ["images/products/caiete/caietm-a4-80-file-s1.jpeg", "images/products/caiete/caietm-a4-80-file-s2.jpeg"]
+    },
+    {
+        id: "caiet-a5-48-file",
+        categoryId: "caiete",
+        title: " ",
+        shortDesc: "Caiet A5, 48 file, velin.",
+        longDesc: "Caiet A5 cu 48 file, tip velin. Mai multe pagini pentru mai multe notițe.",
+        price: "1.50 lei",
+        author: "PrintExpress",
+        features: ["Format: A5", "Număr file: 48", "Tip: Velin", "Gramaj hârtie: 80g/mp", "Copertă: Carton", "Utilizare: Școală, birou"],
+        images: ["images/products/caiete/caietv-a5-48-file-1.jpg"]
+    },
+    {
+        id: "caiet-a4-48-file-aritmetica",
+        categoryId: "caiete",
+        title: " ",
+        shortDesc: "Caiet mic, 48 file, aritmetica.",
+        longDesc: "Caiet mic, 48 file, tip aritmetica.",
         price: "2.00 lei",
         author: "PrintExpress",
-        features: ["Format: A4", "Număr file: 48", "Tip: Dictando", "Gramaj hârtie: 80g/mp", "Copertă: Carton", "Utilizare: Notițe, școală"],
-        images: ["images/products/caiet-a4-48-file-1.jpg", "images/products/caiet-a4-48-file-2.jpg", "images/products/caiet-a4-48-file-3.jpg"]
-    },
-    {
-        id: "caiet-a5-80-file",
-        categoryId: "caiete",
-        title: "Caiet A5 80 file",
-        shortDesc: "Caiet A5, 80 file, dictando.",
-        longDesc: "Caiet A5 cu 80 file, tip dictando. Mai multe pagini pentru mai multe notițe.",
-        price: "2.50 lei",
-        author: "PrintExpress",
-        features: ["Format: A5", "Număr file: 80", "Tip: Dictando", "Gramaj hârtie: 80g/mp", "Copertă: Carton", "Utilizare: Școală, birou"],
-        images: ["images/products/caiet-a5-80-file-1.jpg", "images/products/caiet-a5-80-file-2.jpg", "images/products/caiet-a5-80-file-3.jpg"]
-    },
-    {
-        id: "caiet-24-file",
-        categoryId: "caiete",
-        title: "Caiet 24 file",
-        shortDesc: "Caiet mic, 24 file, dictando.",
-        longDesc: "Caiet mic, 24 file, tip dictando. Ideal pentru notițe scurte.",
-        price: "1.00 lei",
-        author: "PrintExpress",
-        features: ["Format: Mic (A6)", "Număr file: 24", "Tip: Dictando", "Gramaj hârtie: 80g/mp", "Copertă: Carton", "Utilizare: Notițe rapide"],
-        images: ["images/products/caiet-24-file-1.jpg", "images/products/caiet-24-file-2.jpg", "images/products/caiet-24-file-3.jpg"]
-    },
-    {
-        id: "caiet-a4-80-file",
-        categoryId: "caiete",
-        title: "Caiet A4 80 file",
-        shortDesc: "Caiet A4, 80 file, matematică.",
-        longDesc: "Caiet A4, 80 file, tip matematică. Ideal pentru exerciții și calcule.",
-        price: "5.50 lei",
-        author: "PrintExpress",
-        features: ["Format: A4", "Număr file: 80", "Tip: Matematică (pătrățele)", "Gramaj hârtie: 80g/mp", "Copertă: Carton", "Utilizare: Matematică, științe exacte"],
-        images: ["images/products/caiet-a4-80-file-1.jpg", "images/products/caiet-a4-80-file-2.jpg", "images/products/caiet-a4-80-file-3.jpg"]
+        features: ["Format: Mic (A5)", "Număr file:48", "Tip: Matematica", "Gramaj hârtie: 80g/mp", "Copertă: Polipropilena(plastic)"],
+        images: ["images/products/caiete/caiet-a5-48-file-aritmetica.jpeg"]
     },
 
     // --- PIXURI ---
     {
         id: "pix-albastru",
         categoryId: "pixuri",
-        title: "Pix albastru",
-        shortDesc: "Pix cu cerneală albastră, vârf 0.7mm.",
+        title: "",
+        shortDesc: "Pix semigel retractabil, albastru, vârf 0.7mm.",
         longDesc: "Pix albastru cu cerneală fluidă, vârf de 0.7mm. Scriere fină și curată.",
-        price: "1.50 lei",
+        price: "5 lei",
         author: "PrintExpress",
-        features: ["Culoare: Albastru", "Vârf: 0.7mm", "Tip cerneală: Lichidă", "Brand: Diverse", "Utilizare: Scris zilnic"],
-        images: ["images/products/pix-albastru-1.jpg", "images/products/pix-albastru-2.jpg", "images/products/pix-albastru-3.jpg"]
+        features: ["Culoare: Albastru", "Vârf: 0.7mm", "Tip cerneală: semigel", "Brand: Faber Castell", "Utilizare: Scris zilnic"],
+        images: ["images/products/pixuri/pix-albastru-1.jpg"]
     },
     {
-        id: "pix-rosu",
+        id: "highligher-pelikan",
         categoryId: "pixuri",
-        title: "Pix roșu",
-        shortDesc: "Pix cu cerneală roșie, vârf 0.7mm.",
-        longDesc: "Pix roșu cu cerneală fluidă, vârf de 0.7mm. Ideal pentru corecturi.",
-        price: "1.50 lei",
+        title: " ",
+        shortDesc: "Highlighter Pelikan",
+        longDesc: "Highlighter Pelikan, cu 3 moduri de scriere diferita datorita varfului special",
+        price: "4.00 lei",
         author: "PrintExpress",
-        features: ["Culoare: Roșu", "Vârf: 0.7mm", "Tip cerneală: Lichidă", "Brand: Diverse", "Utilizare: Corecturi, notițe"],
-        images: ["images/products/pix-rosu-1.jpg", "images/products/pix-rosu-2.jpg", "images/products/pix-rosu-3.jpg"]
+        features: ["Culoare: Roz/Galben/Oranj/Verde/Albatru/Rosu", "Tip cerneală: Lichidă, Reincarcabil", "Brand: Pelikan", "Utilizare: Evidentiere text"],
+        images: ["images/products/pixuri/highlighter-pelikan-1.jpg"]
     },
     {
-        id: "stilou",
+        id: "pix-frixion",
         categoryId: "pixuri",
-        title: "Stilou",
-        shortDesc: "Stilou elegant, pentru scris rafinat.",
-        longDesc: "Stilou din metal, cu design elegant. Ideal pentru semnături și cadouri.",
-        price: "35.00 lei",
+        title: " ",
+        shortDesc: "Pix Frixion Fineliner, diverse culori",
+        longDesc: "Pix Frixion cu stergere prin frecare.",
+        price: "12.00 lei",
         author: "PrintExpress",
-        features: ["Material: Metal", "Culoare: Argintiu", "Tip: Cu cerneală", "Brand: Premium", "Utilizare: Cadou, semnături"],
-        images: ["images/products/stilou-1.jpg", "images/products/stilou-2.jpg", "images/products/stilou-3.jpg"]
+        features: ["Dimensiune scriere: 0.45mm", "Culoare: Diverse", "Tip: Cu cerneală", "Brand: Frixion", "Utilizare: Scriere zilnica"],
+        images: ["images/products/pixuri/pix-frixion-1.jpg", "images/products/pixuri/pix-frixion-2.jpg", "images/products/pixuri/pix-frixion-3.jpg", "images/products/pixuri/pix-frixion-4.jpg", "images/products/pixuri/pix-frixion-5.jpg"]
     },
     {
         id: "marker-tabla",
         categoryId: "pixuri",
-        title: "Marker pentru tablă",
-        shortDesc: "Marker pentru tablă, vârf rotund.",
-        longDesc: "Marker pentru tablă, cu cerneală ștergabilă. Vârf rotund de 2mm.",
-        price: "4.50 lei",
+        title: " ",
+        shortDesc: "Marker pentru tablă, vârf rotund(F) sau ascutit(M).",
+        longDesc: "Marker pentru tablă, cu cerneală ștergabilă. Vârf rotund(F) sau ascutit(M).",
+        price: "5.50 lei",
         author: "PrintExpress",
-        features: ["Culoare: Negru/Albastru", "Vârf: Rotund 2mm", "Tip cerneală: Ștergabilă", "Brand: Diverse", "Utilizare: Tablă albă"],
-        images: ["images/products/marker-tabla-1.jpg", "images/products/marker-tabla-2.jpg", "images/products/marker-tabla-3.jpg"]
+        features: ["Culoare: Negru/Albastru/Rosu/Verde", "Vârf: Rotund(F)/Ascutit(M)", "Tip cerneală: Ștergabilă", "Brand: Pelikan", "Utilizare: Tablă albă"],
+        images: ["images/products/pixuri/marker-tabla-pelikan-1.jpg"]
     },
 
     // --- CĂRȚI ---
     {
-        id: "roman-contemporan",
-        categoryId: "carti",
-        title: "Roman contemporan",
-        shortDesc: "Bestselleruri internaționale.",
-        longDesc: "Selecție de romane contemporane de la autori români și internaționali.",
-        price: "39.00 lei",
-        author: "Autori variați",
-        features: ["Bestselleruri", "Autori premiați", "Noutăți editoriale", "Reduceri la seturi"],
-        images: ["images/products/roman-contemporan-1.jpg", "images/products/roman-contemporan-2.jpg", "images/products/roman-contemporan-3.jpg"]
-    },
-    {
-        id: "dezvoltare-personala",
-        categoryId: "carti",
-        title: "Dezvoltare personală",
-        shortDesc: "Ghiduri pentru succes.",
-        longDesc: "Cărți care te ajută să îți îmbunătățești viața.",
-        price: "45.00 lei",
-        author: "Autori internaționali",
-        features: ["Bestselleruri", "Ghiduri practice", "Exerciții", "Autori recunoscuți"],
-        images: ["images/products/dezvoltare-personala-1.jpg", "images/products/dezvoltare-personala-2.jpg", "images/products/dezvoltare-personala-3.jpg"]
-    },
-    {
-        id: "literatura-clasica",
-        categoryId: "carti",
-        title: "Literatură clasică",
-        shortDesc: "Capodopere universale.",
-        longDesc: "Ediții de calitate ale marilor clasici.",
-        price: "29.00 lei",
-        author: "Clasici",
-        features: ["Ediții îngrijite", "Traduceri recente", "Colecții", "Format elegant"],
-        images: ["images/products/literatura-clasica-1.jpg", "images/products/literatura-clasica-2.jpg", "images/products/literatura-clasica-3.jpg"]
-    },
-    {
         id: "carti-copii",
         categoryId: "carti",
-        title: "Cărți pentru copii",
-        shortDesc: "Povești și cărți educative.",
-        longDesc: "Cărți ilustrate și materiale educative pentru copii.",
+        title: " ",
+        shortDesc: "Carte de colorat cu ghicitori",
+        longDesc: "Carte educativa de colorat cu ghicitori",
         price: "19.00 lei",
-        author: "Autori copii",
+        author: "Gama",
         features: ["Ilustrații colorate", "Povești clasice", "Educative", "Grupe vârstă"],
-        images: ["images/products/carti-copii-1.jpg", "images/products/carti-copii-2.jpg", "images/products/carti-copii-3.jpg"]
+        images: ["images/products/carti/carte-de-colorat-ghicitori.jpg"]
     },
 
     // --- RECHIZITE ---
     {
         id: "set-rechizite-primar",
         categoryId: "rechizite",
-        title: "Set rechizite ciclu primar",
+        title: " ",
         shortDesc: "Set complet pentru clasele I-IV.",
         longDesc: "Set complet de rechizite pentru elevii din ciclul primar: caiete, pixuri, creioane, culori, riglă, gumă și alte materiale.",
         price: "89.00 lei",
         author: "PrintExpress",
         features: ["Conținut: 20+ piese", "Include: Caiete, pixuri, creioane", "Include: Culori, riglă, gumă", "Ciclu: Primar (I-IV)", "Ambalaj: Cutie"],
-        images: ["images/products/set-rechizite-primar-1.jpg", "images/products/set-rechizite-primar-2.jpg", "images/products/set-rechizite-primar-3.jpg"]
+        images: ["images/products/rechizite/set-rechizite-1.jpg"]
     },
     {
         id: "set-rechizite-gimnaziu",
         categoryId: "rechizite",
-        title: "Set rechizite gimnaziu",
+        title: " ",
         shortDesc: "Set complet pentru clasele V-VIII.",
         longDesc: "Set de rechizite pentru gimnaziu: caiete specializate, instrumente geometrice, markere și materiale pentru toate materiile.",
         price: "129.00 lei",
         author: "PrintExpress",
         features: ["Conținut: 25+ piese", "Include: Caiete specializate", "Include: Instrumente geometrice", "Ciclu: Gimnaziu (V-VIII)", "Ambalaj: Cutie"],
-        images: ["images/products/set-rechizite-gimnaziu-1.jpg", "images/products/set-rechizite-gimnaziu-2.jpg", "images/products/set-rechizite-gimnaziu-3.jpg"]
+        images: ["images/products/rechizite/set-rechizite-2.jpg"]
     },
 
     // --- ACCESORII BIROU ---
     {
         id: "suport-pixuri",
         categoryId: "accesorii-birou",
-        title: "Suport pixuri",
+        title: " ",
         shortDesc: "Suport pentru pixuri și creioane.",
         longDesc: "Suport din metal pentru pixuri și creioane. Design elegant, ideal pentru birou.",
         price: "15.00 lei",
         author: "PrintExpress",
         features: ["Material: Metal", "Culoare: Negru", "Capacitate: 10+ pixuri", "Design: Elegant", "Utilizare: Birou"],
-        images: ["images/products/suport-pixuri-1.jpg", "images/products/suport-pixuri-2.jpg", "images/products/suport-pixuri-3.jpg"]
+        images: ["images/products/birotica/suport-pixuri-birou-1.jpg"]
     },
     {
-        id: "agenda-2024",
+        id: "suport-telefon",
         categoryId: "accesorii-birou",
-        title: "Agendă 2024",
-        shortDesc: "Agendă de birou pentru anul 2024.",
-        longDesc: "Agendă de birou cu coperți premium, pentru anul 2024. Include calendar și pagini pentru notițe.",
+        title: " ",
+        shortDesc: "Suport telefon",
+        longDesc: "Suport de telefon metalic, modern",
         price: "25.00 lei",
         author: "PrintExpress",
-        features: ["An: 2024", "Format: A5", "Coperți: Piele ecologică", "Pagini: 200+", "Utilizare: Birou, organizare"],
-        images: ["images/products/agenda-2024-1.jpg", "images/products/agenda-2024-2.jpg", "images/products/agenda-2024-3.jpg"]
+        features: ["Material: Metal", "Utilizare: Telefon, organizare"],
+        images: ["images/products/birotica/suport-telefon-1.jpg"]
     }
 ];
 
