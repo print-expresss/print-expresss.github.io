@@ -73,25 +73,25 @@ const PRODUCT_CATEGORIES = [
 const PRODUCTS = [
     // --- CAIETE ---
     {
+        id: "caiet-a5-48-file",
+        categoryId: "papetarie",
+        title: "Caiet NEBO A5 48 file",
+        shortDesc: "Caiet A5, 48 file, dictando, 65-70 g/mp.",
+        longDesc: "Caiet A5 cu 48 file, tip dictando, 65-70 g/mp. Coperta rezistentă, file albe de calitate superioară.",
+        price: "1.50 lei",
+        author: "PrintExpress",
+        features: ["Format: A5", "Număr file: 48", "Tip: Dictando", "Gramaj hârtie: 65-70g/mp", "Copertă: Carton", "Utilizare: Școală, birou, notițe"],
+        gallery: ["caiet1", "caiet2", "caiet3"]
+    },
+    {
         id: "caiet-a4-48-file",
         categoryId: "papetarie",
         title: "Caiet A4 48 file",
         shortDesc: "Caiet A4, 48 file, dictando.",
-        longDesc: "Caiet A4 cu 48 file, tip dictando. Coperta rezistentă, file albe de calitate superioară.",
-        price: "3.50 lei",
-        author: "PrintExpress",
-        features: ["Format: A4", "Număr file: 48", "Tip: Dictando", "Gramaj hârtie: 80g/mp", "Copertă: Carton", "Utilizare: Școală, birou, notițe"],
-        gallery: ["caiet1", "caiet2", "caiet3"]
-    },
-    {
-        id: "caiet-a5-48-file",
-        categoryId: "papetarie",
-        title: "Caiet A5 48 file",
-        shortDesc: "Caiet A5, 48 file, dictando.",
-        longDesc: "Caiet A5 cu 48 file, tip dictando. Ideal pentru notițe rapide.",
+        longDesc: "Caiet A4 cu 48 file, tip dictando. Ideal pentru notițe rapide.",
         price: "2.00 lei",
         author: "PrintExpress",
-        features: ["Format: A5", "Număr file: 48", "Tip: Dictando", "Gramaj hârtie: 80g/mp", "Copertă: Carton", "Utilizare: Notițe, școală"],
+        features: ["Format: A4", "Număr file: 48", "Tip: Dictando", "Gramaj hârtie: 80g/mp", "Copertă: Carton", "Utilizare: Notițe, școală"],
         gallery: ["caiet2", "caiet2", "caiet3"]
     },
     {
