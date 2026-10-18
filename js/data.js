@@ -217,30 +217,6 @@ const PRODUCTS = [
         author: "PrintExpress",
         features: ["An: 2024", "Format: A5", "Coperți: Piele ecologică", "Pagini: 200+", "Utilizare: Birou, organizare"],
         images: ["images/products/agenda-2024-1.jpg", "images/products/agenda-2024-2.jpg", "images/products/agenda-2024-3.jpg"]
-    },
-
-    // --- HÂRTIE ---
-    {
-        id: "hartie-a4",
-        categoryId: "hartie",
-        title: "Hârtie A4",
-        shortDesc: "Hârtie copiator A4, 80g/mp.",
-        longDesc: "Hârtie copiator A4, 80g/mp, 500 coli. Calitate superioară pentru printare.",
-        price: "25.00 lei",
-        author: "PrintExpress",
-        features: ["Format: A4", "Gramaj: 80g/mp", "Cantitate: 500 coli", "Culoare: Alb", "Utilizare: Printare, copiere"],
-        images: ["images/products/hartie-a4-1.jpg", "images/products/hartie-a4-2.jpg", "images/products/hartie-a4-3.jpg"]
-    },
-    {
-        id: "post-it",
-        categoryId: "hartie",
-        title: "Post-it",
-        shortDesc: "Blocnotes adeziv, 76x76mm.",
-        longDesc: "Blocnotes adeziv pentru notițe rapide. Se lipește ușor și se îndepărtează fără urme.",
-        price: "5.00 lei",
-        author: "PrintExpress",
-        features: ["Dimensiune: 76x76mm", "Culoare: Galben", "Cantitate: 100 file", "Adeziv: Refolosibil", "Utilizare: Notițe rapide"],
-        images: ["images/products/post-it-1.jpg", "images/products/post-it-2.jpg", "images/products/post-it-3.jpg"]
     }
 ];
 
