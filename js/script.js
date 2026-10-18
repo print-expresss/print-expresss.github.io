@@ -36,7 +36,7 @@ function initBackButton() {
 }
 
 // ============================================
-// CREARE CARD CATEGORIE (CU SUPORT PENTRU IMAGINI)
+// CREARE CARD CATEGORIE
 // ============================================
 function createCategoryCard(cat, count, type) {
     var url = '';
@@ -60,7 +60,6 @@ function createCategoryCard(cat, count, type) {
     var imageContent = '<span class="icon">&#9679;</span>';
     
     if (cat.image) {
-        // Dacă există imagine, o folosim. Dacă apare eroare (poza lipsește), arătăm bulina.
         imageContent = '<img src="' + cat.image + '" alt="' + cat.title + '" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.parentNode.innerHTML=\'<span class=&quot;icon&quot;>&#9679;</span>\'">';
     }
 
@@ -97,15 +96,20 @@ function createServiceCard(service) {
 }
 
 // ============================================
-// CREARE CARD PRODUS
+// CREARE CARD PRODUS (CU SUPORT PENTRU IMAGINI)
 // ============================================
 function createProductCard(product, categoryColor) {
+    // Construim calea către imagine pe baza ID-ului
+    var imagePath = 'images/products/' + product.id + '.jpg';
+    
     var div = document.createElement('div');
     div.className = 'card product-card';
     div.innerHTML =
         '<a href="produs-detalii.html?id=' + product.id + '" class="card-link">' +
             '<div class="product-image ' + (categoryColor || 'gradient-1') + '">' +
-                '<span>' + product.title + '</span>' +
+                // Aici punem imaginea. Dacă nu o găsește, o ascunde și arată textul
+                '<img src="' + imagePath + '" alt="' + product.title + '" style="width:100%; height:100%; object-fit:cover; position:absolute; top:0; left:0;" onerror="this.style.display=\'none\'">' +
+                '<span style="position:relative; z-index:1; color: #fff; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">' + product.title + '</span>' +
             '</div>' +
             '<div class="product-body">' +
                 '<h3>' + product.title + '</h3>' +
@@ -126,7 +130,6 @@ function renderIndexPreviews() {
         if (typeof COMING_SOON_SERVICES !== 'undefined' && COMING_SOON_SERVICES) {
             servicesPreview.innerHTML = '<div class="coming-soon"><h2>Va urma :)</h2><p>Lucrăm la această secțiune.</p></div>';
         } else {
-            // Afișăm primele 3 servicii
             SERVICE_CATEGORIES.slice(0, 3).forEach(function (cat) {
                 var count = getServicesByCategory(cat.id).length;
                 servicesPreview.appendChild(createCategoryCard(cat, count, 'servicii'));
@@ -218,7 +221,6 @@ function renderObiectePersonalizatePage() {
     });
 }
 
-// (Restul funcțiilor rămân neschimbate)
 function renderServiciiCategorie() {
     var el = document.getElementById('servicesInCategory');
     if (!el || typeof SERVICES === 'undefined') return;
@@ -331,6 +333,9 @@ function renderServiciuDetalii() {
     ]);
 }
 
+// ============================================
+// DETALII PRODUS (CU IMAGINE ȘI SPECIFICAȚII)
+// ============================================
 function renderProdusDetalii() {
     var el = document.getElementById('productDetails');
     if (!el || typeof PRODUCTS === 'undefined') return;
@@ -345,15 +350,19 @@ function renderProdusDetalii() {
 
     var category = getProductCategory(product.categoryId);
     var featuresHtml = product.features.map(function (f) { return '<li>' + f + '</li>'; }).join('');
+    var imagePath = 'images/products/' + product.id + '.jpg';
+    
+    // Generăm galeria cu imagini (dacă există)
     var galleryHtml = product.gallery.map(function () {
-        return '<div class="gallery-thumb ' + (category ? category.color : 'gradient-1') + '"></div>';
+        return '<div class="gallery-thumb" style="background-image: url(\'' + imagePath + '\'); background-size: cover; background-position: center;"></div>';
     }).join('');
 
     el.innerHTML =
         '<div class="details-wrapper fade-in-up">' +
             '<div>' +
                 '<div class="details-image-main ' + (category ? category.color : 'gradient-1') + '">' +
-                    '<span>' + product.title + '</span>' +
+                    '<img src="' + imagePath + '" alt="' + product.title + '" style="width:100%; height:100%; object-fit:cover; position:absolute; top:0; left:0; z-index:1;" onerror="this.style.display=\'none\'">' +
+                    '<span style="position:relative; z-index:2; color: #fff; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">' + product.title + '</span>' +
                 '</div>' +
                 '<div class="details-gallery">' + galleryHtml + '</div>' +
             '</div>' +
@@ -361,11 +370,11 @@ function renderProdusDetalii() {
                 '<h1>' + product.title + '</h1>' +
                 '<div class="details-meta">' +
                     '<span>' + (category ? category.title : 'Produs') + '</span>' +
-                    '<span>' + product.author + '</span>' +
+                    '<span>În stoc</span>' +
                 '</div>' +
                 '<p class="long-desc">' + product.longDesc + '</p>' +
                 '<div class="details-price">' + product.price + '</div>' +
-                '<h2 class="features-title">Caracteristici:</h2>' +
+                '<h2 class="features-title">Specificații:</h2>' +
                 '<ul class="features-list">' + featuresHtml + '</ul>' +
                 '<div class="details-actions">' +
                     '<a href="index.html#contact" class="btn btn-primary">Comandă acum</a>' +
