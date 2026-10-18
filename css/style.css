@@ -1382,3 +1382,23 @@ img { max-width: 100%; display: block; }
     
     .carousel-container { height: 250px; }
 }
+/* BANNER CU IMAGINE - PRODUSE */
+.page-hero.with-image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.page-hero.with-image::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(30, 58, 138, 0.65);
+    z-index: 1;
+}
+
+.page-hero.with-image .container {
+    position: relative;
+    z-index: 2;
+}
