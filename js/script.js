@@ -1,6 +1,3 @@
-// ============================================
-// UTILITARE
-// ============================================
 function getQueryParam(param) {
     var urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(param);
@@ -35,9 +32,6 @@ function initBackButton() {
     }
 }
 
-// ============================================
-// CREARE CARDURI
-// ============================================
 function createCategoryCard(cat, count, type) {
     var url = '';
     var label = '';
@@ -108,9 +102,6 @@ function createProductCard(product, categoryColor) {
     return div;
 }
 
-// ============================================
-// RANDARE PAGINI
-// ============================================
 function renderIndexPreviews() {
     var servicesPreview = document.getElementById('servicesPreview');
     if (servicesPreview && typeof SERVICE_CATEGORIES !== 'undefined') {
@@ -147,9 +138,9 @@ function renderMainGallery() {
     dotsContainer.innerHTML = '';
 
     GALLERY_IMAGES.forEach(function(imgSrc, index) {
-        // Slide
         var slide = document.createElement('div');
         slide.className = 'carousel-slide';
+        // object-fit: contain asigură că poza se vede întreagă
         slide.innerHTML = 
             '<img src="' + imgSrc + '" alt="Galerie PrintExpress ' + (index + 1) + '" ' +
                  'style="width: 100%; height: 100%; object-fit: contain; background: #f8fafc;" ' +
@@ -157,7 +148,6 @@ function renderMainGallery() {
             '<div class="fallback-text">Galerie PrintExpress ' + (index + 1) + '</div>';
         track.appendChild(slide);
 
-        // Bulină
         var dot = document.createElement('div');
         dot.className = 'carousel-dot' + (index === 0 ? ' active' : '');
         dot.setAttribute('data-index', index);
@@ -434,9 +424,6 @@ function renderProdusDetalii() {
     initCarousel();
 }
 
-// ============================================
-// INIȚIALIZARE CARUSELE
-// ============================================
 function initCarousel() {
     function setupCarousel(trackId, dotsSelector, prevId, nextId, containerId) {
         var track = document.getElementById(trackId);
@@ -501,16 +488,10 @@ function initCarousel() {
         startAutoPlay();
     }
 
-    // 1. Caruselul de pe pagina de detalii produs
     setupCarousel('carouselTrack', '#carouselDots .carousel-dot', 'carouselPrev', 'carouselNext', 'productCarousel');
-
-    // 2. Caruselul din Galeria Principală
     setupCarousel('mainGalleryTrack', '#mainGalleryDots .carousel-dot', 'mainGalleryPrev', 'mainGalleryNext', 'mainGalleryCarousel');
 }
 
-// ============================================
-// ANIMAȚII LA SCROLL
-// ============================================
 function initScrollAnimations() {
     var els = document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right');
     if (!els.length) return;
@@ -574,11 +555,7 @@ function initHeaderScroll() {
     });
 }
 
-// ============================================
-// INIT GENERAL
-// ============================================
 document.addEventListener('DOMContentLoaded', function () {
-    // Meniu mobil
     var menuToggle = document.querySelector('.menu-toggle');
     var nav = document.querySelector('.nav');
     if (menuToggle && nav) {
@@ -595,11 +572,9 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // An curent
     var yearEl = document.getElementById('currentYear');
     if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-    // Formular contact
     var contactForm = document.getElementById('contactForm');
     var formStatus = document.getElementById('formStatus');
     if (contactForm && formStatus) {
@@ -618,9 +593,8 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // --- RANDARE PAGINI ---
     renderIndexPreviews();
-    renderMainGallery(); // <--- Generează pozele din galerie
+    renderMainGallery(); // Generează pozele galeriei
     renderServiciiPage();
     renderProdusePage();
     renderObiectePersonalizatePage();
@@ -629,10 +603,9 @@ document.addEventListener('DOMContentLoaded', function () {
     renderServiciuDetalii();
     renderProdusDetalii();
 
-    // --- INIȚIALIZĂRI ---
     initBackButton();
     initHeaderScroll();
     initScrollAnimations();
     initCounters();
-    initCarousel(); // <--- Pornește ambele carusele după ce elementele au fost create
+    initCarousel(); // Pornește caruselele (inclusiv cel din galerie)
 });
