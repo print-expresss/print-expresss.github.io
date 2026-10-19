@@ -1402,3 +1402,26 @@ img { max-width: 100%; display: block; }
     position: relative;
     z-index: 2;
 }
+
+.tiktok {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+}
+.tiktok:hover {
+    background-color: #1a1a1a !important;
+    color: #ffffff !important;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4) !important;
+}
+
+.main-gallery-carousel {
+    height: 450px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(30,58,138,0.2);
+}
+
+@media (max-width: 768px) {
+    .main-gallery-carousel {
+        height: 250px;
+    }
+}
