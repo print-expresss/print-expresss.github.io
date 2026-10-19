@@ -194,6 +194,12 @@ const PERSONALIZABLE_PRODUCTS = [
     { id: "cutie", title: "Cutie cadou personalizată", shortDesc: "Cutie cadou cu mesajul tău.", basePrice: 20, shapes: [ { id: "patrata", label: "Pătrată", priceExtra: 0, layer: "front", baseImage: "images/products/cutie-patrata.png", coords: [50, 50, 250, 250], borderRadius: "4px" } ], sizes: [ { id: "mica", label: "Mică (10x10 cm)", priceExtra: 0 }, { id: "mare", label: "Mare (15x15 cm)", priceExtra: 5 } ], materials: [ { id: "carton", label: "Carton", priceExtra: 0 }, { id: "lemn", label: "Lemn", priceExtra: 15 } ] }
 ];
 
+const GALLERY_IMAGES = [
+    "images/galerie/1.jpg",
+    "images/galerie/2.jpg",
+    "images/galerie/3.jpg"
+];
+
 function getServiceCategory(id) { return SERVICE_CATEGORIES.find(function (c) { return c.id === id; }); }
 function getProductCategory(id) { return PRODUCT_CATEGORIES.find(function (c) { return c.id === id; }); }
 function getServicesByCategory(id) { return SERVICES.filter(function (s) { return s.categoryId === id; }); }
