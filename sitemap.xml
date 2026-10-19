@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+       <loc>https://print-expresss.github.io/</loc>
+       <lastmod>2026-10-18T16:08:14+00:00</lastmod>
+       <priority>1.0000</priority>
+  </url>
+  <url>
+       <loc>https://print-expresss.github.io/index.html</loc>
+       <lastmod>2026-10-18T16:08:14+00:00</lastmod>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://print-expresss.github.io/servicii.html</loc>
+       <lastmod>2026-10-18T16:08:14+00:00</lastmod>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://print-expresss.github.io/produse.html</loc>
+       <lastmod>2026-10-18T16:08:14+00:00</lastmod>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://print-expresss.github.io/personalizare.html</loc>
+       <lastmod>2026-10-18T16:08:14+00:00</lastmod>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://print-expresss.github.io/printari.html</loc>
+       <lastmod>2026-10-18T16:08:14+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://print-expresss.github.io/obiecte-personalizate.html</loc>
+       <lastmod>2026-10-18T16:08:14+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://print-expresss.github.io/servicii-categorie.html?id=cadouri</loc>
+       <lastmod>2026-10-18T16:08:14+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://print-expresss.github.io/produse-categorie.html?id=caiete</loc>
+       <lastmod>2026-10-18T16:08:14+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://print-expresss.github.io/produse-categorie.html?id=pixuri</loc>
+       <lastmod>2026-10-18T16:08:14+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://print-expresss.github.io/produse-categorie.html?id=carti</loc>
+       <lastmod>2026-10-18T16:08:14+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://print-expresss.github.io/produse-categorie.html?id=rechizite</loc>
+       <lastmod>2026-10-18T16:08:14+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+</urlset>
