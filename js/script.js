@@ -1,3 +1,6 @@
+// ============================================
+// UTILITARE
+// ============================================
 function getQueryParam(param) {
     var urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(param);
@@ -32,6 +35,9 @@ function initBackButton() {
     }
 }
 
+// ============================================
+// CREARE CARDURI
+// ============================================
 function createCategoryCard(cat, count, type) {
     var url = '';
     var label = '';
@@ -102,6 +108,9 @@ function createProductCard(product, categoryColor) {
     return div;
 }
 
+// ============================================
+// RANDARE PAGINI
+// ============================================
 function renderIndexPreviews() {
     var servicesPreview = document.getElementById('servicesPreview');
     if (servicesPreview && typeof SERVICE_CATEGORIES !== 'undefined') {
@@ -126,6 +135,34 @@ function renderIndexPreviews() {
             });
         }
     }
+}
+
+function renderMainGallery() {
+    var track = document.getElementById('mainGalleryTrack');
+    var dotsContainer = document.getElementById('mainGalleryDots');
+    
+    if (!track || !dotsContainer || typeof GALLERY_IMAGES === 'undefined') return;
+
+    track.innerHTML = '';
+    dotsContainer.innerHTML = '';
+
+    GALLERY_IMAGES.forEach(function(imgSrc, index) {
+        // Slide
+        var slide = document.createElement('div');
+        slide.className = 'carousel-slide';
+        slide.innerHTML = 
+            '<img src="' + imgSrc + '" alt="Galerie PrintExpress ' + (index + 1) + '" ' +
+                 'style="width: 100%; height: 100%; object-fit: contain; background: #f8fafc;" ' +
+                 'onerror="this.style.display=\'none\'; this.nextElementSibling.style.display=\'block\';">' +
+            '<div class="fallback-text">Galerie PrintExpress ' + (index + 1) + '</div>';
+        track.appendChild(slide);
+
+        // Bulină
+        var dot = document.createElement('div');
+        dot.className = 'carousel-dot' + (index === 0 ? ' active' : '');
+        dot.setAttribute('data-index', index);
+        dotsContainer.appendChild(dot);
+    });
 }
 
 function renderServiciiPage() {
@@ -351,6 +388,7 @@ function renderProdusDetalii() {
         slidesHtml += 
             '<div class="carousel-slide">' +
                 '<img src="' + imgSrc + '" alt="' + product.title + ' - Poza ' + (index+1) + '" ' +
+                     'style="width: 100%; height: 100%; object-fit: contain; background: #f8fafc;" ' +
                      'onerror="this.style.display=\'none\'; this.nextElementSibling.style.display=\'block\';">' +
                 '<div class="fallback-text">' + product.title + '</div>' +
             '</div>';
@@ -396,67 +434,83 @@ function renderProdusDetalii() {
     initCarousel();
 }
 
+// ============================================
+// INIȚIALIZARE CARUSELE
+// ============================================
 function initCarousel() {
-    var track = document.getElementById('carouselTrack');
-    var dots = document.querySelectorAll('.carousel-dot');
-    var prevBtn = document.getElementById('carouselPrev');
-    var nextBtn = document.getElementById('carouselNext');
-    var container = document.getElementById('productCarousel');
-    
-    if (!track || !dots.length) return;
+    function setupCarousel(trackId, dotsSelector, prevId, nextId, containerId) {
+        var track = document.getElementById(trackId);
+        var dots = document.querySelectorAll(dotsSelector);
+        var prevBtn = document.getElementById(prevId);
+        var nextBtn = document.getElementById(nextId);
+        var container = document.getElementById(containerId);
+        
+        if (!track || !dots.length) return;
 
-    var currentIndex = 0;
-    var totalSlides = dots.length;
-    var autoPlayInterval;
+        var currentIndex = 0;
+        var totalSlides = dots.length;
+        var autoPlayInterval;
 
-    function updateCarousel() {
-        track.style.transform = 'translateX(-' + (currentIndex * 100) + '%)';
-        dots.forEach(function (dot, i) {
-            dot.classList.toggle('active', i === currentIndex);
+        function updateCarousel() {
+            track.style.transform = 'translateX(-' + (currentIndex * 100) + '%)';
+            dots.forEach(function (dot, i) {
+                dot.classList.toggle('active', i === currentIndex);
+            });
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateCarousel();
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+        }
+
+        function goToSlide(index) {
+            currentIndex = index;
+            updateCarousel();
+        }
+
+        function startAutoPlay() {
+            autoPlayInterval = setInterval(nextSlide, 3500);
+        }
+
+        function stopAutoPlay() {
+            clearInterval(autoPlayInterval);
+        }
+
+        if (nextBtn) nextBtn.addEventListener('click', function() { stopAutoPlay(); nextSlide(); startAutoPlay(); });
+        if (prevBtn) prevBtn.addEventListener('click', function() { stopAutoPlay(); prevSlide(); startAutoPlay(); });
+        
+        dots.forEach(function (dot) {
+            dot.addEventListener('click', function() {
+                stopAutoPlay();
+                goToSlide(parseInt(this.dataset.index));
+                startAutoPlay();
+            });
         });
+
+        if (container) {
+            container.addEventListener('mouseenter', stopAutoPlay);
+            container.addEventListener('mouseleave', startAutoPlay);
+            container.addEventListener('touchstart', stopAutoPlay);
+        }
+
+        startAutoPlay();
     }
 
-    function nextSlide() {
-        currentIndex = (currentIndex + 1) % totalSlides;
-        updateCarousel();
-    }
+    // 1. Caruselul de pe pagina de detalii produs
+    setupCarousel('carouselTrack', '#carouselDots .carousel-dot', 'carouselPrev', 'carouselNext', 'productCarousel');
 
-    function prevSlide() {
-        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-        updateCarousel();
-    }
-
-    function goToSlide(index) {
-        currentIndex = index;
-        updateCarousel();
-    }
-
-    function startAutoPlay() {
-        autoPlayInterval = setInterval(nextSlide, 3000);
-    }
-
-    function stopAutoPlay() {
-        clearInterval(autoPlayInterval);
-    }
-
-    nextBtn.addEventListener('click', function() { stopAutoPlay(); nextSlide(); startAutoPlay(); });
-    prevBtn.addEventListener('click', function() { stopAutoPlay(); prevSlide(); startAutoPlay(); });
-    
-    dots.forEach(function (dot) {
-        dot.addEventListener('click', function() {
-            stopAutoPlay();
-            goToSlide(parseInt(this.dataset.index));
-            startAutoPlay();
-        });
-    });
-
-    container.addEventListener('mouseenter', stopAutoPlay);
-    container.addEventListener('mouseleave', startAutoPlay);
-    container.addEventListener('touchstart', stopAutoPlay);
-
-    startAutoPlay();
+    // 2. Caruselul din Galeria Principală
+    setupCarousel('mainGalleryTrack', '#mainGalleryDots .carousel-dot', 'mainGalleryPrev', 'mainGalleryNext', 'mainGalleryCarousel');
 }
 
+// ============================================
+// ANIMAȚII LA SCROLL
+// ============================================
 function initScrollAnimations() {
     var els = document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right');
     if (!els.length) return;
@@ -520,7 +574,11 @@ function initHeaderScroll() {
     });
 }
 
+// ============================================
+// INIT GENERAL
+// ============================================
 document.addEventListener('DOMContentLoaded', function () {
+    // Meniu mobil
     var menuToggle = document.querySelector('.menu-toggle');
     var nav = document.querySelector('.nav');
     if (menuToggle && nav) {
@@ -537,9 +595,11 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // An curent
     var yearEl = document.getElementById('currentYear');
     if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+    // Formular contact
     var contactForm = document.getElementById('contactForm');
     var formStatus = document.getElementById('formStatus');
     if (contactForm && formStatus) {
@@ -558,7 +618,9 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // --- RANDARE PAGINI ---
     renderIndexPreviews();
+    renderMainGallery(); // <--- Generează pozele din galerie
     renderServiciiPage();
     renderProdusePage();
     renderObiectePersonalizatePage();
@@ -567,8 +629,10 @@ document.addEventListener('DOMContentLoaded', function () {
     renderServiciuDetalii();
     renderProdusDetalii();
 
+    // --- INIȚIALIZĂRI ---
     initBackButton();
     initHeaderScroll();
     initScrollAnimations();
     initCounters();
+    initCarousel(); // <--- Pornește ambele carusele după ce elementele au fost create
 });
