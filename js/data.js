@@ -29,7 +29,7 @@ const PRODUCTS = [
         title: " ",
         shortDesc: "Caiet A5, 48 file, dictando, 65-70 g/mp.",
         longDesc: "Caiet A5 cu 48 file, tip dictando, 65-70 g/mp. Coperta rezistentă, file albe de calitate superioară.",
-        price: "1.50 lei",
+        price: "2.00 lei",
         author: "PrintExpress",
         features: ["Format: A5", "Număr file: 48", "Tip: Dictando", "Gramaj hârtie: 65-70g/mp", "Copertă: Carton", "Utilizare: Școală, birou, notițe"],
         images: ["images/products/caiete/caiet-a5-48-file-1.jpg", "images/products/caiete/caiet-a5-48-file-2.jpg", "images/products/caiete/caiet-a5-48-file-3.jpg"]
@@ -40,7 +40,7 @@ const PRODUCTS = [
         title: " ",
         shortDesc: "Caiet A5, 48 file, mate, 65-70 g/mp.",
         longDesc: "Caiet A5 cu 48 file, tip mate, 65-70 g/mp. Coperta rezistentă, file albe de calitate superioară.",
-        price: "1.50 lei",
+        price: "2.00 lei",
         author: "PrintExpress",
         features: ["Format: A5", "Număr file: 48", "Tip: Mate", "Gramaj hârtie: 65-70g/mp", "Copertă: Carton Laminat", "Utilizare: Școală, birou, notițe"],
         images: ["images/products/caiete/caietm-a5-48-file-1.jpg"]
@@ -51,7 +51,7 @@ const PRODUCTS = [
         title: " ",
         shortDesc: "Caiet A4, 80 file, matematica.",
         longDesc: "Caiet A4 cu 48 file, tip dictando. Ideal pentru notițe rapide.",
-        price: "7.00 lei",
+        price: "8.00 lei",
         author: "PrintExpress",
         features: ["Format: A4", "Număr file: 80", "Tip: Matematica cu spirala", "Gramaj hârtie: 80g/mp", "Copertă: Carton", "Utilizare: Notițe, școală"],
         images: ["images/products/caiete/caietm-a4-80-file-s1.jpeg", "images/products/caiete/caietm-a4-80-file-s2.jpeg"]
@@ -62,7 +62,7 @@ const PRODUCTS = [
         title: " ",
         shortDesc: "Caiet A5, 48 file, velin.",
         longDesc: "Caiet A5 cu 48 file, tip velin. Mai multe pagini pentru mai multe notițe.",
-        price: "1.50 lei",
+        price: "2.00 lei",
         author: "PrintExpress",
         features: ["Format: A5", "Număr file: 48", "Tip: Velin", "Gramaj hârtie: 80g/mp", "Copertă: Carton", "Utilizare: Școală, birou"],
         images: ["images/products/caiete/caietv-a5-48-file-1.jpg"]
@@ -73,7 +73,7 @@ const PRODUCTS = [
         title: " ",
         shortDesc: "Caiet mic, 48 file, aritmetica.",
         longDesc: "Caiet mic, 48 file, tip aritmetica.",
-        price: "2.00 lei",
+        price: "5.00 lei",
         author: "PrintExpress",
         features: ["Format: Mic (A5)", "Număr file:48", "Tip: Matematica", "Gramaj hârtie: 80g/mp", "Copertă: Polipropilena(plastic)"],
         images: ["images/products/caiete/caiet-a5-48-file-aritmetica.jpeg"]
