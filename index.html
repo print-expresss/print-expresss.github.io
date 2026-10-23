@@ -30,6 +30,7 @@
         </div>
     </header>
 
+    <!-- HERO VIDEO -->
     <section id="acasa" class="hero hero-video">
         <video autoplay loop muted playsinline class="hero-video-bg">
             <source src="images/header-video.mp4" type="video/mp4">
@@ -41,8 +42,19 @@
         </div>
     </section>
 
+    <!-- BARA DE CĂUTARE (Mutată aici, între header/hero și galerie) -->
+    <section class="search-hero-section">
+        <div class="container">
+            <div class="search-wrapper fade-in-up">
+                <input type="text" id="homeSearchInput" placeholder="Caută un produs/serviciu..." autocomplete="off">
+            </div>
+            <!-- Aici vor apărea rezultatele căutării -->
+            <div class="hidden" id="homeSearchResults"></div>
+        </div>
+    </section>
+
     <!-- GALERIE CARUSEL -->
-    <section class="section" style="padding-bottom: 0;">
+    <section class="section" style="padding-top: 0; padding-bottom: 0;">
         <div class="container">
             <div class="carousel-container main-gallery-carousel" id="mainGalleryCarousel">
                 <div class="carousel-track" id="mainGalleryTrack"></div>
@@ -64,21 +76,9 @@
         <div class="container">
             <h2 class="section-title">Produse</h2>
             
-            <!-- BARA DE CĂUTARE PE PAGINA PRINCIPALĂ -->
-            <div class="search-wrapper fade-in-up" style="margin-top: -1rem; margin-bottom: 2rem;">
-                <div class="search-input-container">
-                    <span class="search-icon">&#128269;</span>
-                    <input type="text" id="homeSearchInput" placeholder="Caută produse, servicii, contact, locație..." autocomplete="off">
-                </div>
-            </div>
-
-            <h3 class="search-subtitle" id="homeSearchSubtitle">Sau explorează pe categorii:</h3>
-
-            <!-- CONTAINER PENTRU CATEGORII (Ascuns când se caută) -->
+            <!-- Fără search bar aici, doar titlul și categoriile -->
+            <h3 class="search-subtitle" id="homeSearchSubtitle">Explorează pe categorii:</h3>
             <div class="grid-4" id="productsPreview"></div>
-
-            <!-- CONTAINER PENTRU REZULTATELE CĂUTĂRII (Aici pot apărea mai multe secțiuni) -->
-            <div class="hidden" id="homeSearchResults"></div>
             
             <div class="section-cta">
                 <a href="produse.html" class="btn btn-primary">Toate produsele noastre</a>
