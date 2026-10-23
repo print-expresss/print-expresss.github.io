@@ -102,6 +102,12 @@ function createProductCard(product, categoryColor) {
     return div;
 }
 
+// Funcție pentru eliminarea diacriticelor (diacritics-insensitive)
+function normalizeString(str) {
+    if (!str) return '';
+    return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+}
+
 function renderIndexPreviews() {
     var servicesPreview = document.getElementById('servicesPreview');
     if (servicesPreview && typeof SERVICE_CATEGORIES !== 'undefined') {
@@ -116,14 +122,134 @@ function renderIndexPreviews() {
     }
 
     var productsPreview = document.getElementById('productsPreview');
+    var searchInput = document.getElementById('homeSearchInput');
+    var resultsContainer = document.getElementById('homeSearchResults');
+    var categoriesTitle = document.getElementById('homeSearchSubtitle');
+
     if (productsPreview && typeof PRODUCT_CATEGORIES !== 'undefined') {
         if (typeof COMING_SOON_PRODUCTS !== 'undefined' && COMING_SOON_PRODUCTS) {
             productsPreview.innerHTML = '<div class="coming-soon"><h2>Va urma :)</h2><p>Lucrăm la această secțiune.</p></div>';
         } else {
+            // 1. Randăm categoriile (la încărcarea paginii)
             PRODUCT_CATEGORIES.slice(0, 4).forEach(function (cat) {
                 var count = getProductsByCategory(cat.id).length;
                 productsPreview.appendChild(createCategoryCard(cat, count, 'produse'));
             });
+
+            // 2. Logica pentru bara de căutare
+            if (searchInput && resultsContainer) {
+                searchInput.addEventListener('input', function() {
+                    var rawQuery = this.value.trim().toLowerCase();
+                    var query = normalizeString(rawQuery);
+                    
+                    if (query === '') {
+                        productsPreview.style.display = 'grid';
+                        if (categoriesTitle) categoriesTitle.style.display = 'block';
+                        resultsContainer.classList.add('hidden');
+                        resultsContainer.innerHTML = '';
+                    } else {
+                        productsPreview.style.display = 'none';
+                        if (categoriesTitle) categoriesTitle.style.display = 'none';
+                        resultsContainer.classList.remove('hidden');
+                        resultsContainer.innerHTML = '';
+                        
+                        var hasResults = false;
+
+                        // A. Căutare Servicii
+                        if (typeof SERVICES !== 'undefined') {
+                            var matchedServices = SERVICES.filter(function(s) {
+                                return normalizeString(s.title).includes(query) || 
+                                       normalizeString(s.shortDesc).includes(query);
+                            });
+                            if (matchedServices.length > 0) {
+                                hasResults = true;
+                                var title = document.createElement('h3');
+                                title.className = 'search-section-title';
+                                title.textContent = 'Servicii găsite:';
+                                resultsContainer.appendChild(title);
+                                
+                                var grid = document.createElement('div');
+                                grid.className = 'grid-3';
+                                matchedServices.forEach(function(s) {
+                                    grid.appendChild(createServiceCard(s));
+                                });
+                                resultsContainer.appendChild(grid);
+                            }
+                        }
+
+                        // B. Căutare Produse
+                        if (typeof PRODUCTS !== 'undefined') {
+                            var matchedProducts = PRODUCTS.filter(function(p) {
+                                return normalizeString(p.title).includes(query) || 
+                                       normalizeString(p.shortDesc).includes(query) ||
+                                       (p.author && normalizeString(p.author).includes(query));
+                            });
+                            if (matchedProducts.length > 0) {
+                                hasResults = true;
+                                var title = document.createElement('h3');
+                                title.className = 'search-section-title';
+                                title.textContent = 'Produse găsite:';
+                                resultsContainer.appendChild(title);
+                                
+                                var grid = document.createElement('div');
+                                grid.className = 'grid-4';
+                                matchedProducts.forEach(function(p) {
+                                    grid.appendChild(createProductCard(p, 'gradient-1'));
+                                });
+                                resultsContainer.appendChild(grid);
+                            }
+                        }
+
+                        // C. Căutare Locație
+                        var locKeywords = ["locatie", "locatii", "adresa", "harta", "garii", "bacau", "strada", "unde ne gasiti", "magazin"];
+                        var isLocMatch = locKeywords.some(function(kw) {
+                            return kw.includes(query) || query.includes(kw);
+                        });
+                        if (isLocMatch) {
+                            hasResults = true;
+                            var title = document.createElement('h3');
+                            title.className = 'search-section-title';
+                            title.textContent = 'Locație:';
+                            resultsContainer.appendChild(title);
+                            
+                            var mapDiv = document.createElement('div');
+                            mapDiv.className = 'map-wrapper fade-in-up';
+                            mapDiv.innerHTML = '<iframe src="https://maps.google.com/maps?q=Str.%20Garii%2056,%20Bacau,%20Romania&t=&z=16&ie=UTF8&iwloc=&output=embed" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>';
+                            resultsContainer.appendChild(mapDiv);
+                        }
+
+                        // D. Căutare Contact
+                        var contactKeywords = ["contact", "telefon", "email", "whatsapp", "facebook", "instagram", "tiktok", "program", "date de contact"];
+                        var isContactMatch = contactKeywords.some(function(kw) {
+                            return kw.includes(query) || query.includes(kw);
+                        });
+                        if (isContactMatch) {
+                            hasResults = true;
+                            var title = document.createElement('h3');
+                            title.className = 'search-section-title';
+                            title.textContent = 'Contact:';
+                            resultsContainer.appendChild(title);
+                            
+                            var contactDiv = document.createElement('div');
+                            contactDiv.className = 'contact-info fade-in-up';
+                            contactDiv.style.padding = "2rem";
+                            contactDiv.style.background = "#fff";
+                            contactDiv.style.borderRadius = "16px";
+                            contactDiv.style.boxShadow = "0 4px 15px rgba(30,58,138,0.1)";
+                            contactDiv.innerHTML = 
+                                '<p><strong>Telefon:</strong> <a href="tel:+40747830598">+40 747 830 598</a></p>' +
+                                '<p><strong>Email:</strong> <a href="mailto:printexpressbacau@yahoo.com">printexpressbacau@yahoo.com</a></p>' +
+                                '<p><strong>Program:</strong> Luni - Vineri, 07:00 - 19:00 | Sâmbătă, 10:00 - 14:00</p>';
+                            resultsContainer.appendChild(contactDiv);
+                        }
+
+                        // Dacă nu s-a găsit nimic
+                        if (!hasResults) {
+                            resultsContainer.innerHTML = '<div class="no-results"><h3>Nu am găsit rezultate pentru "' + rawQuery + '"</h3><p>Încearcă un alt cuvânt cheie (ex: caiet, pix, contact, locatie).</p></div>';
+                        }
+                    }
+                });
+            }
         }
     }
 }
@@ -141,10 +267,10 @@ function renderMainGallery() {
         var slide = document.createElement('div');
         slide.className = 'carousel-slide';
         slide.innerHTML = 
-            '<img src="' + imgSrc + '" alt="Galerie PrintExpress ' + (index + 1) + '" ' +
+            '<img src="' + imgSrc + '" alt="Galerie PrintExpress Bacău ' + (index + 1) + '" ' +
                  'style="width: 100%; height: 100%; object-fit: contain; background: #f8fafc;" ' +
                  'onerror="this.style.display=\'none\'; this.nextElementSibling.style.display=\'block\';">' +
-            '<div class="fallback-text">Galerie PrintExpress ' + (index + 1) + '</div>';
+            '<div class="fallback-text">Galerie PrintExpress Bacău ' + (index + 1) + '</div>';
         track.appendChild(slide);
 
         var dot = document.createElement('div');
@@ -176,10 +302,6 @@ function renderServiciiPage() {
 
 function renderProdusePage() {
     var el = document.getElementById('productCategories');
-    var searchInput = document.getElementById('productSearchInput');
-    var resultsContainer = document.getElementById('searchResults');
-    var categoriesTitle = document.getElementById('searchSubtitle');
-
     if (!el || typeof PRODUCT_CATEGORIES === 'undefined') return;
 
     renderBreadcrumb([
@@ -192,50 +314,10 @@ function renderProdusePage() {
         return;
     }
 
-    // 1. Randăm categoriile (la încărcarea paginii)
     PRODUCT_CATEGORIES.forEach(function (cat) {
         var count = getProductsByCategory(cat.id).length;
         el.appendChild(createCategoryCard(cat, count, 'produse'));
     });
-
-    // 2. Logica pentru bara de căutare
-    if (searchInput && resultsContainer) {
-        searchInput.addEventListener('input', function() {
-            var query = this.value.trim().toLowerCase();
-            
-            if (query === '') {
-                // Dacă e gol, arătăm categoriile la loc
-                el.style.display = 'grid';
-                if (categoriesTitle) categoriesTitle.style.display = 'block';
-                resultsContainer.classList.add('hidden');
-                resultsContainer.innerHTML = '';
-            } else {
-                // Dacă scrie ceva, ascundem categoriile și arătăm rezultatele
-                el.style.display = 'none';
-                if (categoriesTitle) categoriesTitle.style.display = 'none';
-                resultsContainer.classList.remove('hidden');
-                
-                // Filtrăm produsele (după titlu, descriere sau brand/autor)
-                var filtered = PRODUCTS.filter(function(p) {
-                    return p.title.toLowerCase().includes(query) || 
-                           p.shortDesc.toLowerCase().includes(query) ||
-                           (p.author && p.author.toLowerCase().includes(query));
-                });
-
-                resultsContainer.innerHTML = '';
-                
-                if (filtered.length > 0) {
-                    // Generăm cardurile pentru rezultate
-                    filtered.forEach(function(p) {
-                        resultsContainer.appendChild(createProductCard(p, 'gradient-1')); 
-                    });
-                } else {
-                    // Mesaj dacă nu găsește nimic
-                    resultsContainer.innerHTML = '<div class="no-results"><h3>Nu am găsit produse pentru "' + query + '"</h3><p>Încearcă un alt cuvânt cheie (ex: caiet, pix, Herlitz).</p></div>';
-                }
-            }
-        });
-    }
 }
 
 function renderObiectePersonalizatePage() {
@@ -280,7 +362,7 @@ function renderServiciiCategorie() {
     if (category) {
         document.getElementById('categoryTitle').textContent = category.title;
         document.getElementById('categoryDesc').textContent = category.shortDesc;
-        document.title = category.title + ' - Servicii - PrintExpress';
+        document.title = category.title + ' - Servicii - PrintExpress Bacău';
         
         var hero = document.getElementById('categoryHero');
         if (hero) {
@@ -318,7 +400,7 @@ function renderProduseCategorie() {
     if (category) {
         document.getElementById('categoryTitle').textContent = category.title;
         document.getElementById('categoryDesc').textContent = category.shortDesc;
-        document.title = category.title + ' - Produse - PrintExpress';
+        document.title = category.title + ' - Produse - PrintExpress Bacău';
         
         var hero = document.getElementById('categoryHero');
         if (hero) {
@@ -389,7 +471,7 @@ function renderServiciuDetalii() {
             '</div>' +
         '</div>';
 
-    document.title = service.title + ' - PrintExpress';
+    document.title = service.title + ' - PrintExpress Bacău';
 
     renderBreadcrumb([
         { label: 'Acasă', url: 'index.html' },
@@ -455,7 +537,7 @@ function renderProdusDetalii() {
             '</div>' +
         '</div>';
 
-    document.title = product.title + ' - PrintExpress';
+    document.title = product.title + ' - PrintExpress Bacău';
 
     renderBreadcrumb([
         { label: 'Acasă', url: 'index.html' },
