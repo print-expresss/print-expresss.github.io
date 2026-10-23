@@ -1506,3 +1506,39 @@ img { max-width: 100%; display: block; }
     color: #64748b;
     font-size: 1.1rem;
 }
+
+
+/* ============================================
+   STILURI PENTRU REZULTATELE CĂUTĂRII
+   ============================================ */
+.search-section-title {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e2e8f0;
+    text-align: left;
+}
+
+/* Pentru ca harta si contactul sa stea frumos in container */
+#homeSearchResults {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#homeSearchResults .map-wrapper {
+    height: 350px;
+}
+
+#homeSearchResults .contact-info {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #homeSearchResults .map-wrapper iframe {
+        height: 250px;
+    }
+}
