@@ -140,7 +140,6 @@ function renderMainGallery() {
     GALLERY_IMAGES.forEach(function(imgSrc, index) {
         var slide = document.createElement('div');
         slide.className = 'carousel-slide';
-        // object-fit: contain asigură că poza se vede întreagă
         slide.innerHTML = 
             '<img src="' + imgSrc + '" alt="Galerie PrintExpress ' + (index + 1) + '" ' +
                  'style="width: 100%; height: 100%; object-fit: contain; background: #f8fafc;" ' +
@@ -177,6 +176,10 @@ function renderServiciiPage() {
 
 function renderProdusePage() {
     var el = document.getElementById('productCategories');
+    var searchInput = document.getElementById('productSearchInput');
+    var resultsContainer = document.getElementById('searchResults');
+    var categoriesTitle = document.getElementById('searchSubtitle');
+
     if (!el || typeof PRODUCT_CATEGORIES === 'undefined') return;
 
     renderBreadcrumb([
@@ -189,10 +192,50 @@ function renderProdusePage() {
         return;
     }
 
+    // 1. Randăm categoriile (la încărcarea paginii)
     PRODUCT_CATEGORIES.forEach(function (cat) {
         var count = getProductsByCategory(cat.id).length;
         el.appendChild(createCategoryCard(cat, count, 'produse'));
     });
+
+    // 2. Logica pentru bara de căutare
+    if (searchInput && resultsContainer) {
+        searchInput.addEventListener('input', function() {
+            var query = this.value.trim().toLowerCase();
+            
+            if (query === '') {
+                // Dacă e gol, arătăm categoriile la loc
+                el.style.display = 'grid';
+                if (categoriesTitle) categoriesTitle.style.display = 'block';
+                resultsContainer.classList.add('hidden');
+                resultsContainer.innerHTML = '';
+            } else {
+                // Dacă scrie ceva, ascundem categoriile și arătăm rezultatele
+                el.style.display = 'none';
+                if (categoriesTitle) categoriesTitle.style.display = 'none';
+                resultsContainer.classList.remove('hidden');
+                
+                // Filtrăm produsele (după titlu, descriere sau brand/autor)
+                var filtered = PRODUCTS.filter(function(p) {
+                    return p.title.toLowerCase().includes(query) || 
+                           p.shortDesc.toLowerCase().includes(query) ||
+                           (p.author && p.author.toLowerCase().includes(query));
+                });
+
+                resultsContainer.innerHTML = '';
+                
+                if (filtered.length > 0) {
+                    // Generăm cardurile pentru rezultate
+                    filtered.forEach(function(p) {
+                        resultsContainer.appendChild(createProductCard(p, 'gradient-1')); 
+                    });
+                } else {
+                    // Mesaj dacă nu găsește nimic
+                    resultsContainer.innerHTML = '<div class="no-results"><h3>Nu am găsit produse pentru "' + query + '"</h3><p>Încearcă un alt cuvânt cheie (ex: caiet, pix, Herlitz).</p></div>';
+                }
+            }
+        });
+    }
 }
 
 function renderObiectePersonalizatePage() {
@@ -594,7 +637,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     renderIndexPreviews();
-    renderMainGallery(); // Generează pozele galeriei
+    renderMainGallery(); 
     renderServiciiPage();
     renderProdusePage();
     renderObiectePersonalizatePage();
@@ -607,5 +650,5 @@ document.addEventListener('DOMContentLoaded', function () {
     initHeaderScroll();
     initScrollAnimations();
     initCounters();
-    initCarousel(); // Pornește caruselele (inclusiv cel din galerie)
+    initCarousel(); 
 });
