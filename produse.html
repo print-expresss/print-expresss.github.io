@@ -38,7 +38,7 @@
     <section class="page-hero animated-gradient">
         <div class="container fade-in-up">
             <h1>Produsele noastre</h1>
-            <p>Alege o categorie pentru a vedea produsele disponibile</p>
+            <p>Caută un produs anume sau alege o categorie</p>
         </div>
     </section>
 
@@ -49,7 +49,23 @@
                     <span class="arrow">&larr;</span> Înapoi
                 </a>
             </div>
+
+            <!-- BARA DE CĂUTARE -->
+            <div class="search-wrapper fade-in-up">
+                <div class="search-input-container">
+                    <span class="search-icon">&#128269;</span>
+                    <input type="text" id="productSearchInput" placeholder="Ce produse căutați?" autocomplete="off">
+                </div>
+            </div>
+
+            <!-- TITLU CATEGORII -->
+            <h3 class="search-subtitle" id="searchSubtitle">Sau explorează pe categorii:</h3>
+
+            <!-- CONTAINER PENTRU CATEGORII (Ascuns când se caută) -->
             <div class="grid-3" id="productCategories"></div>
+
+            <!-- CONTAINER PENTRU REZULTATELE CĂUTĂRII (Ascuns inițial) -->
+            <div class="grid-4 hidden" id="searchResults"></div>
         </div>
     </section>
 
