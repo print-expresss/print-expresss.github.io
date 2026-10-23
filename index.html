@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="google-site-verification" content="IRRIwklYfAM4KakVs8MfR-BUMKHXGZRAiNsHoaWdocE" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PrintExpress</title>
+    <title>PrintExpress Bacău</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -13,8 +13,8 @@
     <header class="header">
         <div class="container header-content">
             <a href="index.html" class="logo">
-                <img src="images/logo.png" alt="Logo PrintExpress" class="logo-img" onerror="this.style.display='none'">
-                <span class="logo-text">PrintExpress</span>
+                <img src="images/logo.png" alt="Logo PrintExpress Bacău" class="logo-img" onerror="this.style.display='none'">
+                <span class="logo-text">PrintExpress Bacău</span>
             </a>
             <nav class="nav">
                 <ul class="nav-list">
@@ -36,7 +36,7 @@
         </video>
         <div class="hero-overlay"></div>
         <div class="container hero-content fade-in-up">
-            <h1>Bine ați venit la PrintExpress</h1>
+            <h1>Bine ați venit la PrintExpress Bacău</h1>
             <p>Librărie și produse personalizate pentru fiecare ocazie</p>
         </div>
     </section>
@@ -45,7 +45,6 @@
     <section class="section" style="padding-bottom: 0;">
         <div class="container">
             <div class="carousel-container main-gallery-carousel" id="mainGalleryCarousel">
-                <!-- Container gol, JS va pune pozele aici -->
                 <div class="carousel-track" id="mainGalleryTrack"></div>
                 <button class="carousel-btn prev" id="mainGalleryPrev">&#10094;</button>
                 <button class="carousel-btn next" id="mainGalleryNext">&#10095;</button>
@@ -64,7 +63,23 @@
     <section id="produse" class="section section-alt">
         <div class="container">
             <h2 class="section-title">Produse</h2>
+            
+            <!-- BARA DE CĂUTARE PE PAGINA PRINCIPALĂ -->
+            <div class="search-wrapper fade-in-up" style="margin-top: -1rem; margin-bottom: 2rem;">
+                <div class="search-input-container">
+                    <span class="search-icon">&#128269;</span>
+                    <input type="text" id="homeSearchInput" placeholder="Ce produse căutați?" autocomplete="off">
+                </div>
+            </div>
+
+            <h3 class="search-subtitle" id="homeSearchSubtitle">Sau explorează pe categorii:</h3>
+
+            <!-- CONTAINER PENTRU CATEGORII (Ascuns când se caută) -->
             <div class="grid-4" id="productsPreview"></div>
+
+            <!-- CONTAINER PENTRU REZULTATELE CĂUTĂRII (Ascuns inițial) -->
+            <div class="grid-4 hidden" id="homeSearchResults"></div>
+            
             <div class="section-cta">
                 <a href="produse.html" class="btn btn-primary">Toate produsele noastre</a>
             </div>
@@ -76,7 +91,7 @@
             <h2 class="section-title">Despre Noi</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>PrintExpress este un loc dedicat pasionaților de lectură și produse personalizate, înființat cu scopul de a aduce creativitatea mai aproape de comunitate.</p>
+                    <p>PrintExpress Bacău este un loc dedicat pasionaților de lectură și produse personalizate, înființat cu scopul de a aduce creativitatea mai aproape de comunitate.</p>
                     <p>De peste 10 ani oferim o selecție atentă de titluri, consiliere personalizată și un spațiu primitor pentru toți clienții noștri.</p>
                     <p>Credem că fiecare produs poate spune o poveste și ne dedicăm misiunii de a face personalizarea accesibilă tuturor.</p>
                 </div>
@@ -152,7 +167,7 @@
                 <li><a href="index.html#contact">Contact</a></li>
                 <li><a href="index.html#unde-ne-gasiti">Unde ne găsiți</a></li>
             </ul>
-            <p>&copy; <span id="currentYear"></span> PrintExpress. Toate drepturile rezervate.</p>
+            <p>&copy; <span id="currentYear"></span> PrintExpress Bacău. Toate drepturile rezervate.</p>
         </div>
     </footer>
 
