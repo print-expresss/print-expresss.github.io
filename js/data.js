@@ -1,5 +1,5 @@
-const COMING_SOON_SERVICES = false;
-const COMING_SOON_PRODUCTS = false;
+const COMING_SOON_SERVICES = true;
+const COMING_SOON_PRODUCTS = true;
 
 const SERVICE_CATEGORIES = [
     { id: "printari", title: "Printări", shortDesc: "Listă de prețuri pentru printări (A4, A3, color etc).", color: "gradient-1", image: "images/printari-banner.jpg" },
