@@ -273,7 +273,7 @@ const PRODUCTS = [
     {
         id: "creioane-bic",
         categoryId: "creioane",
-        title: "Creioane colorate BIC (12 culori)",
+        title: " ",
         shortDesc: "Set creioane colorate BIC.",
         longDesc: "Set de creioane colorate de la BIC, cu culori vii și intense, ideale pentru desen și colorat.",
         price: "18.00 lei",
@@ -284,7 +284,7 @@ const PRODUCTS = [
     {
         id: "creioane-bic-kids",
         categoryId: "creioane",
-        title: "Creioane colorate BIC Kids (12 culori)",
+        title: "  ",
         shortDesc: "Set 12 creioane colorate BIC Kids.",
         longDesc: "Creioanele BIC Kids oferă culori vii și intense. Mina moale este ușor de aplicat pe hârtie, iar tăietura specială a lemnului previne ruperea minei.",
         price: "20.00 lei",
@@ -295,7 +295,7 @@ const PRODUCTS = [
     {
         id: "creioane-carioca-tita",
         categoryId: "creioane",
-        title: "Creioane colorate Carioca Tita (12 culori)",
+        title: " ",
         shortDesc: "Set 12 creioane colorate rezistente la cădere.",
         longDesc: "Creioanele Carioca Tita sunt cunoscute pentru mina lor rezistentă la cădere (anti-break) și culorile strălucitoare. Vârful de 3mm le face ușor de ascuțit.",
         price: "18.00 lei",
@@ -306,7 +306,7 @@ const PRODUCTS = [
     {
         id: "creioane-daco-cc312t",
         categoryId: "creioane",
-        title: "Creioane colorate Daco CC312T (12 culori)",
+        title: " ",
         shortDesc: "Set 12 creioane colorate cu ascuțitoare.",
         longDesc: "Setul Daco conține 12 creioane colorate cu secțiune triunghiulară (ergonomice) și mine foarte moi, rezistente la rupere. Include un ascuțitoare gratuit.",
         price: "10.00 lei",
@@ -317,7 +317,7 @@ const PRODUCTS = [
     {
         id: "creioane-herlitz-bicolor",
         categoryId: "creioane",
-        title: "Creioane Herlitz Bicolor (12 buc / 24 culori)",
+        title: " ",
         shortDesc: "Set 12 creioane bidirecționale (24 culori).",
         longDesc: "Creioane premium Herlitz cu vârf dublu, oferind 24 de culori în doar 12 creioane. Mina de 4mm, rotundă și rezistentă, ideală pentru tehnică mixtă.",
         price: "20.00 lei",
@@ -328,7 +328,7 @@ const PRODUCTS = [
     {
         id: "creioane-herlitz-ultrasoft",
         categoryId: "creioane",
-        title: "Creioane colorate Herlitz Ultra Soft (12 culori)",
+        title: " ",
         shortDesc: "Set 12 creioane cu mină ultra moale.",
         longDesc: "Creioane Herlitz cu mină ultra-soft de 3.3mm pentru o acoperire rapidă și uniformă. Formă triunghiulară pentru o prindere corectă, rezistente la rupere.",
         price: "25.00 lei",
@@ -339,7 +339,7 @@ const PRODUCTS = [
     {
         id: "creioane-maped-color-peps-monster",
         categoryId: "creioane",
-        title: "Creioane colorate Maped Color'Peps Monstruleți (12 culori)",
+        title: " ",
         shortDesc: "Set 12 creioane colorate cu design haios.",
         longDesc: "Creioanele Color'Peps vin cu un design extrem de atractiv pentru copii, cu monstruleți simpatici pe corpul creionului. Culori vii, mine rezistente.",
         price: "20.00 lei",
@@ -350,7 +350,7 @@ const PRODUCTS = [
     {
         id: "creioane-maped-color-peps-strong",
         categoryId: "creioane",
-        title: "Creioane colorate Maped Color'Peps Strong (12 culori)",
+        title: " ",
         shortDesc: "Set 12 creioane colorate cu mină rezistentă.",
         longDesc: "Creioane special create pentru a fi rezistente la rupere, ideale pentru copiii care apasă tare. Culori intense și acoperire bună.",
         price: "20.00 lei",
@@ -361,7 +361,7 @@ const PRODUCTS = [
     {
         id: "creioane-maped-harry-potter",
         categoryId: "creioane",
-        title: "Creioane colorate Maped Harry Potter (12 culori)",
+        title: " ",
         shortDesc: "Set 12 creioane colorate, ediție Harry Potter.",
         longDesc: "Set de 12 creioane colorate Maped cu tematică Harry Potter. Culori intense și o copertă pe care o poți decupa și păstra.",
         price: "16.00 lei",
@@ -372,7 +372,7 @@ const PRODUCTS = [
     {
         id: "creioane-maped-color-peps-oops",
         categoryId: "creioane",
-        title: "Creioane colorate Maped Color'Peps Ștersabile (12 culori)",
+        title: " ",
         shortDesc: "Set 12 creioane colorate cu mină ștersabilă.",
         longDesc: "Creioanele Color'Peps Ôops! de la Maped sunt ideale pentru copii datorită minei ștersabile care permite corectarea ușoară a greșelilor. Vârful rezistent și culorile vii le fac perfecte pentru desen.",
         price: "22.00 lei",
@@ -383,7 +383,7 @@ const PRODUCTS = [
     {
         id: "creioane-milan-1",
         categoryId: "creioane",
-        title: "Creioane colorate Milan Hexagonale (12 culori)",
+        title: " ",
         shortDesc: "Set 12 creioane colorate Milan.",
         longDesc: "Creioane colorate de calitate superioară de la Milan. Mina moale și rezistentă, disponibilă în culori vii, cu corp hexagonal.",
         price: "20.00 lei",
@@ -394,7 +394,7 @@ const PRODUCTS = [
     {
         id: "creioane-milla-metalic",
         categoryId: "creioane",
-        title: "Creioane colorate Milla Metalice",
+        title: " ",
         shortDesc: "Set creioane colorate cu efect metalic.",
         longDesc: "Creioane colorate cu miez special pentru efect metalic. Perfecte pentru a adăuga accente strălucitoare lucrărilor de artă.",
         price: "17.00 lei",
@@ -405,7 +405,7 @@ const PRODUCTS = [
     {
         id: "creioane-milla-pastel",
         categoryId: "creioane",
-        title: "Creioane colorate Milla Pastel",
+        title: " ",
         shortDesc: "Set creioane colorate cu tonuri pastelate.",
         longDesc: "Creioane colorate de înaltă calitate cu tonuri pastelate moi, ideale pentru tehnici de desen fine și colorat delicat.",
         price: "17.00 lei",
@@ -416,7 +416,7 @@ const PRODUCTS = [
     {
         id: "creioane-pelikan-bicolor",
         categoryId: "creioane",
-        title: "Creioane Pelikan Bicolor (12 buc / 24 culori)",
+        title: " ",
         shortDesc: "Set 12 creioane cu vârf dublu.",
         longDesc: "Creioane Pelikan Bicolor cu vârf dublu pentru 24 de culori. Mina moale și rezistentă, includ 2 culori metalice. Certificat FSC.",
         price: "20.00 lei",
