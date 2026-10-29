@@ -14,7 +14,7 @@ const SERVICES = [
 ];
 
 const PRODUCT_CATEGORIES = [
-    { id: "caiete", title: "Caiete", shortDesc: "Caiete dictando, matematică, de la NEBO, Herlitz și altele.", color: "gradient-1", image: "images/banner-caiete.jpg" },
+    { id: "salut", title: "Salut", shortDesc: "Caiete dictando, matematică, de la NEBO, Herlitz și altele.", color: "gradient-1", image: "images/banner-caiete.jpg" },
     { id: "pixuri", title: "Pixuri și stilouri", shortDesc: "Pixuri, stilouri, rezerve, markere și highlighters.", color: "gradient-2", image: "images/banner-pixuri.jpg" },
     { id: "creioane", title: "Creioane", shortDesc: "Creioane colorate, cerate, mecanice și seturi pentru desen.", color: "gradient-3", image: "images/banner-creioane.jpg" },
     { id: "carti", title: "Cărți și auxiliare", shortDesc: "Cărți de colorat, ghicitori, materiale educaționale.", color: "gradient-4", image: "images/banner-carti.jpg" },
