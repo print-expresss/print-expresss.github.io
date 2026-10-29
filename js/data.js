@@ -340,7 +340,7 @@ const PRODUCTS = [
         id: "creioane-maped-color-peps-monster",
         categoryId: "creioane",
         title: " ",
-        shortDesc: "Set 12 creioane colorate cu design haios.",
+        shortDesc: "Set 12 creioane colorate.",
         longDesc: "Creioanele Color'Peps vin cu un design extrem de atractiv pentru copii, cu monstruleți simpatici pe corpul creionului. Culori vii, mine rezistente.",
         price: "20.00 lei",
         author: "Maped",
@@ -392,6 +392,17 @@ const PRODUCTS = [
         images: ["images/products/creioane/milan-1.jpg"]
     },
     {
+        id: "creioane-maped-acvatic",
+        categoryId: "creioane",
+        title: " ",
+        shortDesc: "Set 12 creioane colorate.",
+        longDesc: "Creioanele Maped vin cu un design extrem de atractiv pentru copii, cu animalute simpatice pe corpul creionului. Culori vii, mine rezistente.",
+        price: "18.00 lei",
+        author: "Maped",
+        features: ["Brand: Maped", "Culori: 12", "Design: Acvatic", "Mină: Rezistentă"],
+        images: ["images/products/creioane/maped-acvatic.jpg"]
+    },
+    {
         id: "creioane-milla-metalic",
         categoryId: "creioane",
         title: " ",
@@ -424,8 +435,19 @@ const PRODUCTS = [
         features: ["Brand: Pelikan", "Bucăți: 12", "Culori: 24", "Mină: Moale", "Extra: 2 culori metalice"],
         images: ["images/products/creioane/pelikan-bicolor.jpg"]
     },
+    {
+        id: "creioane-pelikan-2",
+        categoryId: "creioane",
+        title: " ",
+        shortDesc: "Set 12 creioane colorate pelikan.",
+        longDesc: "Creioane colorate de calitate superioară de la Pelikan. Mina moale și rezistentă, disponibilă în culori vii, cu corp hexagonal.",
+        price: "20.00 lei",
+        author: "Pelikan",
+        features: ["Brand: Pelikan", "Culori: 12", "Formă: Hexagonală", "Diametru mină: 3mm"],
+        images: ["images/products/creioane/pelikan2.jpg"]
+    },
 
-    // --- CĂRȚI ȘI AUXILIARE ---
+    /*
     {
         id: "carti-copii",
         categoryId: "carti",
@@ -447,7 +469,7 @@ const PRODUCTS = [
         author: "PrintExpress",
         features: ["Tematica: Sirenă", "Include: Abțibilduri", "Format: Mic"],
         images: ["images/products/carti/carte-colorat-sirena.jpg"]
-    },
+    }, 
 
     // --- RECHIZITE ---
     {
@@ -537,7 +559,7 @@ const PRODUCTS = [
         author: "PrintExpress",
         features: ["Lungime: 30cm", "Material: Plastic", "Marcaje: Clari"],
         images: ["images/products/rechizite/rigla-30cm.jpg"]
-    },
+    }, */
 
     // --- ACCESORII BIROU ---
     {
