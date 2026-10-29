@@ -135,7 +135,7 @@ const PRODUCTS = [
         images: ["images/products/caiete/caiet-biologie-geografie.jpg"]
     },
 
-    // --- PIXURI ȘI STILOURI ---
+    /*
     {
         id: "pix-albastru",
         categoryId: "pixuri",
@@ -267,7 +267,7 @@ const PRODUCTS = [
         author: "Maped",
         features: ["Brand: Maped", "Tip: Mecanic", "Dimensiune mină: 0.5mm/0.7mm"],
         images: ["images/products/pixuri/creion-mecanic-maped.jpg"]
-    },
+    }, */
 
     // --- CREIOANE ---
     {
@@ -279,7 +279,7 @@ const PRODUCTS = [
         price: "18.00 lei",
         author: "BIC",
         features: ["Brand: BIC", "Culori: 12", "Tip: Creioane colorate"],
-        images: ["images/products/creioane/bic.webp"]
+        images: ["images/products/creioane/bic.png"]
     },
     {
         id: "creioane-bic-kids",
@@ -334,7 +334,7 @@ const PRODUCTS = [
         price: "25.00 lei",
         author: "Herlitz",
         features: ["Brand: Herlitz", "Culori: 12", "Mină: Ultra Soft (3.3mm)", "Formă: Triunghiulară", "Rezistent la rupere"],
-        images: ["images/products/creioane/herlitz-ultrasoft.webp"]
+        images: ["images/products/creioane/herlitz-ultrasoft.png"]
     },
     {
         id: "creioane-maped-color-peps-monster",
@@ -400,7 +400,7 @@ const PRODUCTS = [
         price: "17.00 lei",
         author: "Milla",
         features: ["Brand: Milla", "Tip: Metalice", "Efect: Strălucitor"],
-        images: ["images/products/creioane/milla-metalic.jpg"]
+        images: ["images/products/creioane/milla-metallic.jpg"]
     },
     {
         id: "creioane-milla-pastel",
