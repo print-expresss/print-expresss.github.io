@@ -16,9 +16,10 @@ const SERVICES = [
 const PRODUCT_CATEGORIES = [
     { id: "caiete", title: "Caiete", shortDesc: "Caiete dictando, matematică, de la NEBO, Herlitz și altele.", color: "gradient-1", image: "images/banner-caiete.jpg" },
     { id: "pixuri", title: "Pixuri și stilouri", shortDesc: "Pixuri, stilouri, rezerve, markere și highlighters.", color: "gradient-2", image: "images/banner-pixuri.jpg" },
-    { id: "carti", title: "Cărți și auxiliare", shortDesc: "Cărți de colorat, ghicitori, materiale educaționale.", color: "gradient-3", image: "images/banner-carti.jpg" },
-    { id: "rechizite", title: "Rechizite școlare", shortDesc: "Seturi complete, creioane, rigle, lipici, plastilină.", color: "gradient-4", image: "images/banner-rechizite.jpg" },
-    { id: "accesorii-birou", title: "Accesorii birou", shortDesc: "Suporturi, organizatoare, albume foto, agende.", color: "gradient-5", image: "images/banner-accesorii.jpg" }
+    { id: "creioane", title: "Creioane", shortDesc: "Creioane colorate, cerate, mecanice și seturi pentru desen.", color: "gradient-3", image: "images/banner-creioane.jpg" },
+    { id: "carti", title: "Cărți și auxiliare", shortDesc: "Cărți de colorat, ghicitori, materiale educaționale.", color: "gradient-4", image: "images/banner-carti.jpg" },
+    { id: "rechizite", title: "Rechizite școlare", shortDesc: "Seturi complete, rigle, lipici, plastilină.", color: "gradient-5", image: "images/banner-rechizite.jpg" },
+    { id: "accesorii-birou", title: "Accesorii birou", shortDesc: "Suporturi, organizatoare, albume foto, agende.", color: "gradient-6", image: "images/banner-accesorii.jpg" }
 ];
 
 const PRODUCTS = [
@@ -268,6 +269,162 @@ const PRODUCTS = [
         images: ["images/products/pixuri/creion-mecanic-maped.jpg"]
     },
 
+    // --- CREIOANE ---
+    {
+        id: "creioane-bic",
+        categoryId: "creioane",
+        title: "Creioane colorate BIC (12 culori)",
+        shortDesc: "Set creioane colorate BIC.",
+        longDesc: "Set de creioane colorate de la BIC, cu culori vii și intense, ideale pentru desen și colorat.",
+        price: "18.00 lei",
+        author: "BIC",
+        features: ["Brand: BIC", "Culori: 12", "Tip: Creioane colorate"],
+        images: ["images/products/creioane/bic.webp"]
+    },
+    {
+        id: "creioane-bic-kids",
+        categoryId: "creioane",
+        title: "Creioane colorate BIC Kids (12 culori)",
+        shortDesc: "Set 12 creioane colorate BIC Kids.",
+        longDesc: "Creioanele BIC Kids oferă culori vii și intense. Mina moale este ușor de aplicat pe hârtie, iar tăietura specială a lemnului previne ruperea minei.",
+        price: "20.00 lei",
+        author: "BIC",
+        features: ["Brand: BIC Kids", "Culori: 12", "Mină: Moale", "Culori: Vii și intense"],
+        images: ["images/products/creioane/bic-kids.jpg"]
+    },
+    {
+        id: "creioane-carioca-tita",
+        categoryId: "creioane",
+        title: "Creioane colorate Carioca Tita (12 culori)",
+        shortDesc: "Set 12 creioane colorate rezistente la cădere.",
+        longDesc: "Creioanele Carioca Tita sunt cunoscute pentru mina lor rezistentă la cădere (anti-break) și culorile strălucitoare. Vârful de 3mm le face ușor de ascuțit.",
+        price: "18.00 lei",
+        author: "Carioca",
+        features: ["Brand: Carioca", "Culori: 12", "Rezistent la cădere", "Grosime mină: 3mm"],
+        images: ["images/products/creioane/carioca-tita.jpg"]
+    },
+    {
+        id: "creioane-daco-cc312t",
+        categoryId: "creioane",
+        title: "Creioane colorate Daco CC312T (12 culori)",
+        shortDesc: "Set 12 creioane colorate cu ascuțitoare.",
+        longDesc: "Setul Daco conține 12 creioane colorate cu secțiune triunghiulară (ergonomice) și mine foarte moi, rezistente la rupere. Include un ascuțitoare gratuit.",
+        price: "10.00 lei",
+        author: "Daco",
+        features: ["Brand: Daco", "Culori: 12", "Formă: Triunghiulară", "Mină: Moale și rezistentă", "Bonus: Ascuțitoare inclusă"],
+        images: ["images/products/creioane/daco-cc312t.jpg"]
+    },
+    {
+        id: "creioane-herlitz-bicolor",
+        categoryId: "creioane",
+        title: "Creioane Herlitz Bicolor (12 buc / 24 culori)",
+        shortDesc: "Set 12 creioane bidirecționale (24 culori).",
+        longDesc: "Creioane premium Herlitz cu vârf dublu, oferind 24 de culori în doar 12 creioane. Mina de 4mm, rotundă și rezistentă, ideală pentru tehnică mixtă.",
+        price: "20.00 lei",
+        author: "Herlitz",
+        features: ["Brand: Herlitz", "Bucăți: 12", "Culori: 24 (bicolore)", "Mină: 4mm", "Tip: Rotund"],
+        images: ["images/products/creioane/herlitz-bicolor.jpg"]
+    },
+    {
+        id: "creioane-herlitz-ultrasoft",
+        categoryId: "creioane",
+        title: "Creioane colorate Herlitz Ultra Soft (12 culori)",
+        shortDesc: "Set 12 creioane cu mină ultra moale.",
+        longDesc: "Creioane Herlitz cu mină ultra-soft de 3.3mm pentru o acoperire rapidă și uniformă. Formă triunghiulară pentru o prindere corectă, rezistente la rupere.",
+        price: "25.00 lei",
+        author: "Herlitz",
+        features: ["Brand: Herlitz", "Culori: 12", "Mină: Ultra Soft (3.3mm)", "Formă: Triunghiulară", "Rezistent la rupere"],
+        images: ["images/products/creioane/herlitz-ultrasoft.webp"]
+    },
+    {
+        id: "creioane-maped-color-peps-monster",
+        categoryId: "creioane",
+        title: "Creioane colorate Maped Color'Peps Monstruleți (12 culori)",
+        shortDesc: "Set 12 creioane colorate cu design haios.",
+        longDesc: "Creioanele Color'Peps vin cu un design extrem de atractiv pentru copii, cu monstruleți simpatici pe corpul creionului. Culori vii, mine rezistente.",
+        price: "20.00 lei",
+        author: "Maped",
+        features: ["Brand: Maped", "Culori: 12", "Design: Monstruleți", "Mină: Rezistentă"],
+        images: ["images/products/creioane/maped-color-peps-monster.jpg"]
+    },
+    {
+        id: "creioane-maped-color-peps-strong",
+        categoryId: "creioane",
+        title: "Creioane colorate Maped Color'Peps Strong (12 culori)",
+        shortDesc: "Set 12 creioane colorate cu mină rezistentă.",
+        longDesc: "Creioane special create pentru a fi rezistente la rupere, ideale pentru copiii care apasă tare. Culori intense și acoperire bună.",
+        price: "20.00 lei",
+        author: "Maped",
+        features: ["Brand: Maped", "Culori: 12", "Tip: Strong", "Mină: Rezistentă la rupere"],
+        images: ["images/products/creioane/maped-color-peps-strong.jpg"]
+    },
+    {
+        id: "creioane-maped-harry-potter",
+        categoryId: "creioane",
+        title: "Creioane colorate Maped Harry Potter (12 culori)",
+        shortDesc: "Set 12 creioane colorate, ediție Harry Potter.",
+        longDesc: "Set de 12 creioane colorate Maped cu tematică Harry Potter. Culori intense și o copertă pe care o poți decupa și păstra.",
+        price: "16.00 lei",
+        author: "Maped",
+        features: ["Brand: Maped", "Culori: 12", "Tematică: Harry Potter", "Include: Activitate pe ambalaj"],
+        images: ["images/products/creioane/maped-harrypotter.jpg"]
+    },
+    {
+        id: "creioane-maped-color-peps-oops",
+        categoryId: "creioane",
+        title: "Creioane colorate Maped Color'Peps Ștersabile (12 culori)",
+        shortDesc: "Set 12 creioane colorate cu mină ștersabilă.",
+        longDesc: "Creioanele Color'Peps Ôops! de la Maped sunt ideale pentru copii datorită minei ștersabile care permite corectarea ușoară a greșelilor. Vârful rezistent și culorile vii le fac perfecte pentru desen.",
+        price: "22.00 lei",
+        author: "Maped",
+        features: ["Brand: Maped", "Culori: 12", "Tip: Ștersabile", "Mină: Rezistentă", "Vârf: Învelit"],
+        images: ["images/products/creioane/mated-color-peps-oops.jpg"]
+    },
+    {
+        id: "creioane-milan-1",
+        categoryId: "creioane",
+        title: "Creioane colorate Milan Hexagonale (12 culori)",
+        shortDesc: "Set 12 creioane colorate Milan.",
+        longDesc: "Creioane colorate de calitate superioară de la Milan. Mina moale și rezistentă, disponibilă în culori vii, cu corp hexagonal.",
+        price: "20.00 lei",
+        author: "Milan",
+        features: ["Brand: Milan", "Culori: 12", "Formă: Hexagonală", "Mină: Moale"],
+        images: ["images/products/creioane/milan-1.jpg"]
+    },
+    {
+        id: "creioane-milla-metalic",
+        categoryId: "creioane",
+        title: "Creioane colorate Milla Metalice",
+        shortDesc: "Set creioane colorate cu efect metalic.",
+        longDesc: "Creioane colorate cu miez special pentru efect metalic. Perfecte pentru a adăuga accente strălucitoare lucrărilor de artă.",
+        price: "17.00 lei",
+        author: "Milla",
+        features: ["Brand: Milla", "Tip: Metalice", "Efect: Strălucitor"],
+        images: ["images/products/creioane/milla-metalic.jpg"]
+    },
+    {
+        id: "creioane-milla-pastel",
+        categoryId: "creioane",
+        title: "Creioane colorate Milla Pastel",
+        shortDesc: "Set creioane colorate cu tonuri pastelate.",
+        longDesc: "Creioane colorate de înaltă calitate cu tonuri pastelate moi, ideale pentru tehnici de desen fine și colorat delicat.",
+        price: "17.00 lei",
+        author: "Milla",
+        features: ["Brand: Milla", "Tip: Pastel", "Mină: Moale"],
+        images: ["images/products/creioane/milla-pastel.jpg"]
+    },
+    {
+        id: "creioane-pelikan-bicolor",
+        categoryId: "creioane",
+        title: "Creioane Pelikan Bicolor (12 buc / 24 culori)",
+        shortDesc: "Set 12 creioane cu vârf dublu.",
+        longDesc: "Creioane Pelikan Bicolor cu vârf dublu pentru 24 de culori. Mina moale și rezistentă, includ 2 culori metalice. Certificat FSC.",
+        price: "20.00 lei",
+        author: "Pelikan",
+        features: ["Brand: Pelikan", "Bucăți: 12", "Culori: 24", "Mină: Moale", "Extra: 2 culori metalice"],
+        images: ["images/products/creioane/pelikan-bicolor.jpg"]
+    },
+
     // --- CĂRȚI ȘI AUXILIARE ---
     {
         id: "carti-copii",
@@ -358,28 +515,6 @@ const PRODUCTS = [
         author: "Daco",
         features: ["Conținut: Riglă, echer, raportor, compas", "Material: Plastic", "Utilizare: Matematică, Desen"],
         images: ["images/products/rechizite/set-geometrie.jpg"]
-    },
-    {
-        id: "creioane-colorate-bic",
-        categoryId: "rechizite",
-        title: "Creioane colorate BIC",
-        shortDesc: "Set creioane colorate, 12 culori.",
-        longDesc: "Set de 12 creioane colorate BIC, calitate premium pentru desen.",
-        price: "15.00 lei",
-        author: "BIC",
-        features: ["Brand: BIC", "Culori: 12", "Tip: Creioane colorate"],
-        images: ["images/products/rechizite/creioane-colorate-bic.jpg"]
-    },
-    {
-        id: "culori-carioca",
-        categoryId: "rechizite",
-        title: "Culori Carioca (12 culori)",
-        shortDesc: "Set 12 creioane colorate Carioca.",
-        longDesc: "Creioane colorate Carioca, ideale pentru copii.",
-        price: "14.00 lei",
-        author: "Carioca",
-        features: ["Brand: Carioca", "Culori: 12", "Tip: Creioane colorate"],
-        images: ["images/products/rechizite/culori-carioca.jpg"]
     },
     {
         id: "corector-banda-daco",
