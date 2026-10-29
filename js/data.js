@@ -290,7 +290,7 @@ const PRODUCTS = [
         price: "20.00 lei",
         author: "BIC",
         features: ["Brand: BIC Kids", "Culori: 12", "Mină: Moale", "Culori: Vii și intense"],
-        images: ["images/products/creioane/bic-kids.jpg"]
+        images: ["images/products/creioane/bic-kids.jpg", "images/products/creioane/bic-kids2.jpg"]
     },
     {
         id: "creioane-carioca-tita",
@@ -445,6 +445,118 @@ const PRODUCTS = [
         author: "Pelikan",
         features: ["Brand: Pelikan", "Culori: 12", "Formă: Hexagonală", "Diametru mină: 3mm"],
         images: ["images/products/creioane/pelikan2.jpg"]
+    },
+
+    // --- CARIOCI ȘI CREIOANE CERATE (Noi) ---
+    {
+        id: "carioci-bic",
+        categoryId: "creioane",
+        title: " ",
+        shortDesc: "Set carioci BIC.",
+        longDesc: "Carioci de calitate superioară de la BIC, ideale pentru desen și colorat.",
+        price: "15.00 lei",
+        author: "BIC",
+        features: ["Brand: BIC", "Tip: Carioci"],
+        images: ["images/products/carioci/bic-carioci.jpg"]
+    },
+    {
+        id: "carioci-carioca-joy",
+        categoryId: "creioane",
+        title: " ",
+        shortDesc: "Set carioci Carioca Joy.",
+        longDesc: "Carioci Carioca Joy, culori vii, ideale pentru copii.",
+        price: "12.00 lei",
+        author: "Carioca",
+        features: ["Brand: Carioca", "Tip: Carioci"],
+        images: ["images/products/carioci/carioca-joy.jpg"]
+    },
+    {
+        id: "carioci-milan",
+        categoryId: "creioane",
+        title: " ",
+        shortDesc: "Set carioci Milan.",
+        longDesc: "Carioci de calitate superioară de la Milan.",
+        price: "15.00 lei",
+        author: "Milan",
+        features: ["Brand: Milan", "Tip: Carioci"],
+        images: ["images/products/carioci/carioci-milan.jpg"]
+    },
+    {
+        id: "carioci-daco-bi",
+        categoryId: "creioane",
+        title: " ",
+        shortDesc: "Set carioci Daco bicolore.",
+        longDesc: "Carioci Daco cu vârf dublu.",
+        price: "10.00 lei",
+        author: "Daco",
+        features: ["Brand: Daco", "Tip: Bicolore"],
+        images: ["images/products/carioci/daco-carioci-bi.jpg"]
+    },
+    {
+        id: "carioci-daco-unicolora",
+        categoryId: "creioane",
+        title: " ",
+        shortDesc: "Carioci Daco unicolore.",
+        longDesc: "Carioci Daco într-o singură culoare.",
+        price: "5.00 lei",
+        author: "Daco",
+        features: ["Brand: Daco", "Tip: Unicolore"],
+        images: ["images/products/carioci/daco-unicolora.jpg"]
+    },
+    {
+        id: "carioci-jumbo-felt-pens",
+        categoryId: "creioane",
+        title: " ",
+        shortDesc: "Carioci Jumbo Felt Pens.",
+        longDesc: "Carioci cu vârf gros, ideale pentru copii mici.",
+        price: "18.00 lei",
+        author: "PrintExpress",
+        features: ["Tip: Jumbo", "Carioci"],
+        images: ["images/products/carioci/jumbo-felt-pens.jpg"]
+    },
+    {
+        id: "carioci-maped-color-peps",
+        categoryId: "creioane",
+        title: " ",
+        shortDesc: "Carioci Maped Color'Peps.",
+        longDesc: "Carioci Maped Color'Peps, culori intense.",
+        price: "16.00 lei",
+        author: "Maped",
+        features: ["Brand: Maped", "Tip: Carioci"],
+        images: ["images/products/carioci/maped-carioci-color-peps.jpg"]
+    },
+    {
+        id: "set-maped-creioane-carioci",
+        categoryId: "creioane",
+        title: " ",
+        shortDesc: "Set Maped creioane și carioci.",
+        longDesc: "Set mixt de la Maped conținând creioane colorate și carioci.",
+        price: "25.00 lei",
+        author: "Maped",
+        features: ["Brand: Maped", "Conținut: Creioane și Carioci"],
+        images: ["images/products/carioci/maped-creioane-si-carioci.jpg"]
+    },
+    {
+        id: "creioane-cerate-1",
+        categoryId: "creioane",
+        title: " ",
+        shortDesc: "Creioane cerate.",
+        longDesc: "Creioane cerate pentru desen și colorat.",
+        price: "10.00 lei",
+        author: "PrintExpress",
+        features: ["Tip: Cerate"],
+        images: ["images/products/carioci/creioane-cerate-1.jpg"]
+    },
+    {
+        id: "creioane-cerate-2",
+        categoryId: "creioane",
+        title: " ",
+        shortDesc: "Creioane cerate.",
+        longDesc: "Creioane cerate pentru desen și colorat.",
+        price: "12.00 lei",
+        author: "PrintExpress",
+        features: ["Tip: Cerate"],
+        images: ["images/products/carioci/creioane-cerate-2.jpg"]
     },
 
     /*
