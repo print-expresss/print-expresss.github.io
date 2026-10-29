@@ -451,12 +451,12 @@ const PRODUCTS = [
         id: "creioane-cerate-1",
         categoryId: "creioane",
         title: " ",
-        shortDesc: "Creioane cerate.",
+        shortDesc: "Creioane cerate Maped.",
         longDesc: "Creioane cerate pentru desen și colorat.",
-        price: "10.00 lei",
+        price: "15.00 lei",
         author: "PrintExpress",
         features: ["Tip: Cerate"],
-        images: ["images/products/creioane/creioane-cerate-1.jpg"]
+        images: ["images/products/creioane/maped-creioane-ceratejpg"]
     },
     {
         id: "creioane-cerate-2",
@@ -464,10 +464,10 @@ const PRODUCTS = [
         title: " ",
         shortDesc: "Creioane cerate.",
         longDesc: "Creioane cerate pentru desen și colorat.",
-        price: "12.00 lei",
+        price: "18.00 lei",
         author: "PrintExpress",
         features: ["Tip: Cerate"],
-        images: ["images/products/creioane/creioane-cerate-2.jpg"]
+        images: ["images/products/creioane/carioca-creion-cerat.jpg"]
     },
 
     // --- CARIOCI ȘI MARKERE ---
@@ -477,7 +477,7 @@ const PRODUCTS = [
         title: " ",
         shortDesc: "Set carioci BIC.",
         longDesc: "Carioci de calitate superioară de la BIC, ideale pentru desen și colorat.",
-        price: "15.00 lei",
+        price: "22.00 lei",
         author: "BIC",
         features: ["Brand: BIC", "Tip: Carioci"],
         images: ["images/products/carioci/bic-carioci.jpg"]
@@ -488,7 +488,7 @@ const PRODUCTS = [
         title: " ",
         shortDesc: "Set carioci Carioca Joy.",
         longDesc: "Carioci Carioca Joy, culori vii, ideale pentru copii.",
-        price: "12.00 lei",
+        price: "16.00 lei",
         author: "Carioca",
         features: ["Brand: Carioca", "Tip: Carioci"],
         images: ["images/products/carioci/carioca-joy.jpg"]
@@ -499,7 +499,7 @@ const PRODUCTS = [
         title: " ",
         shortDesc: "Set carioci Milan.",
         longDesc: "Carioci de calitate superioară de la Milan.",
-        price: "15.00 lei",
+        price: "20.00 lei",
         author: "Milan",
         features: ["Brand: Milan", "Tip: Carioci"],
         images: ["images/products/carioci/carioci-milan.jpg"]
@@ -510,7 +510,7 @@ const PRODUCTS = [
         title: " ",
         shortDesc: "Set carioci Daco bicolore.",
         longDesc: "Carioci Daco cu vârf dublu.",
-        price: "10.00 lei",
+        price: "25.00 lei",
         author: "Daco",
         features: ["Brand: Daco", "Tip: Bicolore"],
         images: ["images/products/carioci/daco-carioci-bi.jpg"]
@@ -521,7 +521,7 @@ const PRODUCTS = [
         title: " ",
         shortDesc: "Carioci Daco unicolore.",
         longDesc: "Carioci Daco într-o singură culoare.",
-        price: "5.00 lei",
+        price: "15.00 lei",
         author: "Daco",
         features: ["Brand: Daco", "Tip: Unicolore"],
         images: ["images/products/carioci/daco-unicolora.jpg"]
@@ -532,7 +532,7 @@ const PRODUCTS = [
         title: " ",
         shortDesc: "Carioci Jumbo Felt Pens.",
         longDesc: "Carioci cu vârf gros, ideale pentru copii mici.",
-        price: "18.00 lei",
+        price: "20.00 lei",
         author: "PrintExpress",
         features: ["Tip: Jumbo", "Carioci"],
         images: ["images/products/carioci/jumbo-felt-pens.jpg"]
@@ -543,7 +543,7 @@ const PRODUCTS = [
         title: " ",
         shortDesc: "Carioci Maped Color'Peps.",
         longDesc: "Carioci Maped Color'Peps, culori intense.",
-        price: "16.00 lei",
+        price: "15.00 lei",
         author: "Maped",
         features: ["Brand: Maped", "Tip: Carioci"],
         images: ["images/products/carioci/maped-carioci-color-peps.jpg"]
@@ -554,7 +554,7 @@ const PRODUCTS = [
         title: " ",
         shortDesc: "Set Maped creioane și carioci.",
         longDesc: "Set mixt de la Maped conținând creioane colorate și carioci.",
-        price: "25.00 lei",
+        price: "30.00 lei",
         author: "Maped",
         features: ["Brand: Maped", "Conținut: Creioane și Carioci"],
         images: ["images/products/carioci/maped-creioane-si-carioci.jpg"]
