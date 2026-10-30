@@ -607,7 +607,7 @@ const PRODUCTS = [
         price: "35.00 lei",
         author: "Cellara",
         features: ["Brand: Cellara", "Porturi: USB-A + USB-C", "PD Function: 20W", "Output USB A: 3A"],
-        images: ["images/products/technologie/accharger-1.jpg"]
+        images: ["images/products/tehnologie/accharger-1.jpg"]
     },
     {
         id: "tehnologie-achcharger2",
@@ -618,7 +618,7 @@ const PRODUCTS = [
         price: "45.00 lei",
         author: "Cellara",
         features: ["Brand: Cellara", "Putere: 20W", "Tehnologie: GaN", "Conector: Type-C", "Include: Cablu Type-C to iPh"],
-        images: ["images/products/technologie/achcharger2.jpg"]
+        images: ["images/products/tehnologie/achcharger2.jpg"]
     },
     {
         id: "tehnologie-accharger3",
@@ -629,7 +629,7 @@ const PRODUCTS = [
         price: "50.00 lei",
         author: "Cellara",
         features: ["Brand: Cellara", "Putere: 25W", "Tehnologie: GaN", "Conector: Type-C", "Include: Cablu Type-C to Type-C"],
-        images: ["images/products/technologie/accharger3.jpg"]
+        images: ["images/products/tehnologie/accharger3.jpg"]
     },
     {
         id: "tehnologie-accharger4",
@@ -640,7 +640,7 @@ const PRODUCTS = [
         price: "40.00 lei",
         author: "Cellara",
         features: ["Brand: Cellara", "Putere: 25W", "Porturi: USB-C + USB-A", "Tehnologie: GaN", "Output USB A: 3A"],
-        images: ["images/products/technologie/accharger4.jpg"]
+        images: ["images/products/tehnologie/accharger4.jpg"]
     },
     {
         id: "tehnologie-achcharger5",
@@ -651,7 +651,7 @@ const PRODUCTS = [
         price: "30.00 lei",
         author: "Cellara",
         features: ["Brand: Cellara", "Putere: 20W", "Port: USB-C", "Tehnologie: GaN"],
-        images: ["images/products/technologie/achcharger5.jpg"]
+        images: ["images/products/tehnologie/achcharger5.jpg"]
     },
     {
         id: "tehnologie-achcharger6",
@@ -662,7 +662,7 @@ const PRODUCTS = [
         price: "20.00 lei",
         author: "Cellara",
         features: ["Brand: Cellara", "Curent: 2.4A", "Port: USB-A"],
-        images: ["images/products/technologie/achcharger6.jpg"]
+        images: ["images/products/tehnologie/achcharger6.jpg"]
     },
     {
         id: "tehnologie-achcharger7",
@@ -673,7 +673,7 @@ const PRODUCTS = [
         price: "25.00 lei",
         author: "Mobik",
         features: ["Brand: Mobik", "Putere: 20W", "Port: USB-C"],
-        images: ["images/products/technologie/achcharger7.jpg"]
+        images: ["images/products/tehnologie/achcharger7.jpg"]
     },
     {
         id: "tehnologie-daracable",
@@ -684,7 +684,7 @@ const PRODUCTS = [
         price: "40.00 lei",
         author: "Mobik",
         features: ["Brand: Mobik", "Tip: Data Cable", "Conector: Type-C"],
-        images: ["images/products/technologie/daracable.jpg"]
+        images: ["images/products/tehnologie/daracable.jpg"]
     },
     {
         id: "tehnologie-datacable-1m-black",
@@ -695,7 +695,7 @@ const PRODUCTS = [
         price: "39.00 lei",
         author: "Cellara",
         features: ["Brand: Cellara", "Conectori: Type-C to Type-C", "Lungime: 1m", "Culoare: Negru"],
-        images: ["images/products/technologie/datacable-1m-black.jpg"]
+        images: ["images/products/tehnologie/datacable-1m-black.jpg"]
     },
     {
         id: "tehnologie-datacable-1m-c-to-ip",
@@ -706,7 +706,7 @@ const PRODUCTS = [
         price: "79.00 lei",
         author: "Cellara",
         features: ["Brand: Cellara", "Conectori: Type-C to iPh", "Lungime: 1m", "Culoare: Alb"],
-        images: ["images/products/technologie/datacable-1m-c-to-ip.jpg"]
+        images: ["images/products/tehnologie/datacable-1m-c-to-ip.jpg"]
     },
     {
         id: "tehnologie-datacable-1m-white",
@@ -717,7 +717,7 @@ const PRODUCTS = [
         price: "39.00 lei",
         author: "Cellara",
         features: ["Brand: Cellara", "Conectori: Type-C to Type-C", "Lungime: 1m", "Culoare: Alb", "Amperaj: 3A"],
-        images: ["images/products/technologie/datacable-1m-white.jpg"]
+        images: ["images/products/tehnologie/datacable-1m-white.jpg"]
     },
     {
         id: "tehnologie-datacable-2m-white",
@@ -728,7 +728,7 @@ const PRODUCTS = [
         price: "45.00 lei",
         author: "Cellara",
         features: ["Brand: Cellara", "Conectori: Type-C to Type-C", "Lungime: 2m", "Culoare: Alb", "Amperaj: 3A"],
-        images: ["images/products/technologie/datacable-2m-white.jpg"]
+        images: ["images/products/tehnologie/datacable-2m-white.jpg"]
     },
     {
         id: "tehnologie-earphones-jack",
@@ -739,7 +739,7 @@ const PRODUCTS = [
         price: "39.00 lei",
         author: "Cellara",
         features: ["Brand: Cellara", "Sunet: Stereo", "Mufă: 3.5mm Jack", "Culori: Diverse"],
-        images: ["images/products/technologie/earphones-jack.jpg"]
+        images: ["images/products/tehnologie/earphones-jack.jpg"]
     },
     {
         id: "tehnologie-35-jack-to-jack",
@@ -750,7 +750,7 @@ const PRODUCTS = [
         price: "29.00 lei",
         author: "Cellara",
         features: ["Brand: Cellara", "Conectori: 3.5mm to 3.5mm", "Lungime: 1m", "Calitate: Hi-Fi"],
-        images: ["images/products/technologie/35-jack-to-jack.jpg"]
+        images: ["images/products/tehnologie/35-jack-to-jack.jpg"]
     },
     {
         id: "tehnologie-flashdrive-16gb",
@@ -761,7 +761,7 @@ const PRODUCTS = [
         price: "45.00 lei",
         author: "Platine",
         features: ["Brand: Platine", "Capacitate: 16GB", "Interfață: USB 2.0", "Material: Aluminiu"],
-        images: ["images/products/technologie/flashdrive-16gb.jpg"]
+        images: ["images/products/tehnologie/flashdrive-16gb.jpg"]
     },
     {
         id: "tehnologie-flashdrive-32gb",
@@ -772,7 +772,7 @@ const PRODUCTS = [
         price: "55.00 lei",
         author: "Platine",
         features: ["Brand: Platine", "Capacitate: 32GB", "Interfață: USB 2.0", "Material: Aluminiu"],
-        images: ["images/products/technologie/flashdrive-32gb.jpg"]
+        images: ["images/products/tehnologie/flashdrive-32gb.jpg"]
     },
     {
         id: "tehnologie-pen-10-in-1",
@@ -783,7 +783,7 @@ const PRODUCTS = [
         price: "65.00 lei",
         author: "Mobik",
         features: ["Brand: Mobik", "Tip: 10-in-1", "Funcții: LED, Riglă, Stylus, Șurubelniță, Deschizător"],
-        images: ["images/products/technologie/pen-10-in-1.jpg"]
+        images: ["images/products/tehnologie/pen-10-in-1.jpg"]
     },
     {
         id: "tehnologie-pen-6-in-1",
@@ -794,7 +794,7 @@ const PRODUCTS = [
         price: "50.00 lei",
         author: "Mobik",
         features: ["Brand: Mobik", "Tip: 6-in-1", "Funcții: Stylus, Nivel, Riglă, Șurubelniță", "Include: 3 rezerve"],
-        images: ["images/products/technologie/pen-6-in-1.jpg"]
+        images: ["images/products/tehnologie/pen-6-in-1.jpg"]
     },
     {
         id: "tehnologie-portable-speaker",
@@ -805,7 +805,7 @@ const PRODUCTS = [
         price: "65.00 lei",
         author: "Mobik",
         features: ["Brand: Mobik", "Conectivitate: Wireless/Bluetooth", "Rezistență: IPX5 (Waterproof)", "Sunet: HD"],
-        images: ["images/products/technologie/portable-speaker.jpg"]
+        images: ["images/products/tehnologie/portable-speaker.jpg"]
     },
     {
         id: "tehnologie-powerbank-10kmah",
@@ -816,7 +816,7 @@ const PRODUCTS = [
         price: "100.00 lei",
         author: "Mobik",
         features: ["Brand: Mobik", "Capacitate: 10000 mAh", "Ieșire: PD Output", "Extra: Afișaj LED", "Extra: Cabluri multiple"],
-        images: ["images/products/technologie/powerbank-10kmah.jpg"]
+        images: ["images/products/tehnologie/powerbank-10kmah.jpg"]
     },
     {
         id: "tehnologie-wireless-headset",
@@ -827,7 +827,7 @@ const PRODUCTS = [
         price: "129.00 lei",
         author: "Cellara",
         features: ["Brand: Cellara", "Model: Soundrex", "Tip: Wireless", "Extra: Carcasă încărcare", "Operare: One-Button"],
-        images: ["images/products/technologie/wireless-headset.jpg"]
+        images: ["images/products/tehnologie/wireless-headset.jpg"]
     }
 ];
 
