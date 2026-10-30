@@ -623,7 +623,7 @@ const PRODUCTS = [
         title: " ",
         shortDesc: "Set vopsea tempera în tuburi, calitate superioară.",
         longDesc: "Vopsea tempera ambalată în tuburi, ideală pentru pictură pe diverse suprafețe. Culori vii și acoperire bună.",
-        price: "24.00 lei",
+        price: "30.00 lei",
         author: "PrintExpress",
         features: ["Tip: Tempera", "Ambalare: Tuburi", "Calitate: Superioară"],
         images: ["images/products/acuarele/milla1.jpg"]
