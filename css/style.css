@@ -10,6 +10,10 @@
     --gradient-4: linear-gradient(135deg, #0c4a6e, #0ea5e9);
     --gradient-5: linear-gradient(135deg, #1e3a8a, #06b6d4);
     --gradient-6: linear-gradient(135deg, #312e81, #6366f1);
+    /* Gradienți noi adăugați pentru noile categorii din JS */
+    --gradient-7: linear-gradient(135deg, #0284c7, #38bdf8);
+    --gradient-8: linear-gradient(135deg, #4f46e5, #a855f7);
+    --gradient-9: linear-gradient(135deg, #0f172a, #334155);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -319,7 +323,7 @@ img { max-width: 100%; display: block; }
 }
 
 #homeSearchInput::placeholder {
-    color: #bfdbfe; /* Albastru foarte deschis */
+    color: #bfdbfe;
     font-weight: 500;
 }
 
@@ -437,10 +441,13 @@ img { max-width: 100%; display: block; }
     z-index: 2;
     animation: float 4s ease-in-out infinite;
 }
+/* MODIFICAT: Pozele de categorii nu se mai taie, au fundal alb/gri */
 .category-card-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain; 
+    background-color: #f8fafc;
+    padding: 10px;
 }
 
 .category-card-body { padding: 1.5rem; }
@@ -530,8 +537,18 @@ img { max-width: 100%; display: block; }
     font-weight: 600;
     font-size: 1rem;
     transition: transform 0.5s ease;
+    background-color: #f8fafc; /* Fundal pentru spațiu liber */
 }
 .product-card:hover .product-image { transform: scale(1.05); }
+
+/* MODIFICAT: Pozele de produse nu se mai taie */
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 10px;
+}
+
 .product-body { padding: 1.5rem; }
 .product-price {
     display: inline-block;
@@ -547,6 +564,9 @@ img { max-width: 100%; display: block; }
 .gradient-4 { background: var(--gradient-4); }
 .gradient-5 { background: var(--gradient-5); }
 .gradient-6 { background: var(--gradient-6); }
+.gradient-7 { background: var(--gradient-7); }
+.gradient-8 { background: var(--gradient-8); }
+.gradient-9 { background: var(--gradient-9); }
 
 /* ============================================
    DETALII (PAGINI PRODUS/SERVICIU)
@@ -573,7 +593,16 @@ img { max-width: 100%; display: block; }
     margin-bottom: 1rem;
     text-align: center;
     padding: 1rem;
+    background-color: #f8fafc;
 }
+
+/* MODIFICAT: Poza mare din detalii nu se taie */
+.details-image-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
 .details-gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -584,6 +613,17 @@ img { max-width: 100%; display: block; }
     border-radius: 10px;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #f8fafc;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* MODIFICAT: Thumbnail-urile nu se taie */
+.gallery-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 .gallery-thumb:hover {
     transform: scale(1.05);
@@ -969,7 +1009,7 @@ img { max-width: 100%; display: block; }
 .preview-user-image {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Păstrat cover aici pentru că utilizatorul încarcă poza proprie în zona de print */
     object-position: center;
     display: none;
     position: relative;
@@ -1383,7 +1423,7 @@ img { max-width: 100%; display: block; }
     width: 100%;
     height: auto;
     display: block;
-    object-fit: cover;
+    object-fit: contain; /* Modificat aici */
 }
 
 /* ============================================
@@ -1413,10 +1453,12 @@ img { max-width: 100%; display: block; }
     position: relative;
 }
 
+/* MODIFICAT: Imaginile din carusel nu se mai taie */
 .carousel-slide img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    background-color: #f8fafc;
     display: block;
 }
 
@@ -1561,4 +1603,4 @@ img { max-width: 100%; display: block; }
     #homeSearchResults .map-wrapper iframe {
         height: 250px;
     }
-}
+    }
