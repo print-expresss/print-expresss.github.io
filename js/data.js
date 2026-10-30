@@ -582,7 +582,7 @@ const PRODUCTS = [
         price: "30.00 lei",
         author: "Pelikan",
         features: ["Brand: Pelikan", "Culori: 12", "Tip: Acuarelă", "Include: Pensulă"],
-        images: ["images/products/acuarele/pelika2.jpg"]
+        images: ["images/products/acuarele/pelikan2.jpg"]
     },
     {
         id: "acuarele-carioca-12",
@@ -659,7 +659,7 @@ const PRODUCTS = [
         price: "35.00 lei",
         author: "Daco",
         features: ["Brand: Daco", "Culori: 12", "Tip: Guașă", "Volum: 20ml", "Model: CU220"],
-        images: ["images/products/acuarele/daco3jpg"]
+        images: ["images/products/acuarele/daco3.jpg"]
     },
     {
         id: "vopsea-tempera-daco-250ml",
