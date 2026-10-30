@@ -18,9 +18,10 @@ const PRODUCT_CATEGORIES = [
     { id: "pixuri", title: "Pixuri și stilouri", shortDesc: "Pixuri, stilouri, rezerve, markere și highlighters.", color: "gradient-2", image: "images/banner-pixuri.jpg" },
     { id: "creioane", title: "Creioane", shortDesc: "Creioane colorate, cerate, mecanice și seturi pentru desen.", color: "gradient-3", image: "images/banner-creioane.jpg" },
     { id: "carioci", title: "Carioci și Markere", shortDesc: "Carioci pentru copii, markere permanente și pentru tablă.", color: "gradient-4", image: "images/banner-carioci.jpg" },
-    { id: "carti", title: "Cărți și auxiliare", shortDesc: "Cărți de colorat, ghicitori, materiale educaționale.", color: "gradient-5", image: "images/banner-carti.jpg" },
-    { id: "rechizite", title: "Rechizite școlare", shortDesc: "Seturi complete, rigle, lipici, plastilină.", color: "gradient-6", image: "images/banner-rechizite.jpg" },
-    { id: "accesorii-birou", title: "Accesorii birou", shortDesc: "Suporturi, organizatoare, albume foto, agende.", color: "gradient-7", image: "images/banner-accesorii.jpg" }
+    { id: "vopsele", title: "Acuarele și Vopsele", shortDesc: "Acuarele, vopsele tempera, guașă și acrilice pentru artă.", color: "gradient-5", image: "images/banner-vopsele.jpg" },
+    { id: "carti", title: "Cărți și auxiliare", shortDesc: "Cărți de colorat, ghicitori, materiale educaționale.", color: "gradient-6", image: "images/banner-carti.jpg" },
+    { id: "rechizite", title: "Rechizite școlare", shortDesc: "Seturi complete, rigle, lipici, plastilină.", color: "gradient-7", image: "images/banner-rechizite.jpg" },
+    { id: "accesorii-birou", title: "Accesorii birou", shortDesc: "Suporturi, organizatoare, albume foto, agende.", color: "gradient-8", image: "images/banner-accesorii.jpg" }
 ];
 
 const PRODUCTS = [
@@ -454,9 +455,9 @@ const PRODUCTS = [
         shortDesc: "Creioane cerate Maped.",
         longDesc: "Creioane cerate pentru desen și colorat.",
         price: "15.00 lei",
-        author: "PrintExpress",
+        author: "Maped",
         features: ["Tip: Cerate"],
-        images: ["images/products/creioane/maped-creioane-ceratejpg"]
+        images: ["images/products/creioane/maped-creioane-cerate.jpg"]
     },
     {
         id: "creioane-cerate-2",
@@ -465,7 +466,7 @@ const PRODUCTS = [
         shortDesc: "Creioane cerate.",
         longDesc: "Creioane cerate pentru desen și colorat.",
         price: "18.00 lei",
-        author: "PrintExpress",
+        author: "Carioca",
         features: ["Tip: Cerate"],
         images: ["images/products/creioane/carioca-creion-cerat.jpg"]
     },
@@ -558,6 +559,118 @@ const PRODUCTS = [
         author: "Maped",
         features: ["Brand: Maped", "Conținut: Creioane și Carioci"],
         images: ["images/products/carioci/maped-creioane-si-carioci.jpg"]
+    },
+
+    // --- ACUARELE ȘI VOPSELE ---
+    {
+        id: "vopsea-pelikan-opaque-12",
+        categoryId: "vopsele",
+        title: "Vopsea Opacă Pelikan 12 Culori",
+        shortDesc: "Set vopsea opacă Pelikan, 12 culori, include pensulă.",
+        longDesc: "Setul de vopsea opacă (Deckfarbkasten) Pelikan oferă 12 culori vibrante, ideale pentru tehnicile de pictură școlară. Include o pensulă de calitate.",
+        price: "45.00 lei",
+        author: "Pelikan",
+        features: ["Brand: Pelikan", "Culori: 12", "Tip: Opacă/Gouache", "Include: Pensulă", "Origine: Made in Germany"],
+        images: ["images/products/acuarele/pelikan-opaque.jpg"]
+    },
+    {
+        id: "acuarele-pelikan-12",
+        categoryId: "vopsele",
+        title: "Acuarele Pelikan 12 Culori",
+        shortDesc: "Set acuarele Pelikan, 12 culori, include pensulă.",
+        longDesc: "Acuarele Pelikan cu 12 culori intense, ușor de amestecat. Cutia include o pensulă pentru aplicare.",
+        price: "30.00 lei",
+        author: "Pelikan",
+        features: ["Brand: Pelikan", "Culori: 12", "Tip: Acuarelă", "Include: Pensulă"],
+        images: ["images/products/acuarele/pelikan-acuarele.jpg"]
+    },
+    {
+        id: "acuarele-carioca-12",
+        categoryId: "vopsele",
+        title: "Acuarele Carioca 12 Culori",
+        shortDesc: "Set acuarele Carioca Acquarell, 12 culori.",
+        longDesc: "Set de acuarele Carioca cu 12 pastile rotunde de 30mm, formulă îmbunătățită. Include o pensulă.",
+        price: "20.00 lei",
+        author: "Carioca",
+        features: ["Brand: Carioca", "Culori: 12", "Diametru pastile: 30mm", "Include: Pensulă", "Formulă: Îmbunătățită"],
+        images: ["images/products/acuarele/carioca-acuarele.jpg"]
+    },
+    {
+        id: "vopsea-tempera-12-culori",
+        categoryId: "vopsele",
+        title: "Vopsea Tempera 12 Culori",
+        shortDesc: "Set vopsea tempera 12 culori, 30ml.",
+        longDesc: "Set de vopsea tempera cu 12 culori, ambalate în recipiente de 30ml. Ideale pentru proiecte școlare.",
+        price: "25.00 lei",
+        author: "PrintExpress",
+        features: ["Culori: 12", "Volum: 30ml", "Tip: Tempera"],
+        images: ["images/products/acuarele/tempera-12.jpg"]
+    },
+    {
+        id: "acuarele-ecada-12",
+        categoryId: "vopsele",
+        title: "Acuarele Ecada 12 Culori",
+        shortDesc: "Set acuarele Ecada, 12 culori, include pensulă.",
+        longDesc: "Set de acuarele Ecada cu 12 culori, ideal pentru elevi. Cutia include o pensulă de lemn.",
+        price: "12.00 lei",
+        author: "Ecada",
+        features: ["Brand: Ecada", "Culori: 12", "Tip: Acuarelă", "Include: Pensulă"],
+        images: ["images/products/acuarele/ecada-acuarele.jpg"]
+    },
+    {
+        id: "vopsea-tempera-tuburi",
+        categoryId: "vopsele",
+        title: "Vopsea Tempera Tuburi",
+        shortDesc: "Set vopsea tempera în tuburi, calitate superioară.",
+        longDesc: "Vopsea tempera ambalată în tuburi, ideală pentru pictură pe diverse suprafețe. Culori vii și acoperire bună.",
+        price: "24.00 lei",
+        author: "PrintExpress",
+        features: ["Tip: Tempera", "Ambalare: Tuburi", "Calitate: Superioară"],
+        images: ["images/products/acuarele/tempera-tuburi.jpg"]
+    },
+    {
+        id: "acuarele-daco-28",
+        categoryId: "vopsele",
+        title: "Acuarele Daco 28 Culori",
+        shortDesc: "Set acuarele Daco, 28 culori.",
+        longDesc: "Setul complet de acuarele Daco conține 28 de culori (AR280) cu pastile de 28mm. Cutia robustă include o pensulă.",
+        price: "35.00 lei",
+        author: "Daco",
+        features: ["Brand: Daco", "Culori: 28", "Diametru pastile: 28mm", "Include: Pensulă", "Model: AR280"],
+        images: ["images/products/acuarele/daco-acuarele-28.jpg"]
+    },
+    {
+        id: "vopsea-acrilica-daco-12",
+        categoryId: "vopsele",
+        title: "Culori Acrilice Daco 12 Culori",
+        shortDesc: "Set vopsea acrilică Daco, 12 culori.",
+        longDesc: "Set de 12 culori acrilice Daco (CU312) în tuburi. Acoperire excelentă, uscare rapidă, ideale pentru pânză și alte materiale.",
+        price: "30.00 lei",
+        author: "Daco",
+        features: ["Brand: Daco", "Culori: 12", "Tip: Acrilic", "Model: CU312"],
+        images: ["images/products/acuarele/daco-acrilice.jpg"]
+    },
+    {
+        id: "vopsea-guasa-daco-12",
+        categoryId: "vopsele",
+        title: "Culori Guașă Daco 12 Culori",
+        shortDesc: "Set vopsea guașă Daco Brilia, 12 culori.",
+        longDesc: "Culori guașă Daco Brilia (CU220) în 12 nuanțe, ambalate în recipiente de 20ml. Vopsea lavabilă, non-toxică, cu acoperire excelentă.",
+        price: "35.00 lei",
+        author: "Daco",
+        features: ["Brand: Daco", "Culori: 12", "Tip: Guașă", "Volum: 20ml", "Model: CU220"],
+        images: ["images/products/acuarele/daco-guasa.jpg"]
+    },
+    {
+        id: "vopsea-tempera-daco-250ml",
+        categoryId: "vopsele",
+        title: "Vopsea Tempera Daco 250ml",
+        shortDesc: "Vopsea tempera Daco, 250ml, culoarea negru.",
+        longDesc: "Vopsea tempera lichidă Daco, într-un flacon de 250ml. Culoarea Negru (Lamp Black), ideală pentru completarea seturilor de pictură.",
+        price: "15.00 lei",
+        author: "Daco",
+        features: ["Brand: Daco", "Volum: 250ml", "Tip: Tempera lichidă", "Culoare: Negru (Lamp Black)"],
+        images: ["images/products/acuarele/daco-tempera-negru.jpg"]
     },
 
     /*
